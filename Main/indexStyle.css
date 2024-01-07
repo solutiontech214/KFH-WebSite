@@ -1,0 +1,34 @@
+.home{
+  background-image: url("KFH-logos_transparent.png");
+  width: 100%;
+  height: 774px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: fixed;
+}
+.nav-bar{
+
+  box-shadow: 0 0 4px black;
+  border: 0.1px solid rgb(45, 2, 2);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-bar div h3{
+  color: rgb(208, 0, 0);
+  transition: 0.5s;
+}
+.nav-bar div h3:hover{
+  transform: scale(1.2);
+  color: #ffb9b9;
+}
+.nav-bar a{
+  text-decoration: none;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  transition: 1s;
+}
+.nav-bar a:hover{
+  transform: scale(1.2);
+}
