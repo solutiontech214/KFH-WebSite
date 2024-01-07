@@ -32,3 +32,8 @@
 .nav-bar a:hover{
   transform: scale(1.2);
 }
+.nav-bar .login .btn-login{
+  padding: 5px 20px;
+  font-weight: 500;
+  border: 0.1px solid black;
+}
