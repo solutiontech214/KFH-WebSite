@@ -20,13 +20,26 @@ body::-webkit-scrollbar{
   text-shadow: 0 0 2px brown;
   cursor: pointer;
 }
-.nav-bar .items a{
+.nav-bar .items div,a{
   margin-top: 4px;
+}
+.nav-bar .items a{
   text-decoration: none;
   color: black;
   font-size: 18px;
   font-weight: 600;
+  text-decoration: underline 1.5px rgba(0, 0, 0, 0);
+  transition: text-decoration-color 300ms;
 }
+
+.nav-bar .items a:hover {
+  text-decoration-color: rgb(86, 33, 26);
+  text-shadow: 0 1px brown;
+}
+
+/*drop down*/
+
+
 .nav-bar .login{
   margin-right: 20px;
 }
