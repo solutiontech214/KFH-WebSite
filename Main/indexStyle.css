@@ -1,44 +1,79 @@
-.home{
-  background-image: url("KFH-logos_transparent.png");
-  width: 100%;
-  height: 774px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  position: fixed;
+
+body::-webkit-scrollbar{
+  display: none;
 }
+
 .nav-bar{
-
-  box-shadow: 0 0 4px black;
-  border: 0.1px solid rgb(45, 2, 2);
-  padding: 10px;
-  display: flex;
+  display:flex;
   justify-content: space-between;
+  width: 100%;
+  height: 66px;
 }
-.nav-bar div h3{
-  color: rgb(208, 0, 0);
-  transition: 0.5s;
+.nav-bar .items,.login{
+  margin-top: 15px;
 }
-.nav-bar div h3:hover{
-  transform: scale(1.2);
-  color: #ffb9b9;
-}
-.nav-bar a{
-  text-decoration: none;
-  color: aliceblue;
+.nav-bar .items{
   display: flex;
-  align-items: center;
-  transition: 1s;
+  gap: 5em;
 }
-.nav-bar a:hover{
-  transform: scale(1.2);
+.nav-bar .items h3:hover{
+  text-shadow: 0 0 2px brown;
+  cursor: pointer;
 }
-.nav-bar .login .btn-login{
-  padding: 5px 20px;
-  font-weight: 500;
+.nav-bar .items a{
+  margin-top: 4px;
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: 600;
+}
+.nav-bar .login{
+  margin-right: 20px;
+}
+.login .btn-login{
+  padding: 5px 25px;
+  border-radius:2px;
   border: 0.1px solid black;
+  font-weight:600;
+  background-color:black;
+  color: aliceblue;
+ }
+.nav-bar .login button:hover{
+  background: linear-gradient(
+    20deg,
+    #221111f4 0%,
+    #630202 35%,
+    #3c0b0b 70%
+  );
+  color: white;
 }
 
-/* info*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* imgs*/
+.img-container{
+  margin-top:1px;
+  position:-webkit-sticky;
+}
 .img-container img{
   width: 100%;
   height: 560px; 
@@ -50,7 +85,7 @@
   top: 50%;
   transform: translateY(-60%);
   background: transparent;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 200px 20px;
   border: none;
   cursor: pointer;
@@ -69,4 +104,12 @@
 
 .next-arrow {
   right: 10px;
+}
+
+/* gym info*/
+.gym-info-content{
+  width: 100%;
+  height: 500px;
+  border: 1px solid white;
+  margin: 10px 0px;
 }
