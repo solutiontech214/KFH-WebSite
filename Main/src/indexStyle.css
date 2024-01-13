@@ -5,30 +5,34 @@
 body::-webkit-scrollbar{
   display: none;
 }
-
 /* Navigation Styling */
 .nav-bar{
   background-color: rgb(0, 0, 0);
   display:flex;
   font-weight: 400;
+  height: 80px;
   justify-content: space-between;
-  width: 100%;
-  height: auto;
-  box-shadow: 0 0 2px black;
-}
-.nav-bar .items,.login{
-  margin-top: 15px;
+  align-items: center;
 }
 .nav-bar .items{
   display: flex;
+  align-items: center;
   gap: 5em;
 }
-.nav-bar .items h3:hover{
+.items div:nth-child(1){
+  display: block;
+  margin: 0px;
+}
+.nav-bar .items div:nth-child(1) img{
+  font-size: 2em;
+  transition: all 0.5s ease-in;
+  image-resolution: 720dpi;
+}
+.nav-bar .items div:nth-child(1) img:hover{
   text-shadow: 0 0 4px brown;
   cursor: pointer;
-}
-.nav-bar .items div,a{
-  margin-bottom:20px;
+  font-weight: 600;
+  transform: scale(1.2)
 }
 .nav-bar .items a{
   text-decoration: none;
@@ -36,7 +40,6 @@ body::-webkit-scrollbar{
   font-size: 18px;
   font-weight: 600;
   text-decoration: underline 1.5px rgba(255, 255, 255, 0);
-  transition: text-decoration-color 300ms;
 }
 
 /* Dropdown menu Styling */
@@ -48,7 +51,7 @@ body::-webkit-scrollbar{
   display: none;
   position: absolute;
   background-color: #f1f1f1;
-  min-width: 160px;
+  min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -62,12 +65,9 @@ body::-webkit-scrollbar{
 }
 .dropdown-content a:hover {
   background-color: #ddd;
-  box-shadow: 0 0 1px black;
+  box-shadow: 0 0 10px black;
 }
-.dropdown .dropbtn span{
-  transform: rotate(90deg);
-}
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content{
   display: block
 }
 .dropdown .dropdown-content:hover{
@@ -97,8 +97,6 @@ body::-webkit-scrollbar{
   );
   color: white;
 }
-
-
 
 
 
@@ -145,8 +143,35 @@ body::-webkit-scrollbar{
 
 
 /* gym info*/
+main{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
 .gym-info-content{
-  height: 500px;
-  border: 1px solid white;
-  margin: 10px 20px;
+  height: 700px;
+  background-color: #171313;
+  border: 0.1px solid rgb(255, 255, 255);
+  color: white;
+  font-size: 20px ;
+  font-weight: 500;
+  padding: 10px 10px;
+  border-radius: 10px;
+  margin: 5px 5px;
+  display: flex;
+  justify-content:flex-end;
+  align-items: end;
+}
+main div:nth-child(1){
+  width: 25%;
+}
+main div:nth-child(2){
+  width: 25%;
+}
+
+main div:nth-child(3){
+  width: 25%;
+}
+main div:nth-child(4){
+  width: 25%;
 }
