@@ -1,6 +1,4 @@
-body::-webkit-scrollbar{
-    display: none;
-}
+
 body{
     display: flex;
     justify-content: center;
@@ -13,7 +11,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 600px;
+    width: 560px;
     height: 90vh;
     border-radius: 20px;
     color: rgb(0, 0, 0); 
@@ -26,7 +24,7 @@ body{
 }
 .login span:nth-child(2){
     margin-top: 40px;
-    margin-left: -20vh;
+    /* margin-left: -20vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -37,11 +35,30 @@ body{
     width: 300px;
     height: 30px;
     background: transparent;
-    border: 0px solid;  
+    border: 0;  
+    border-bottom: 1px solid black;
     border-radius: 0px;
 }
+.login .email:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid brown;
+}
+.login span:nth-child(2) div i{
+    color: rgb(149, 22, 22);
+    position: absolute;
+    margin-left: -22px;
+    margin-top: 8px;
+}
+
+.login span:nth-child(3) a{
+    text-decoration: none;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 10px;
+}
 .login .btn-login{
-    margin-top: 6vh;
+    margin-top: 8vh;
     letter-spacing: 2px;
     width: 50%;
     height: 40px;
@@ -53,12 +70,18 @@ body{
 .login .btn-signup{
     margin-top: 20px;
     letter-spacing: 2px;
-    width: 50%;
+    width: 280px;
     height: 40px;
     font-size: 20px;
     font-family: "Rajdhani",sans-serif;
     font-weight: 600;
 }
+
+.login .signup-with i{
+    color: #000;
+    margin-left: 10px;
+}
+
 .preloader{
     background: #000 url("/Main/Images/loader.webp") no-repeat  center center;
     background-size: 30%;

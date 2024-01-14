@@ -2,9 +2,6 @@
   font-family: 'Rajdhani', sans-serif;
   letter-spacing: 1.5px;
 }
-body::-webkit-scrollbar{
-  display: none;
-}
 /* Navigation Styling */
 .nav-bar{
   background-color: rgb(0, 0, 0);
