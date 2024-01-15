@@ -12,33 +12,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <!-- preloader -->
   <div class="preloader" id="preLoader"></div>
 
-  <form>
-    <div class="login">
-        <span>
+
+  <!-- login form -->
+    <form class="login">
+        <span class="span1">
             <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
-            <h2>Login</h2><hr width="16%">
+            <h2>Login</h2>
         </span>
-        <span>
+        <span class="span2">
             <div>
                 <input type="email" id="email" class="email" placeholder="Email" required >
                 <i class="fa fa-envelope icon"></i>
             </div>
-        <br>
+            <br>
             <div>
-                <input type="password" id="password" class="email" placeholder="Password"  required>
-                <i class="fa fa-key icon"></i>
+                <input type="password" id="passwordInput" class="email" placeholder="Password" name="password" required>
+                <i class="fa-solid fa-eye eye" onclick=" togglePasswordVisibility()"></i>
             </div>
         </span>
-        <span>        
+
+        <!-- forget password -->
+        <span class="span3">        
             <a href="#">Forget Password?</a>
         </span>
         
+        <!-- buttons login and signup -->
         <button class="btn-login" type="submit">Login</button>
         <a href=""><button class="btn-signup" type="button">SignUp</button></a>
         <hr width="80%" style="margin-top: 2vh;">
 
+
+        <!-- sign up with -->
         <h4>Or SignUp With <i class="fa-solid fa-right-to-bracket"></i></h4>
         <span class="signup-with">
             <a href="#"><i class="fa fa-facebook"></i></a> 
@@ -46,19 +53,14 @@
             <a href="#"><i class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-google"></i></a>
         </span>
+        <!-- / sign up with -->
+
         <span class="copyright">
             <h3>@KANDHRES FITNESS HUB</h3>
         </span>
-    </div>
-  </form>
-   
+    </form>
 
-    <script>
-          let loader = document.getElementById("preLoader")
 
-window.addEventListener("load",()=>{
- loader.style.display = "none";
-});
-    </script>
+    <script src="form.js"></script>
 </body>
 </html>
