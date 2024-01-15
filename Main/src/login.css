@@ -23,10 +23,22 @@ body{
     backdrop-filter: blur(60px);
     box-shadow: 0 0 40px rgb(109, 64, 64);
 }
+.login  span:nth-child(1) i{
+    position: absolute;
+    margin-left: 36vh;
+    margin-top: 30px;
+    transform: scale(1.4);
+    color: rgb(169, 150, 150);
+}
 .login span h2{
     font-weight: 550;
     font-size: 40px;
     color: white;
+    margin-top: 20px;
+}
+.login span hr{
+    position: absolute;
+    margin-top: 2px;
 }
 .login span:nth-child(2){
     margin-top: 40px;
