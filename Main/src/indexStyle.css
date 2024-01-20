@@ -3,12 +3,20 @@
   letter-spacing: 1.5px;
 }
 
+body{
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+
+
 /* Navigation Styling */
 .nav-bar{
   background-color: rgb(0, 0, 0);
   display:flex;
   font-weight: 400;
-  height: 80px;
+  height: 60px;
   justify-content: space-between;
   align-items: center;
 }
@@ -141,37 +149,18 @@
 
 
 /* gym info*/
-main{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-evenly;
-}
-.gym-info-content{
-  height: 700px;
-  background-color: #171313;
-  border: 0.1px solid rgb(255, 255, 255);
-  color: white;
-  font-size: 20px ;
-  font-weight: 500;
-  padding: 10px 10px;
-  border-radius: 10px;
-  margin: 5px 5px;
-  display: flex;
-  justify-content:flex-end;
-  align-items: end;
-}
-main div:nth-child(1){
-  width: 25%;
-}
-main div:nth-child(2){
-  width: 25%;
-}
 
-main div:nth-child(3){
-  width: 25%;
-}
-main div:nth-child(4){
-  width: 25%;
+.gym-container{
+  width: 99%;
+  margin: 0px;
+  margin-left: 8px;
+  position: relative;
+  background-color: #f1f1f1;
+  margin-top: 12px;
+  height: 80vh;
+  border-radius: 5px;
+  box-shadow: 0 0 4px black;
+  display: flex;
 }
 
 .preloader{
