@@ -23,7 +23,7 @@ body{
 .nav-bar .items{
   display: flex;
   align-items: center;
-  gap: 5em;
+  gap: 7em;
 }
 .items div:nth-child(1){
   display: block;
@@ -156,11 +156,15 @@ body{
   margin-left: 8px;
   position: relative;
   background-color: #f1f1f1;
-  margin-top: 12px;
+  margin-top: 18px;
   height: 80vh;
   border-radius: 5px;
-  box-shadow: 0 0 4px black;
+  box-shadow: 0 0 2px black;
   display: flex;
+  transition: 0.6s;
+}
+.gym-container:hover{
+  box-shadow: 0 0 10px black;
 }
 
 .preloader{
