@@ -1,8 +1,8 @@
 
 let loader = document.getElementById("preLoader")
 
-window.addEventListener("load",()=>{
- loader.style.display = "none";
+window.addEventListener("load", () => {
+  loader.style.display = "none";
 });
 
 function togglePasswordVisibility() {
