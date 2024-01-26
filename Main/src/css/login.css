@@ -1,16 +1,14 @@
-
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     letter-spacing: 2px;
-    font-family: "Rajdhani",sans-serif;
-    background-color: rgb(255, 244, 240);
+    font-family: "Rajdhani", sans-serif;
 }
 
 /* preloader */
-.preloader{
-    background: #000 url("../../Images/loader.gif") no-repeat  center center;
+.preloader {
+    background: #000 url("../../Images/loader.gif") no-repeat center center;
     background-size: 30%;
     width: 100%;
     height: 100vh;
@@ -20,29 +18,29 @@ body{
 
 
 /* login form  root*/
-.login{
-    margin-top: 30px;
+.login {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 540px;
-    height: 90vh;
+    height: 650px;
     border-radius: 5px;
     background-color: rgb(249, 244, 240);
-    color: rgb(0, 0, 0); 
+    color: rgb(0, 0, 0);
     box-shadow: 0 0 6px rgb(37, 35, 35);
 }
 
-
 /* span 1 */
-.login  .span1 i{
+.login .span1 i {
     position: absolute;
-    margin-left: 36vh;
+    margin-left: 270px;
     margin-top: 30px;
     transform: scale(1.4);
     color: rgb(0, 0, 0);
 }
-.login .span1 h2{
+
+.login .span1 h2 {
     font-weight: 550;
     font-size: 40px;
     color: rgb(0, 0, 0);
@@ -50,30 +48,32 @@ body{
 
 
 /* span 2 */
-.login .span2{
+.login .span2 {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.span2 .email{
+
+.span2 .email {
     background-color: gray;
     color: rgb(0, 0, 0);
     width: 300px;
     height: 30px;
     background: transparent;
-    border: 0;  
+    border: 0;
     border-bottom: 2px solid black;
     border-radius: 0px;
 }
 
-.span2 .email:focus{
+.span2 .email:focus {
     border: none;
     background: none;
     outline: none;
     border-bottom: 2px solid rgb(255, 0, 0);
 }
-.span2 div i{
+
+.span2 div i {
     color: rgb(19, 19, 19);
     position: absolute;
     margin-left: -22px;
@@ -81,7 +81,7 @@ body{
 }
 
 /* span 3 */
-.span3 a{
+.span3 a {
     text-decoration: none;
     position: absolute;
     margin-top: 14px;
@@ -89,47 +89,47 @@ body{
     color: rgb(1, 27, 115);
 }
 
-.span3 a:active{
+.span3 a:active {
     text-decoration: underline;
 }
 
 
 /* buttons login and signup */
-.btn{
-    margin-top: 8vh;
+.btn {
+    margin-top: 50px;
     letter-spacing: 2px;
     width: 276px;
     padding: 8px 20px;
     font-size: 24px;
-    font-family: "Rajdhani",sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-weight: 500;
     border: 0px;
     border-radius: 4px;
     background-color: brown;
     color: rgb(0, 0, 0);
 }
-#btn-signup{
+
+#btn-signup {
     margin-top: 20px;
     width: 276px;
 }
-.btn:hover{
+
+.btn:hover {
     background: #000;
     color: white;
 }
 
-
-.gym-name{
+.gym-name {
     width: 100%;
-    margin-top: 40px;
+    margin-top: 90px;
     height: auto;
     display: flex;
     justify-content: center;
-    align-items: end;
+    /* align-items: end; */
     background: #580c0c;
 }
-.gym-name h3{
+
+.gym-name h3 {
     padding: 16px 16px;
     color: #fff;
 }
-
- 
