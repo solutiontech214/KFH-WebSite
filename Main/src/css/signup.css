@@ -24,7 +24,7 @@ body{
 }
 .signup span:nth-child(1) i{
     position: absolute;
-    margin-left: 71vh;
+    margin-left: 500px;
     margin-top: 20px;
     color: black;
 }
