@@ -80,7 +80,7 @@
       <img src="../../Images/stringth.JPG" alt="" class="stringth">
       <span>Strength Training<p>A well equipped strength training <br> and free workout section for specialized training.</p>
         <div>
-          <a href="../html/login.html"><button type="button" class="spa-btn">More info..</button></a>
+          <a href="../html/login.php"><button type="button" class="spa-btn">More info..</button></a>
         </div>
       </span>
     </div>
