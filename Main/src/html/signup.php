@@ -8,6 +8,7 @@ if(isset($_POST['submit']))
     $c_pass= $_POST['c_pass'];
 
     //$is_account_exists($email);
+    
 
   if($a_pass!==$c_pass)
   {
