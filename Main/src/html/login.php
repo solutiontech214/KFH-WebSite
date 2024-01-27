@@ -1,9 +1,10 @@
 <?php 
 if(isset($_POST['submit']))
 {
-    echo $_POST['email'];
-    echo $_POST['pass'];
+    $email= $_POST['email'];
+    $pass= $_POST['pass'];
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -44,7 +45,7 @@ if(isset($_POST['submit']))
 
         <!-- forget password -->
         <span class="span3">        
-            <a href="#">Forget Password?</a>
+            <a href="forgot_pass.php">Forget Password?</a>
         </span>
         
         <!-- buttons login and signup -->

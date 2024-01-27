@@ -30,15 +30,15 @@
         <div class="dropdown">
           <a href="#" class="dropbtn dropdown-toggle">Srevices</a>
           <div class="dropdown-content">
-            <a href="#">Cardio center</a>
-            <a href="#">Strength Training</a>
-            <a href="#">Group Classes</a>
-            <a href="#">Spa</a>
-            <a href="#">Personal Training</a>
+            <a href="cardio.php">Cardio center</a>
+            <a href="strength_training.php">Strength Training</a>
+            <a href="group_class.php">Group Classes</a>
+            <a href="spa.php">Spa</a>
+            <a href="personal_training.php">Personal Training</a>
           </div>
         </div>
-        <a href="#">AboutUs</a>
-        <a href="">Contact</a>
+        <a href="about.php">AboutUs</a>
+        <a href="contact.php">Contact</a>
       </div>
       <div class="login">
         <a href="../html/login.php"><button class="btn-login" id="login" type="button">Login</button></a>

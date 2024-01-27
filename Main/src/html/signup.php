@@ -1,3 +1,26 @@
+<?php
+if(isset($_POST['submit']))
+{
+    $f_name= $_POST['f_name'];
+    $l_name= $_POST['l_name'];
+    $email= $_POST['email'];
+    $a_pass= $_POST['a_pass'];
+    $c_pass= $_POST['c_pass'];
+
+    //$is_account_exists($email);
+
+  if($a_pass!==$c_pass)
+  {
+    echo "Password isn't Matches..!!";
+  }
+  else if(strlen($a_pass)<8)
+  {
+    echo "Password length must be greater than 8 character.!!";
+  }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,39 +43,39 @@
     <div class="preloader" id="preLoader"></div>
     
     <div id="perent">
-        <form action="#" class="signup">
+        <form action="#" class="signup" method="POST">
             <span>
-                <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
+                <a href="index.php"><i class="fa-solid fa-xmark"></i></a>
                 <h1>SignUp</h1>
             </span>
             <div class="inputs">
                 <span>
-                    <input type="text" placeholder="First Name" required>
+                    <input type="text" name="f_name" placeholder="First Name" required>
                     <i class="fa-solid fa-user"></i>
                 </span>
                 <span>
-                    <input type="text" placeholder="Last Name" required>
+                    <input type="text" name="l_name" placeholder="Last Name" required>
                     <i class="fa-solid fa-user"></i>
                 </span>
                 <span>
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" name="email" placeholder="Email" required>
                     <i class="fa fa-envelope icon"></i>
                 </span>
                 <span>
-                    <input type="password" placeholder="Password" id="passwordInput" required>
+                    <input type="password" name="a_pass" placeholder="Password" id="passwordInput" required>
                     <i class="fa-solid fa-eye eye" onclick=" togglePassword()" style="cursor: pointer;"></i>
                 </span>
                 <span>
-                    <input type="password" placeholder="Confirm Password" id="recheckpassword" required>
+                    <input type="password" name="c_pass" placeholder="Confirm Password" id="recheckpassword" required>
                     <i class="fa-solid fa-lock"></i>
                 </span>
             </div>
             <span class="haveaccount">
-                <a href="login.html">Already have an account</a>
+                <a href="login.php">Already have an account</a>
                 <i class="fa-solid fa-right-to-bracket"></i>
             </span>
             <div class="signup-btn">
-                <button type="submit">SignUp</button>
+                <button type="submit" name="submit">SignUp</button>
             </div>
             <hr width="90%" style="color: black; margin-top: 34px;">
             <div class="gym-name">
@@ -76,11 +99,11 @@
             }
         }
 
-        // let loader = document.getElementById("preLoader")
+         let loader = document.getElementById("preLoader")
 
-        // window.addEventListener("load", () => {
-        //     loader.style.display = "none";
-        // });
+         window.addEventListener("load", () => {
+             loader.style.display = "none";
+         });
 
     </script>
 </body>
