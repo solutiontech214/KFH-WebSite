@@ -41,7 +41,7 @@
         <a href="">Contact</a>
       </div>
       <div class="login">
-        <a href="../html/login.html"><button class="btn-login" id="login" type="button">Login</button></a>
+        <a href="../html/login.php"><button class="btn-login" id="login" type="button">Login</button></a>
       </div>
     </nav>
   </header>
@@ -64,7 +64,7 @@
         Cardio Center
         <p>Cardio section for weight loss, <br>to improve stamina and <br> cardiovascular health</p>
         <div>
-          <a href="../html/login.html"><button type="button" class="spa-btn">More info..</button></a>
+          <a href="../html/login.php"><button type="button" class="spa-btn">More info..</button></a>
         </div>
       </span>
     </div>
@@ -72,7 +72,7 @@
       <img src="../../Images/spa.jpg" alt="" srcset="" class="spa">
       <span>Spa <p>Relaxing spa that will rejuvinate your body and mind <br> which helps you relax peacefully.</p>
         <div>
-          <a href="../html/login.html"><button type="button" class="spa-btn">More info..</button></a>
+          <a href="../html/login.php"><button type="button" class="spa-btn">More info..</button></a>
         </div>
       </span>
     </div>

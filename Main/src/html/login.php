@@ -1,3 +1,11 @@
+<?php 
+if(isset($_POST['submit']))
+{
+    echo $_POST['email'];
+    echo $_POST['pass'];
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,19 +25,19 @@
   <div class="preloader" id="preLoader"></div>
 
   <!-- login form -->
-    <form  action="#" class="login">
+    <form  action="login.php" class="login" method="POST">
         <span class="span1">
-            <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
+            <a href="index.php"><i class="fa-solid fa-xmark"></i></a>
             <h2>Login</h2>
         </span>
         <span class="span2">
             <div>
-                <input type="email" id="email" class="email" placeholder="Email" required >
+                <input type="email" id="email" class="email" name="email" placeholder="Email" required >
                 <i class="fa fa-envelope icon"></i>
             </div>
             <br>
             <div>
-                <input type="password" id="passwordInput" class="email" placeholder="Password" name="password" required>
+                <input type="password" id="passwordInput" name="pass" class="email" placeholder="Password" name="password" required>
                 <i class="fa-solid fa-eye eye" onclick=" togglePasswordVisibility()" style="cursor: pointer;"></i>
             </div>
         </span>
@@ -40,8 +48,8 @@
         </span>
         
         <!-- buttons login and signup -->
-        <button class="btn" type="submit" id="btn-login">Login</button>
-        <a href="signup.html"><button class="btn" type="button" id="btn-signup">SignUp</button></a>
+        <button class="btn" type="submit" name="submit" id="btn-login">Login</button>
+        <a href="signup.php"><button class="btn" type="button" id="btn-signup">SignUp</button></a>
       
         <hr width="84%" style="margin-top: 20px;">
 
