@@ -1,14 +1,17 @@
 <?php
+
+
+
 if(isset($_POST['submit']))
 {
-    $f_name=$_POST['f_name'];
-    $l_name=$_POST['l_name'];
-   $email=$_POST['email'];
-    $a_pass=$_POST['a_pass'];
+     $f_name=$_POST['f_name'];
+   $l_name=$_POST['l_name'];
+  $email=$_POST['email'];
+   $a_pass=$_POST['a_pass'];
     $c_pass=$_POST['c_pass'];
-   
 
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +35,7 @@ if(isset($_POST['submit']))
     <div class="preloader" id="preLoader"></div>
     
     <div id="perent">
-        <form action="#" class="signup" method="POST">
+        <form  class="signup" method="POST">
             <span>
                 <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
                 <h1>SignUp</h1>
@@ -42,7 +45,7 @@ if(isset($_POST['submit']))
                     <input type="text" placeholder="First Name" name="f_name"required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
-                        <!-- error --><strong><?php echo $f_name ?></strong>
+                        <!-- error --><strong></strong>
                     </div>
                 </span>
                 <span>
@@ -64,7 +67,8 @@ if(isset($_POST['submit']))
                     <i class="fa-solid fa-eye eye" onclick=" togglePassword()" style="cursor: pointer;"></i>
                     <div class="error-msg">
                         <!-- error -->
-                        <!-- hello -->
+                        
+                        <strong><label><?php if(isset($_POST['submit']) && strlen($_POST['f_name'])<8){ echo "Password must be greater than 8 !!";}?> </label></strong>
                     </div>
                 </span>
                 <span>
@@ -72,6 +76,9 @@ if(isset($_POST['submit']))
                     <i class="fa-solid fa-lock"></i>
                     <div class="error-msg">
                         <!-- error -->
+                        <strong><label><?php if(isset($_POST['submit']) && $_POST['a_pass']!=$_POST['c_pass']){ echo "Password isn't matches.!!";}
+            
+                        ?> </label></strong>
                     </div>
                 </span>
             </div>
