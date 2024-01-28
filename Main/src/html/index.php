@@ -16,34 +16,37 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body style="background:whitesmoke;">
+<body style="background-color: #929292;">
 
   <div class="preloader" id="preLoader"></div>
-
-  <nav class="nav-bar">
-    <div style="margin-left: 10px;">
-      <img src="../../Images/KFH.png" width="120px" height="50px" class="logo">
-    </div>
-    <div class="items">
-      <a href="#">Home</a>
-      <div class="dropdown">
-        <a href="#" class="dropbtn dropdown-toggle">Srevices</a>
-        <div class="dropdown-content">
-          <a href="#">Cardio center</a>
-          <a href="#">Strength Training</a>
-          <a href="#">Group Classes</a>
-          <a href="#">Spa</a>
-          <a href="#">Personal Training</a>
+  
+  <header>
+    <nav class="nav-bar">
+      <div class="items">
+        <div style="margin-left: 10px;">
+          <img src="../../Images/KFH.png" width="120px" height="50px" class="logo">
         </div>
+        <a href="#">Home</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn dropdown-toggle">Srevices</a>
+          <div class="dropdown-content">
+            <a href="#">Cardio center</a>
+            <a href="#">Strength Training</a>
+            <a href="#">Group Classes</a>
+            <a href="#">Spa</a>
+            <a href="#">Personal Training</a>
+          </div>
+        </div>
+        <a href="#">AboutUs</a>
+        <a href="">Contact</a>
       </div>
-      <a href="#">AboutUs</a>
-      <a href="">Contact</a>
-    </div>
-    <div class="login">
-      <a href="../html/login.html"><button class="btn-login" id="login" type="button">Login</button></a>
-    </div>
-  </nav>
+      <div class="login">
+        <a href="../html/login.html"><button class="btn-login" id="login" type="button">Login</button></a>
+      </div>
+    </nav>
+  </header>
 
+  <!-- IMage container -->
   <div class="img-container">
     <img class="mySlides" src="../../Images/gym4.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym2.jpg" alt="gym">
@@ -53,15 +56,35 @@
     <button class="next-arrow" onclick="plusDivs(+1)">&#10095;</button>
   </div>
 
-  <div class="containers">
-    <div class="container1">
-      <img src="../../Images/img4.webp" alt="cardio" class="cardio">
-      <img src="../../Images/img3.webp" alt="">
-      <img src="../../Images/img5.webp" alt="">
-      <img src="../../Images/img2.webp" alt="">
-      <img src="../../Images/img1.webp" alt="">
+  <!-- gym-info-Container -->
+  <span class="containers">
+    <div class="gym-container1">
+      <img src="../../Images/cardio2.JPG" alt="cardio" class="cardio">
+      <span>
+        Cardio Center
+        <p>Cardio section for weight loss, <br>to improve stamina and <br> cardiovascular health</p>
+        <div>
+          <a href="../html/login.html"><button type="button" class="spa-btn">More info..</button></a>
+        </div>
+      </span>
     </div>
-  </div>
+    <div class="gym-container2">
+      <img src="../../Images/spa.jpg" alt="" srcset="" class="spa">
+      <span>Spa <p>Relaxing spa that will rejuvinate your body and mind <br> which helps you relax peacefully.</p>
+        <div>
+          <a href="../html/login.html"><button type="button" class="spa-btn">More info..</button></a>
+        </div>
+      </span>
+    </div>
+    <div class="gym-container3">
+      <img src="../../Images/stringth.JPG" alt="" class="stringth">
+      <span>Strength Training<p>A well equipped strength training <br> and free workout section for specialized training.</p>
+        <div>
+          <a href="../html/login.html"><button type="button" class="spa-btn">More info..</button></a>
+        </div>
+      </span>
+    </div>
+  </span>
 
   <div class="get_more">
     <span>Click on <a href="">services</a> for more...</span>
@@ -72,12 +95,13 @@
     <span>in the most <h3>Luxurious</h3> gym in town.</span>
   </div>
 
+  <!-- Footer Navigation -->
   <footer class="nav-footer">
     <div class="follow_us">
       <h3>Follow us on</h3>
       <div class="insta">
         <i class="fa-brands fa-square-instagram fa-3x" id="insta"></i>
-        <a href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link">Instagram</a>
+        <a href="https://www.instagram.com/kfh_pandharpur?igsh=ZWI2YzEzYmMxYg==">Instagram</a>
       </div>
       <div class="facebook">
         <i class="fa-brands fa-facebook-f fa-2x" style="color: #316FF6;"></i>
