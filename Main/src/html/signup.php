@@ -10,10 +10,6 @@ if(isset($_POST['submit']))
 
 }
 ?>
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +42,7 @@ if(isset($_POST['submit']))
                     <input type="text" placeholder="First Name" name="f_name"required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
-                        <!-- error --><?php echo $f_name ?>
+                        <!-- error --><strong><?php echo $f_name ?></strong>
                     </div>
                 </span>
                 <span>
