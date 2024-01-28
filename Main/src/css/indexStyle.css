@@ -2,15 +2,9 @@
   font-family: 'Rajdhani', sans-serif;
   letter-spacing: 1.5px;
 }
-
-body {
-  margin: 0px;
-  padding: 0px;
+body{
   overflow-x: hidden;
 }
-
-/* preloader */
-
 .preloader {
   background: #efe4d3 url("../../Images/loader.gif") no-repeat center center;
   background-size: 20%;
@@ -20,29 +14,25 @@ body {
   z-index: 100;
 }
 
-/* Navigation Styling */
 .nav-bar {
-  background-color: #000000;
   display: flex;
-  font-weight: 400;
-  height: 80px;
+  background: transparent;
+  width: 100%;
+  height: 100px;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
 }
 
 .nav-bar .items {
   display: flex;
   align-items: center;
-  gap: 3em;
-}
-
-.items div:nth-child(1) {
-  display: block;
+  gap: 100px;
 }
 
 .logo {
+  margin-left: 20px;
   transition: all 0.5s ease-in;
-  image-resolution: 1024dpi;
 }
 
 .logo:hover {
@@ -51,13 +41,12 @@ body {
 
 .nav-bar .items a {
   text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 18px;
-  font-weight: 500;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: 550;
   text-decoration: underline 1.5px rgba(255, 255, 255, 0);
 }
 
-/* Dropdown menu Styling */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -72,7 +61,7 @@ body {
   z-index: 1;
 }
 
-.dropdown-content a{
+.dropdown-content a {
   color: black !important;
   margin: 12px 6px;
   padding: 10px 10px;
@@ -80,7 +69,7 @@ body {
   display: block;
   font-weight: 500 !important;
   transition: 0.5s ease;
-  transform-style:flat;
+  transform-style: flat;
 
 }
 
@@ -98,10 +87,8 @@ body {
   cursor: pointer;
 }
 
-/* login and Signup */
 .nav-bar .login {
   margin-right: 40px;
-  display: block;
   gap: 10px;
 }
 
@@ -110,46 +97,45 @@ body {
   border-radius: 5px;
   border: 0px;
   font-weight: 500;
-  background-color: black;
   color: rgb(255, 255, 255);
   background-color: brown;
 }
 
 .nav-bar .login button:hover {
-  background-color: white;
-  color: black;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
-/* imgs*/
 .img-container {
   position: -webkit-sticky;
 }
 
 .img-container img {
   width: 100%;
-  height: 90vh;
+  height: 560px;
 }
 
 .prev-arrow,
 .next-arrow {
   position: absolute;
   border-radius: 2px;
-  top: 60%;
+  top: 35%;
   transform: translateY(-60%);
   background: transparent;
   color: rgb(255, 255, 255);
-  padding: 200px 20px;
+  padding: 10px 16px;
   border: none;
+  border-radius: 100%;
   cursor: pointer;
   transition: 0.6s ease-in-out;
 }
 
 .next-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: brown;
 }
 
 .prev-arrow:hover {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: brown;
 }
 
 .prev-arrow {
@@ -160,106 +146,36 @@ body {
   right: 10px;
 }
 
-/* gym info*/
 .containers {
-  display: block;
-}
-
-.gym-container1,
-.gym-container2,
-.gym-container3 {
-  width: 99%;
-  margin: 0px;
-  margin-left: 7px;
-  position: relative;
-  background-color: #f1f1f1;
-  margin-top: 18px;
-  height: 80vh;
-  border-radius: 5px;
-  box-shadow: 0 0 2px black;
-  display: flex;
-  transition: 0.5s ease-in;
-  transition-timing-function: linear;
-  transition-delay: 0.001ms;
-}
-
-.gym-container1:hover,
-.gym-container2:hover,
-.gym-container3:hover {
-  box-shadow: 0 0 20px rgb(0, 0, 0);
-  transform: scale(1.01);
-}
-
-.spa {
-  width: 1504px;
-  height: 80vh;
-  position: relative;
-  border-radius: 5px;
-}
-
-.containers span {
-  position: absolute;
-  font-size: 50px;
-  font-weight: 500;
-  margin-left: 2ch;
-  margin-top: 10px;
-  color: #000000;
-}
-
-.containers .gym-container1 {
-  justify-content: flex-end;
-  align-items: start;
-  text-align: right;
-}
-
-.gym-container1 span {
   margin-top: 20px;
-  margin-right: 5ch;
-}
-
-.containers span p {
-  font-size: 20px;
-  color: #000000;
-}
-
-.containers span div .spa-btn {
-  font-size: 30px;
-  background-color: #000000;
-  color: white;
-  border: 0px solid black;
-  border-radius: 5px;
-  padding: 6px 20px;
-}
-
-.containers span div .spa-btn:hover {
-  background-color: white;
-  color: black;
+  display: flex;
+  height: 600px;
   box-shadow: 0 0 6px black;
-  transform: scale(1.002);
+  background-color: rgb(202, 202, 202);
+  margin: 10px 0px;
 }
 
-.cardio {
+.container1 {
+  display: flex;
+  justify-content: start;
+  align-items: center;
   width: 100%;
-  height: 80vh;
-  position: relative;
-  border-radius: 5px;
 }
 
-.stringth{
-  width: 100%;
-  height: 80vh;
-  position: relative;
-  border-radius: 5px;
+.container1 img {
+  width: 10%;
+  height: 100%;
+  box-shadow: 0 0 4px black;
+  transition: all 0.6s ease-in-out;
+  border-radius: 6px;
+  margin: 1px;
 }
 
-.gym-container3 span{
-  color: white;
-}
-.gym-container3 p{
-  color: white !important;
+.container1 img:first-child {
+  width: 59.3%;
 }
 
-.get_more{
+.get_more {
   margin: 0px;
   margin-top: 2px;
   width: 100%;
@@ -270,11 +186,13 @@ body {
   align-items: center;
   font-size: 20px;
 }
-.get_more span a:hover{
+
+.get_more span a:hover {
   color: orangered;
   text-decoration: none;
 }
-.slogan{
+
+.slogan {
   width: 100%;
   height: 40vh;
   display: flex;
@@ -283,15 +201,18 @@ body {
   align-items: center;
   background: #505050;
 }
-.slogan h1{
+
+.slogan h1 {
   font-weight: 700;
   color: white;
 }
-.slogan h3{
+
+.slogan h3 {
   color: rgb(142, 10, 28);
   align-items: baseline;
 }
-.slogan span{
+
+.slogan span {
   display: flex;
   flex-direction: row;
   align-items: baseline;
@@ -300,11 +221,6 @@ body {
   font-size: 18px;
 }
 
-
-
-
-
-/* footer started */
 .nav-footer {
   margin-top: 20px;
   width: 100%;
@@ -395,6 +311,6 @@ body {
   margin-left: -40px;
 }
 
-.logo-img{
+.logo-img {
   margin-top: 60px;
 }
