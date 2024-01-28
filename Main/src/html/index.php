@@ -40,7 +40,7 @@
       <a href="">Contact</a>
     </div>
     <div class="login">
-      <a href="../html/login.html"><button class="btn-login" id="login" type="button">Login</button></a>
+      <a href="../html/login.php"><button class="btn-login" id="login" type="button">Login</button></a>
     </div>
   </nav>
 
