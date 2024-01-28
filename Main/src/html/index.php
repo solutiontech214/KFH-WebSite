@@ -78,11 +78,11 @@
       <h3>Follow us on</h3>
       <div class="insta">
         <i class="fa-brands fa-square-instagram fa-3x" id="insta"></i>
-        <a href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link">Instagram</a>
+        <a style="text-decoration:none;"href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link">Instagram</a>
       </div>
       <div class="facebook">
         <i class="fa-brands fa-facebook-f fa-2x" style="color: #316FF6;"></i>
-        <a href="https://www.facebook.com/KandreFitnessHub/">facebook</a>
+        <a style="text-decoration:none;" href="https://www.facebook.com/KandreFitnessHub/">facebook</a>
       </div>
     </div>
     <div class="logo-img">
