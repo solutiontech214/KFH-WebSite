@@ -72,6 +72,7 @@
     <span>in the most <h3>Luxurious</h3> gym in town.</span>
   </div>
 
+
   <footer class="nav-footer">
     <div class="follow_us">
       <h3>Follow us on</h3>
