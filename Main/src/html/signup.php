@@ -1,7 +1,5 @@
 <?php
 
-
-
 if(isset($_POST['submit']))
 {
      $f_name=$_POST['f_name'];
@@ -45,11 +43,7 @@ if(isset($_POST['submit']))
                     <input type="text" placeholder="First Name" name="f_name"required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
-<<<<<<< Updated upstream
-                        <!-- error --><strong></strong>
-=======
-                        <!-- error --><strong><?php echo "samarth" ?></strong>
->>>>>>> Stashed changes
+                        <!-- error -->
                     </div>
                 </span>
                 <span>
