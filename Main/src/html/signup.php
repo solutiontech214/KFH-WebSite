@@ -1,3 +1,19 @@
+<?php
+if(isset($_POST['submit']))
+{
+    $f_name=$_POST['f_name'];
+    $l_name=$_POST['l_name'];
+   $email=$_POST['email'];
+    $a_pass=$_POST['a_pass'];
+    $c_pass=$_POST['c_pass'];
+   
+
+}
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,35 +36,35 @@
     <div class="preloader" id="preLoader"></div>
     
     <div id="perent">
-        <form action="#" class="signup">
+        <form action="#" class="signup" method="POST">
             <span>
                 <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
                 <h1>SignUp</h1>
             </span>
             <div class="inputs">
                 <span>
-                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="First Name" name="f_name"required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
-
+                        <!-- error --><?php echo $f_name ?>
                     </div>
                 </span>
                 <span>
-                    <input type="text" placeholder="Last Name" required>
+                    <input type="text" placeholder="Last Name" name="l_name"  required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
-
+                    <!-- error -->
                     </div>
                 </span>
                 <span>
-                    <input type="email" placeholder="Email" required>
+                    <input type="email" placeholder="Email" name="email" required>
                     <i class="fa fa-envelope icon"></i>
                     <div class="error-msg">
                         <!-- error -->
                     </div>
                 </span>
                 <span>
-                    <input type="password" placeholder="Password" id="passwordInput" required>
+                    <input type="password" placeholder="Password" name="a_pass" id="passwordInput" required>
                     <i class="fa-solid fa-eye eye" onclick=" togglePassword()" style="cursor: pointer;"></i>
                     <div class="error-msg">
                         <!-- error -->
@@ -56,7 +72,7 @@
                     </div>
                 </span>
                 <span>
-                    <input type="password" placeholder="Confirm Password" id="recheckpassword" required>
+                    <input type="password" placeholder="Confirm Password" name="c_pass"id="recheckpassword" required>
                     <i class="fa-solid fa-lock"></i>
                     <div class="error-msg">
                         <!-- error -->
@@ -64,11 +80,11 @@
                 </span>
             </div>
             <span class="haveaccount">
-                <a href="login.html">Already have an account</a>
+                <a href="login.php">Already have an account</a>
                 <i class="fa-solid fa-right-to-bracket"></i>
             </span>
             <div class="signup-btn">
-                <button type="submit">SignUp</button>
+                <button type="submit" name="submit">SignUp</button>
             </div>
             <hr width="90%" style="color: black; margin-top: 34px;">
             <div class="gym-name">
