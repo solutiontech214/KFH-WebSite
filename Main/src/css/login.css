@@ -126,11 +126,10 @@ body {
 
 .gym-name {
     width: 100%;
-    margin-top: 90px;
+    margin-top: 60px;
     height: auto;
     display: flex;
     justify-content: center;
-    /* align-items: end; */
     background: #580c0c;
 }
 

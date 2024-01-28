@@ -37,7 +37,7 @@ if(isset($_POST['submit']))
     <div id="perent">
         <form  class="signup" method="POST">
             <span>
-                <a href="index.html"><i class="fa-solid fa-xmark"></i></a>
+                <a href="index.php"><i class="fa-solid fa-xmark"></i></a>
                 <h1>SignUp</h1>
             </span>
             <div class="inputs">
@@ -45,7 +45,11 @@ if(isset($_POST['submit']))
                     <input type="text" placeholder="First Name" name="f_name"required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
+<<<<<<< Updated upstream
                         <!-- error --><strong></strong>
+=======
+                        <!-- error --><strong><?php echo "samarth" ?></strong>
+>>>>>>> Stashed changes
                     </div>
                 </span>
                 <span>
