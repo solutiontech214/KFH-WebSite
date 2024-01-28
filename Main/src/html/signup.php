@@ -29,22 +29,38 @@
                 <span>
                     <input type="text" placeholder="First Name" required>
                     <i class="fa-solid fa-user"></i>
+                    <div class="error-msg">
+
+                    </div>
                 </span>
                 <span>
                     <input type="text" placeholder="Last Name" required>
                     <i class="fa-solid fa-user"></i>
+                    <div class="error-msg">
+
+                    </div>
                 </span>
                 <span>
                     <input type="email" placeholder="Email" required>
                     <i class="fa fa-envelope icon"></i>
+                    <div class="error-msg">
+                        <!-- error -->
+                    </div>
                 </span>
                 <span>
                     <input type="password" placeholder="Password" id="passwordInput" required>
                     <i class="fa-solid fa-eye eye" onclick=" togglePassword()" style="cursor: pointer;"></i>
+                    <div class="error-msg">
+                        <!-- error -->
+                        <!-- hello -->
+                    </div>
                 </span>
                 <span>
                     <input type="password" placeholder="Confirm Password" id="recheckpassword" required>
                     <i class="fa-solid fa-lock"></i>
+                    <div class="error-msg">
+                        <!-- error -->
+                    </div>
                 </span>
             </div>
             <span class="haveaccount">
@@ -76,11 +92,11 @@
             }
         }
 
-        // let loader = document.getElementById("preLoader")
+        let loader = document.getElementById("preLoader")
 
-        // window.addEventListener("load", () => {
-        //     loader.style.display = "none";
-        // });
+        window.addEventListener("load", () => {
+            loader.style.display = "none";
+        });
 
     </script>
 </body>
