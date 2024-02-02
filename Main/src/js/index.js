@@ -29,8 +29,10 @@ allImages.forEach(image => {
         allImages.forEach(otherImage => {
             if (otherImage !== image) {
                 otherImage.style.width = '10%';
+                otherImage.style.height = '25%';
             }
         });
-        image.style.width = '59.3%';
+        image.style.width = '70%';
+        image.style.height = '100%';
     });
 });

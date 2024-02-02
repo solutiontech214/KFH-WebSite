@@ -9,11 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body style="background:whitesmoke;">
@@ -33,7 +30,7 @@
           <a href="#">Strength Training</a>
           <a href="#">Group Classes</a>
           <a href="#">Spa</a>
-          <a href="#">Personal Training</a> 
+          <a href="#">Personal Training</a>
         </div>
       </div>
       <a href="#">AboutUs</a>
@@ -53,14 +50,100 @@
     <button class="next-arrow" onclick="plusDivs(+1)">&#10095;</button>
   </div>
 
-  <div class="containers">
-    <div class="container1">
-      <img src="../../Images/img4.webp" alt="cardio" class="cardio">
-      <img src="../../Images/img3.webp" alt="">
-      <img src="../../Images/img5.webp" alt="">
-      <img src="../../Images/img2.webp" alt="">
-      <img src="../../Images/img1.webp" alt="">
+
+
+
+
+
+
+  <div class="welcome">
+    <p><b>WELCOME <br> TO <br> KANDRE'S FITNESS HUB</b></p>
+  </div>
+
+
+
+
+
+
+
+
+  <div class="cont-info">
+    <div class="cont c1">
+      <span class="pic">
+        <img src="../../Images/cardio-cycle.jpg" alt="">
+      </span>
+      <span class="pic-info">
+        <h1><b>Equipments</b></h1>
+        <p><br>
+          <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
+        </p>
+      </span>
     </div>
+    <div class="cont c2">
+      <span class="pic-info">
+        <h1><b>Equipments</b></h1>
+        <p><br>
+          <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
+        </p>
+      </span>
+      <span class="pic">
+        <img src="../../Images/cardio-cycle.jpg" alt="">
+      </span>
+    </div>
+    <div class="cont c3">
+      <span class="pic">
+        <img src="../../Images/cardio-cycle.jpg" alt="">
+      </span>
+      <span class="pic-info">
+        <h1><b>Equipments</b></h1>
+        <p><br>
+          <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
+        </p>
+      </span>
+    </div>
+    <div class="cont c4">
+      <span class="pic-info">
+        <h1><b>Equipments</b></h1>
+        <p><br>
+          <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
+        </p>
+      </span>
+      <span class="pic">
+        <img src="../../Images/cardio-cycle.jpg" alt="">
+      </span>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="container1">
+    <img src="../../Images/img4.webp" alt="cardio">
+    <img src="../../Images/img3.webp" alt="">
+    <img src="../../Images/img2.webp" alt="" class="cardio">
+    <img src="../../Images/img5.webp" alt="">
+    <img src="../../Images/img1.webp" alt="">
   </div>
 
   <div class="get_more">
@@ -78,7 +161,7 @@
       <h3>Follow us on</h3>
       <div class="insta">
         <i class="fa-brands fa-square-instagram fa-3x" id="insta"></i>
-        <a style="text-decoration:none;"href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link">Instagram</a>
+        <a style="text-decoration:none;" href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link">Instagram</a>
       </div>
       <div class="facebook">
         <i class="fa-brands fa-facebook-f fa-2x" style="color: #316FF6;"></i>

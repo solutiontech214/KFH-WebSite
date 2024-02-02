@@ -61,7 +61,7 @@ if(isset($_POST['submit']))
         <hr width="84%" style="margin-top: 20px;">
 
         <span class="gym-name">
-            <h3>@KANDHRE'S FITNESS HUB</h3>
+            <h3>@KANDRE'S FITNESS HUB</h3>
         </span>
     </form>
 
