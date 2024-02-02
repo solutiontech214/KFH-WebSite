@@ -2,9 +2,11 @@
   font-family: 'Rajdhani', sans-serif;
   letter-spacing: 1.5px;
 }
-body{
+
+body {
   overflow-x: hidden;
 }
+
 .preloader {
   background: #efe4d3 url("../../Images/loader.gif") no-repeat center center;
   background-size: 20%;
@@ -24,10 +26,16 @@ body{
   position: absolute;
 }
 
-.nav-bar .items {
+.items {
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  gap: 100px;
+}
+
+.items>a,
+.dropdown>a {
+  margin-right: 60px;
 }
 
 .logo {
@@ -39,10 +47,11 @@ body{
   transform: scale(1.2);
 }
 
-.nav-bar .items a {
+.nav-bar .items>a,
+.dropdown>a {
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 550;
   text-decoration: underline 1.5px rgba(255, 255, 255, 0);
 }
@@ -62,15 +71,15 @@ body{
 }
 
 .dropdown-content a {
-  color: black !important;
-  margin: 12px 6px;
+  color: black;
+  margin: 10px 6px;
   padding: 10px 10px;
   text-decoration: none;
+  font-size: 18px;
   display: block;
-  font-weight: 500 !important;
-  transition: 0.5s ease;
-  transform-style: flat;
-
+  font-weight: 560;
+  transition: 0.3s ease-in-out;
+  transition-timing-function: linear;
 }
 
 .dropdown-content a:hover {
@@ -80,7 +89,7 @@ body{
 }
 
 .dropdown:hover .dropdown-content {
-  display: block
+  display: block;
 }
 
 .dropdown .dropdown-content:hover {
@@ -89,7 +98,6 @@ body{
 
 .nav-bar .login {
   margin-right: 40px;
-  gap: 10px;
 }
 
 .login .btn-login {
@@ -108,11 +116,12 @@ body{
 
 .img-container {
   position: -webkit-sticky;
+
 }
 
 .img-container img {
   width: 100%;
-  height: 560px;
+  height: 600px;
 }
 
 .prev-arrow,
@@ -146,65 +155,68 @@ body{
   right: 10px;
 }
 
-
-
-
-
-
-
-
-
-
-.welcome{
+.intro {
+  position: relative;
+  margin-top: -130px;
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
-.welcome p{
-  font-size: 60px;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
 }
 
+.intro img {
+  transition: all 0.6s ease-in-out;
+}
 
+.intro img:hover {
+  box-shadow: 0 0 5px black;
+  transform: translateY(-10px);
+}
 
-
-
-
-.cont-info{
+.cont-info {
   margin: 0px;
   height: fit-content;
   display: flex;
   flex-direction: column;
 }
-.cont-info .cont{
+
+.cont-info .cont {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 500px;
   background: whitesmoke;
   border: 0px solid black;
+  transition: all 1ms linear;
+  transition-delay: 0ms;
 }
- .pic{
+
+.cont-info .cont:hover {
+  background: rgb(213, 211, 211);
+}
+
+.pic {
   display: flex;
-  justify-content: center ;
+  justify-content: center;
   align-items: center;
   width: 50%;
   height: 100%;
 }
- .pic img{
+
+.pic img {
   width: 400px;
   height: 80%;
   position: relative;
   transition: all 0.6s ease-in-out;
 }
-.pic img:hover{
+
+.cont:hover img {
   box-shadow: 0 0 5px black;
   transform: scale(1.01);
   border-radius: 5px;
 }
- .pic-info{
+
+.pic-info {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -215,32 +227,11 @@ body{
   color: rgb(0, 0, 0);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container1 {
   display: flex;
   align-items: center;
   width: 100%;
   height: 600px;
-  margin: 10px 0px;
   background-color: rgb(52, 0, 0);
 }
 
@@ -256,33 +247,6 @@ body{
 .container1 .cardio {
   width: 70%;
   height: 100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-.get_more {
-  margin: 0px;
-  margin-top: 2px;
-  width: 100%;
-  height: 5vh;
-  background: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-}
-
-.get_more span a:hover {
-  color: orangered;
-  text-decoration: none;
 }
 
 .slogan {
@@ -315,7 +279,7 @@ body{
 }
 
 .nav-footer {
-  margin-top: 20px;
+  margin: 0px;
   width: 100%;
   height: 400px;
   background-color: #211f1f;

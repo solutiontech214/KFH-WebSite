@@ -50,22 +50,9 @@
     <button class="next-arrow" onclick="plusDivs(+1)">&#10095;</button>
   </div>
 
-
-
-
-
-
-
-  <div class="welcome">
-    <p><b>WELCOME <br> TO <br> KANDRE'S FITNESS HUB</b></p>
+  <div class="intro">
+    <img src="../../Images/KFH.png" alt="" height="200px">
   </div>
-
-
-
-
-
-
-
 
   <div class="cont-info">
     <div class="cont c1">
@@ -114,30 +101,6 @@
     </div>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="container1">
     <img src="../../Images/img4.webp" alt="cardio">
     <img src="../../Images/img3.webp" alt="">
@@ -146,15 +109,10 @@
     <img src="../../Images/img1.webp" alt="">
   </div>
 
-  <div class="get_more">
-    <span>Click on <a href="">services</a> for more...</span>
-  </div>
-
   <div class="slogan">
     <h1>Shape Your Body!</h1><br>
     <span>in the most <h3>Luxurious</h3> gym in town.</span>
   </div>
-
 
   <footer class="nav-footer">
     <div class="follow_us">
