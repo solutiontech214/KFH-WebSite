@@ -24,7 +24,7 @@
     <div class="items">
       <a href="#">Home</a>
       <div class="dropdown">
-        <a href="#" class="dropbtn dropdown-toggle">Srevices</a>
+        <a href="./service.php" class="dropbtn dropdown-toggle">Srevices</a>
         <div class="dropdown-content">
           <a href="#">Cardio center</a>
           <a href="#">Strength Training</a>

@@ -1,98 +1,117 @@
-body{
-    margin: 0px;
-    font-family: 'Rajdhani',sans-serif;
+body {
+  font-family: "Rajdhani", sans-serif !important;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0px;
+  background-color: #f4f4f4;
 }
 
-
-@media screen and (max-width:500px) {
-    body{
-        font-size: 100px;
-    }
+nav {
+  background-color: whitesmoke ;
+  display: flex;
+  height: 100px;
 }
-.navbar{
+
+.logo {
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo img {
+  margin-left: 40px;
+}
+
+.items {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: whitesmoke;
+}
+.items li:nth-child(1) a{
+    color: inherit;
+    text-decoration: none;
+}
+.items li:nth-child(1) a:hover{
+    cursor: pointer;
+    box-shadow: none;
+}
+.items li {
+  list-style-type: none;
+}
+
+.items  li a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  transition: all 0.4s ease-in-out;
+  padding: 10px 20px;
+}
+
+.items li a:hover {
+  box-shadow: 1px 6px 6px rgb(11, 2, 1);
+}
+
+.info{
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.head{
     width: 100%;
-    height: 80px;
-    display: flex;
-    flex-direction: row;   
-    justify-content: space-between;
-}
-.navbar div{
-    display: flex;
-    gap: 50px;
-}
-.navbar div .logo{
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10px;
 }
-.navbar #logo{
-    width: 120px;
-    height: 50px;
-    transition: 0.5s ease-in;
-}
-#logo:hover{
-    transform: scale(1.2);
-}
-.navbar .nav-items{
-    display: flex;
-    justify-content: baseline;
-    align-items: center;
-    gap: 40px;
-}
-.nav-items a{
-    text-decoration: none;
-    color: black;
-    font-size: 20px;
-    font-weight: 500;
-    transition:all 0.1s ease-in;
-}
-.nav-items a:hover{
-    color: brown;
-}
-
-
-
-/* services */
-.services{
+.service , .service2{
     width: 100%;
-    height: auto;
-}
-.container{
-    height: 600px;
-    background: silver;
-    margin: 20px 2px;
-    border-radius: 0px;
+    background-color: whitesmoke;
+    height: 500px;
     display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
 }
-.container:nth-child(1) .spa{
-    width: 60%;
-    height: 80%;
-    display: flex;
-    align-self: center;
-    margin-left: 20px;
+.service div , .service2 div{
+    text-align: center;
+    width: 350px;
+    height: 220px;
 }
-.spa img{
-    box-shadow: 0 0 4px black;
-    transition: all 0.7s ease-in-out;
+.service div img , .service2 div img{
+    margin-top: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0 0 3px black;
+    transition: all 0.6s ease-in-out;
 }
- img:hover{
-    box-shadow: 0 0 30px brown;
-    transform: scale(1.01);
-    border-radius: 5px;
+.service div img:hover ,.service2 div img:hover{
+    box-shadow: 0 0 10px black;
+    border-top-left-radius: 10px;
 }
-.container:nth-child(2){
-    justify-content: end;
-    align-items: center;
+.service div .span , .service2 div .span{
+    letter-spacing: 1px;
+    padding: 20px 20px;
+    padding-top: 40px;
+    border: 0px solid black;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 0 5px black;
+    background-color: rgb(208, 154, 172);
 }
-.container:nth-child(2) .cardio{
-    height: 80%;
-    display: flex;
-    text-align: end;
+.info .span p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.service2{
+    margin-top: 50px;
+    justify-content: space-evenly;
 }
 
-.cardio img{
-    width: 700px;
-    margin-right: 20px;
-    transition: all 0.7s ease-in-out;
+footer{
+    width: 100%;
+    height: 200px;
+    margin: 0;
+    background-color: #949393;
+    margin-top: 20px;
 }
