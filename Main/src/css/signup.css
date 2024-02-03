@@ -1,41 +1,62 @@
 body {
     letter-spacing: 2px;
+
     display: flex;
 }
 
 #preLoader {
     background: #efe4d3 url("../../Images/loader.gif") no-repeat center center;
+
     background-size: 20%;
+
     width: 100%;
+
     height: 100vh;
+
     position: fixed;
+
     z-index: 100;
-  }
+}
 
 #perent {
     width: 100%;
+
     height: 100%;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     margin-top: 60px;
 }
 
 .signup {
     display: flex;
+
     flex-direction: column;
+
     width: 540px;
+
     height: 650px;
+
     background-color: rgb(249, 244, 240);
+
     border-radius: 5px;
-    font-family: 'Rajdhani', sans-serif;
+
+    font-family: "Rajdhani", sans-serif;
+
     box-shadow: 0 0 10px black;
 }
 
 .signup span:nth-child(1) a i {
     position: absolute;
+
     margin-left: 500px;
+
     margin-top: 20px;
+
     color: black;
 }
 
@@ -45,17 +66,25 @@ body {
 
 .inputs {
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     column-gap: 20px;
 }
 
 .inputs input {
     border: none;
+
     background: none;
+
     outline: none;
+
     border-bottom: 2px solid black;
+
     width: 300px;
+
     margin-top: 30px;
 }
 
@@ -63,23 +92,33 @@ body {
     border-bottom: 2px solid orangered;
 }
 
-.signup .inputs span i {
+.inputs span i {
     position: absolute;
+
     margin-top: 28px;
+
     margin-left: -20px;
 }
-.error-msg{
+
+.error-msg {
     position: relative;
+
     height: 10px;
+
     width: fit-content;
+
     font-size: 10px;
+
     color: red;
 }
 
 .haveaccount {
     margin-top: 14px;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 }
 
@@ -93,40 +132,102 @@ body {
 
 .signup-btn {
     display: flex;
+
     justify-content: center;
+
     margin-top: 20px;
+
     width: 100%;
 }
 
 .signup-btn button {
     width: 50%;
+
     border: 0px;
+
     border-radius: 5px;
-    font-family: 'Rajdhani', sans-serif;
+
+    font-family: "Rajdhani", sans-serif;
+
     font-size: 20px;
+
     font-weight: 500;
+
     padding: 10px 20px;
+
     background: brown;
 }
 
 .signup-btn button:hover {
     background-color: #000;
+
     color: #fff;
 }
 
 .gym-name {
     width: 100%;
+
     margin-top: 10px;
+
     height: auto;
+
     display: flex;
+
     justify-content: center;
+
     align-items: end;
+
     background: #580c0c;
 }
 
 .gym-name h3 {
     padding: 16px 16px;
+
     color: #fff;
 }
 
+/* Your existing CSS code... */
 
+@media only screen and (max-width: 544px) {
+    #perent {
+        margin-top: 30px;
+        margin: 0px;
+        background: none;
+    }
+
+    .signup {
+        width: 100%;
+
+        height: auto;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .signup span:nth-child(1) a i {
+        margin-left: 90%;
+
+        margin-top: 20px;
+    }
+
+    .inputs span {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .inputs span i {
+        position: relative;
+    }
+
+    .inputs input {
+        width: 80%;
+
+
+    }
+
+    .signup-btn button {
+        width: 80%;
+    }
+}

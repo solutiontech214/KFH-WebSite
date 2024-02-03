@@ -1,6 +1,8 @@
 * {
   font-family: 'Rajdhani', sans-serif;
   letter-spacing: 1.5px;
+  margin: 0px;
+  padding: 0px;
 }
 
 body {
@@ -265,7 +267,7 @@ body {
 }
 
 .slogan h3 {
-  color: rgb(142, 10, 28);
+  color: rgb(255, 126, 106);
   align-items: baseline;
 }
 
@@ -370,4 +372,69 @@ body {
 
 .logo-img {
   margin-top: 60px;
+}
+
+/* media query */
+/* Your existing CSS code... */
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 480px) {
+  .nav-bar {
+    height: 60px;
+  }
+
+  .logo {
+    margin-left: 5px;
+  }
+
+  .items {
+    display: none;
+  }
+
+  .nav-bar .login {
+    margin-right: 10px;
+  }
+
+  .nav-bar .logo {
+    margin-left: 10px;
+  }
+
+  .nav-bar .items>a,
+  .dropdown>a {
+    margin-right: 10px;
+  }
+
+  .img-container img {
+    height: 200px;
+  }
+
+  .cont-info .cont {
+    height: auto;
+  }
+
+  .cont-info .cont img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container1 img {
+    width: 100%;
+    height: auto;
+  }
+
+  .slogan {
+    height: 15vh;
+  }
+
+  .slogan h1 {
+    font-size: 1.2em;
+  }
+
+  .slogan h3 {
+    font-size: 0.8em;
+  }
+
+  .slogan span {
+    font-size: 0.7em;
+  }
 }

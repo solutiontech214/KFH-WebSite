@@ -56,15 +56,17 @@ if(isset($_POST['submit']))
         
         <!-- buttons login and signup -->
         <button class="btn" type="submit" name="submit" id="btn-login">Login</button>
-        <a href="signup.php"><button class="btn" type="button" id="btn-signup">SignUp</button></a>
       
         <hr width="84%" style="margin-top: 20px;">
+
+        <a href="./signup.php" class="new-account">Create a new account <i class="fa-solid fa-user-plus"></i></a>
+
+
 
         <span class="gym-name">
             <h3>@KANDRE'S FITNESS HUB</h3>
         </span>
     </form>
-
 
     <script src="../js/form.js"></script>
 </body>

@@ -52,19 +52,18 @@ body {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
-.span2 .email {
-    background-color: gray;
-    color: rgb(0, 0, 0);
-    width: 300px;
-    height: 30px;
-    background: transparent;
-    border: 0;
-    border-bottom: 2px solid black;
-    border-radius: 0px;
-}
+  .span2 .email {
+      background-color: gray;
+      color: rgb(0, 0, 0);
+      width: 300px;
+      height: 30px;
+      background: transparent;
+      border: 0;
+      border-bottom: 2px solid black;
+      border-radius: 0px;
+  }
 .span2 .error-msg{
     position: relative;
     font-size: 12px;
@@ -88,7 +87,6 @@ body {
 /* span 3 */
 .span3 a {
     text-decoration: none;
-    position: absolute;
     margin-top: 14px;
     font-size: 14px !important;
     color: rgb(1, 27, 115);
@@ -101,7 +99,7 @@ body {
 
 /* buttons login and signup */
 .btn {
-    margin-top: 50px;
+    margin-top: 30px;
     letter-spacing: 2px;
     width: 276px;
     padding: 8px 20px;
@@ -113,20 +111,21 @@ body {
     background-color: brown;
     color: rgb(0, 0, 0);
 }
-
-#btn-signup {
-    margin-top: 20px;
-    width: 276px;
+ .new-account{
+    margin: 20px;
+    text-decoration: none;
+    color: black;
 }
 
-.btn:hover {
+.btn:hover{
     background: #000;
-    color: white;
+    color: white !important;
 }
 
 .gym-name {
     width: 100%;
-    margin-top: 60px;
+    margin: 60px;
+    position: relative;
     height: auto;
     display: flex;
     justify-content: center;
@@ -136,4 +135,42 @@ body {
 .gym-name h3 {
     padding: 16px 16px;
     color: #fff;
+}
+
+
+
+
+
+
+
+/* Styles for smaller screens (mobile) */
+@media only screen and (max-width: 557px) {
+    .login{
+        box-shadow: none;
+        background: transparent;
+    }
+    .login .span1 i {
+        margin-left: 50%; /* Adjusted for mobile screens */
+    }
+
+    .login .span1 h2 {
+        font-size: 32px; /* Adjusted font size for mobile screens */
+    }
+
+    .span2 .email{
+        width: 300px; /* Adjusted width for mobile screens */
+    }
+
+    .span3 a {
+        margin-top: 20px; /* Adjusted margin for mobile screens */
+    }
+
+     /* .btn {
+        width: 80%; Adjusted width for mobile screens
+    } 
+     */
+
+    .gym-name h3 {
+        padding: 8px; /* Adjusted padding for mobile screens */
+    }
 }
