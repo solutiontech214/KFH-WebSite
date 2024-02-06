@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <body style="background:whitesmoke;">
+  <body>
 
   <div class="preloader" id="preLoader"></div>
 
@@ -42,7 +42,7 @@
   </nav>
 
   <div class="img-container">
-    <img class="mySlides" src="../../Images/gym4.jpg" alt="gym">
+    <img class="mySlides" src="../../Images/gym-img2.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym2.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym3.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym5.jpg" alt="gym">
@@ -50,9 +50,6 @@
     <button class="next-arrow" onclick="plusDivs(+1)">&#10095;</button>
   </div>
 
-  <div class="intro">
-    <img src="../../Images/KFH.png" alt="" height="200px">
-  </div>
 
   <div class="cont-info">
     <div class="cont c1">
@@ -74,12 +71,14 @@
         </p>
       </span>
       <span class="pic">
-        <img src="../../Images/cardio-cycle.jpg" alt="">
+        <img src="../../Images/zumba.jpg" alt="">
       </span>
     </div>
     <div class="cont c3">
       <span class="pic">
-        <img src="../../Images/cardio-cycle.jpg" alt="">
+        <marquee behavior="slide" direction="right">
+        <img src="../../Images/luxury.jpg" alt="">
+        </marquee>
       </span>
       <span class="pic-info">
         <h1><b>Equipments</b></h1>

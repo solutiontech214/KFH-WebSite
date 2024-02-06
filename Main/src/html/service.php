@@ -18,7 +18,7 @@
         </div>
         <div class="items">
             <li>
-                <a href=""><i class="fa-solid fa-location-dot" style="color: #eb0052;"></i></a>
+                <a href="https://www.google.com/maps/place/Kandre%27s+Fitness+Hub/data=!4m7!3m6!1s0x3bc5da1c451ff087:0x109dd48c98e53aab!8m2!3d17.6354542!4d75.9152472!16s%2Fg%2F11gcm07_jv!19sChIJh_AfRRzaxTsRqzrlmIzUnRA?authuser=0&hl=en&rclk=1" target="_blank"><i class="fa-solid fa-location-dot" style="color: #eb0052;"></i> Solapur</a>
                 <a href=""><i class="fa-brands fa-instagram" style="color: #ea2a76; background-color:none"></i></a>
             </li>
             <li><a href="">Home</a></li>
@@ -32,7 +32,7 @@
         <div class="service">
              <div>
                 <i class="fa-solid fa-1 fa-2x"></i>
-                <img src="../../Images/cardio2.JPG" alt="" width="100%" height="220px">
+                <a href=""><img src="../../Images/cardio2.JPG" alt="" width="100%" height="220px"></a>
                 <div class="span">
                     <h1><b>Cardio center</b></h1>
                     <p>Cardio section for weight loss, to improve stamina and cardiovascular health.</p>
@@ -40,7 +40,7 @@
             </div>
              <div>
                 <i class="fa-solid fa-2 fa-2x"></i>
-                <img src="../../Images/stringth.JPG" alt="" width="100%" height="220px">
+                <a href=""><img src="../../Images/stringth.JPG" alt="" width="100%" height="220px"></a>
                 <div class="span">
                     <h1><b>Strength Training</b></h1>
                     <p>A well equipped strength training and free workout section which for specialized training. </p>
@@ -48,7 +48,7 @@
              </div>
              <div>
                 <i class="fa-solid fa-3 fa-2x"></i>
-                <img src="../../Images/classes.jpeg" alt="" width="100%" height="220px">
+                <a href=""><img src="../../Images/classes.jpeg" alt="" width="100%" height="220px"></a>
                 <div class="span">
                     <h1><b>Group Classes</b></h1>
                     <p>Yoga ,Zumba, aerobics, circuit trainig and other workout classes are scheduled and conducted.</p>
@@ -58,7 +58,7 @@
         <div class="service2">
             <div>
                 <i class="fa-solid fa-4 fa-2x"></i>
-                <img src="../../Images/spa.jpg" alt="" width="100%" height="220px">
+                <a href=""><img src="../../Images/spa.jpg" alt="" width="100%" height="220px"></a>
                 <div class="span">
                     <h1><b>Spa</b></h1>
                     <p>Relaxing spa that will rejuvinate your body and mind which help you relax peacefully.</p>
@@ -66,7 +66,7 @@
             </div>
             <div>
                 <i class="fa-solid fa-5 fa-2x"></i>
-                <img src="../../Images/tranier.jpeg" alt="" width="100%" height="220px">
+                <a href=""><img src="../../Images/tranier.jpeg" alt="" width="100%" height="220px"></a>
                 <div class="span">
                     <h1><b>Personal Training</b></h1>
                     <p>Professional trainers create personalized workout plans and guide and motivate you.</p>
@@ -75,8 +75,27 @@
         </div>
     </div>
 
-    <footer>
-
+    <footer class="nav-footer">
+        <div class="location">
+            <span>
+                <h2>Our GYM's</h2>
+            </span>
+            <ul>
+                <li><a href="https://www.google.com/maps/place/Kandre%27s+Fitness+Hub/data=!4m7!3m6!1s0x3bc5da1c451ff087:0x109dd48c98e53aab!8m2!3d17.6354542!4d75.9152472!16s%2Fg%2F11gcm07_jv!19sChIJh_AfRRzaxTsRqzrlmIzUnRA?authuser=0&hl=en&rclk=1" target="_blank"><i class="fa-solid fa-location-dot" style="color: #eb0052;"></i> Solapur</a></li>
+                <li><a href="https://www.google.com/maps/place/Kandre%27s+Fitness+Hub/data=!4m7!3m6!1s0x3bc5da1c451ff087:0x109dd48c98e53aab!8m2!3d17.6354542!4d75.9152472!16s%2Fg%2F11gcm07_jv!19sChIJh_AfRRzaxTsRqzrlmIzUnRA?authuser=0&hl=en&rclk=1" target="_blank"><i class="fa-solid fa-location-dot" style="color: #eb0052;"></i> Pandharpur</a></li>
+            </ul>
+        </div>
+        <div class="logo10">
+            <img src="../../Images/KFH.png" alt="" width="120px" height="50px">
+        </div>
+        <div class="pages">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">AboutUs</a></li>
+            </ul>
+        </div>
     </footer>
 
 </body>

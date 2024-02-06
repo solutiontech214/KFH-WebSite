@@ -61,7 +61,7 @@ if(isset($_POST['submit']))
                     </div>
                 </span>
                 <span>
-                    <input type="password" placeholder="Password" name="a_pass" id="passwordInput" required>
+                    <input type="password" placeholder="Create Password" name="a_pass" id="passwordInput" required>
                     <i class="fa-solid fa-eye eye" onclick=" togglePassword()" style="cursor: pointer;"></i>
                     <div class="error-msg">
                         <!-- error -->
