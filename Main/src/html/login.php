@@ -28,13 +28,13 @@ if(isset($_POST['submit']))
   <!-- login form -->
     <form  action="login.php" class="login" method="POST">
         <span class="span1">
-            <a href="index.php"><i class="fa-solid fa-xmark"></i></a>
+            <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
             <h2>Login</h2>
         </span>
         <span class="span2">
             <div>
                 <input type="email" id="email" class="email" name="email" placeholder="Email" required >
-                <i class="fa fa-envelope icon"></i>
+                <i class="fa fa-envelope icon" style="color: #bb0120;"></i>
             </div>
             <span class="error-msg" id="email-error">
                 <!-- erroe msg -->
@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
             <br>
             <div>
                 <input type="password" id="passwordInput" name="pass" class="email" placeholder="Password" name="password" required>
-                <i class="fa-solid fa-eye eye" onclick=" togglePasswordVisibility()" style="cursor: pointer;"></i>
+                <i class="fa-solid fa-eye eye" onclick=" togglePasswordVisibility()" style="cursor: pointer; color: #bb0120;"></i>
             </div>
             <span class="error-msg" id="password-error">
                 <!-- error msg -->

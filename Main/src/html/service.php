@@ -28,9 +28,11 @@
     </nav>
 
     <div class="info">
-        <div class="head"><h1><b>Our Services</b></h1></div>
+        <div class="head">
+            <h1><b>Our Services</b></h1>
+        </div>
         <div class="service">
-             <div>
+            <div>
                 <i class="fa-solid fa-1 fa-2x"></i>
                 <a href=""><img src="../../Images/cardio2.JPG" alt="" width="100%" height="220px"></a>
                 <div class="span">
@@ -38,22 +40,22 @@
                     <p>Cardio section for weight loss, to improve stamina and cardiovascular health.</p>
                 </div>
             </div>
-             <div>
+            <div>
                 <i class="fa-solid fa-2 fa-2x"></i>
                 <a href=""><img src="../../Images/stringth.JPG" alt="" width="100%" height="220px"></a>
                 <div class="span">
                     <h1><b>Strength Training</b></h1>
                     <p>A well equipped strength training and free workout section which for specialized training. </p>
                 </div>
-             </div>
-             <div>
+            </div>
+            <div>
                 <i class="fa-solid fa-3 fa-2x"></i>
                 <a href=""><img src="../../Images/classes.jpeg" alt="" width="100%" height="220px"></a>
                 <div class="span">
                     <h1><b>Group Classes</b></h1>
                     <p>Yoga ,Zumba, aerobics, circuit trainig and other workout classes are scheduled and conducted.</p>
                 </div>
-             </div>
+            </div>
         </div>
         <div class="service2">
             <div>

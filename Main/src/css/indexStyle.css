@@ -11,7 +11,7 @@ body {
 }
 
 .preloader {
-  background: #efe4d3 url("../../Images/loader.gif") no-repeat center center;
+  background: #060606 url("../../Images/loader.gif") no-repeat center center;
   background-size: 20%;
   width: 100%;
   height: 100vh;
@@ -103,16 +103,16 @@ body {
   margin-right: 40px;
 }
 
-.login .btn-login {
+ .btn-login {
   padding: 10px 35px;
-  border-radius: 5px;
+  box-shadow: 0 0 10px black;
   border: 0px;
-  font-weight: 500;
+  font-weight: 600;
   color: rgb(255, 255, 255);
-  background-color: brown;
+  background-color: #bb0120;
 }
 
-.nav-bar .login button:hover {
+ button:hover {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
 }
@@ -123,9 +123,25 @@ body {
 
 .img-container img {
   width: 100%;
-  height: 700px;
+  height: 760px;
 }
-
+.img-container .text-info{
+  position: absolute;
+  margin-top: -500px;
+  margin-left: 200px;
+}
+.text-info p {
+  font-size: 30px;
+  color: white;
+  text-shadow: 0 0 10px rgb(0, 0, 0);
+  transition: all 0.3s ease;
+}
+.text-info p:hover{
+ text-shadow: 0 0 40px rgb(0, 0, 0);
+}
+.text-info b{
+  font-size: 60px;
+}
 .prev-arrow,
 .next-arrow {
   position: absolute;
@@ -163,7 +179,7 @@ body {
   height: fit-content;
   display: flex;
   flex-direction: column;
-  background-color: #131313;
+  background-color: #161616;
 }
 
 .cont-info .cont {
@@ -177,7 +193,7 @@ body {
 }
 
 .cont-info .cont:hover {
-  background: rgb(17, 16, 16);
+  background: #111;
 }
 
 .pic {
@@ -193,12 +209,13 @@ body {
   height: 80%;
   position: relative;
   transition: all 0.6s ease-in-out;
+  transform: scale(1);
 }
 
 .cont:hover img {
-  box-shadow: 0 0 4px rgb(44, 17, 34);
-  transform: scale(1.02);
-  border-radius: 10px;
+  transform: scale(1.01);
+  border-radius: 30px;
+  box-shadow: 0 0 40px rgb(0, 0, 0);
 }
 
 .pic-info {
@@ -309,7 +326,7 @@ body {
       #d62976,
       #962fbf,
       #4f5bd5);
-  color: #211f1f;
+  color: #141313;
   width: 30px;
   height: 30px;
 }

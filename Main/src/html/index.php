@@ -43,6 +43,9 @@
 
   <div class="img-container">
     <img class="mySlides" src="../../Images/gym-img2.jpg" alt="gym">
+    <div class="text-info"><p><b>Shape Your Body</b><br> in most <b>Luxurious</b><br> gym in town</p>
+      <a href=""><button class="btn-login" id="login" type="button">See More..</button></a>
+    </div>
     <img class="mySlides" src="../../Images/gym2.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym3.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym5.jpg" alt="gym">
@@ -65,7 +68,7 @@
     </div>
     <div class="cont c2">
       <span class="pic-info">
-        <h1><b>Equipments</b></h1>
+        <h1><b>Zumba Classes</b></h1>
         <p><br>
           <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
         </p>
@@ -76,12 +79,12 @@
     </div>
     <div class="cont c3">
       <span class="pic">
-        <marquee behavior="slide" direction="right">
+        <!-- <marquee behavior="scroll" direction="right" scrollamount=10> -->
         <img src="../../Images/luxury.jpg" alt="">
-        </marquee>
+        <!-- </marquee> -->
       </span>
       <span class="pic-info">
-        <h1><b>Equipments</b></h1>
+        <h1><b>Luxurious Feel</b></h1>
         <p><br>
           <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
         </p>
@@ -101,9 +104,9 @@
   </div>
 
   <div class="container1">
-    <img src="../../Images/img4.webp" alt="cardio">
+    <img src="../../Images/img2.webp" alt="cardio">
     <img src="../../Images/img3.webp" alt="">
-    <img src="../../Images/img2.webp" alt="" class="cardio">
+    <img src="../../Images/img4.webp" alt="" class="cardio">
     <img src="../../Images/img5.webp" alt="">
     <img src="../../Images/img1.webp" alt="">
   </div>
