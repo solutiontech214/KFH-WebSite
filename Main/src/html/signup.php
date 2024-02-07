@@ -1,13 +1,11 @@
 <?php
 
-if(isset($_POST['submit']))
-{
-     $f_name=$_POST['f_name'];
-   $l_name=$_POST['l_name'];
-  $email=$_POST['email'];
-   $a_pass=$_POST['a_pass'];
-    $c_pass=$_POST['c_pass'];
-
+if (isset($_POST['submit'])) {
+    $f_name = $_POST['f_name'];
+    $l_name = $_POST['l_name'];
+    $email = $_POST['email'];
+    $a_pass = $_POST['a_pass'];
+    $c_pass = $_POST['c_pass'];
 }
 
 ?>
@@ -19,9 +17,7 @@ if(isset($_POST['submit']))
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
     <link rel="stylesheet" href="../css/signup.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -31,26 +27,26 @@ if(isset($_POST['submit']))
 <body>
 
     <div class="preloader" id="preLoader"></div>
-    
+
     <div id="perent">
-        <form  class="signup" method="POST">
+        <form class="signup" method="POST">
             <span>
-                <a href="index.php"><i class="fa-solid fa-xmark"></i></a>
-                <h1>SignUp</h1>
+                <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
+                <h2>SignUp</h2>
             </span>
             <div class="inputs">
                 <span>
-                    <input type="text" placeholder="First Name" name="f_name"required>
+                    <input type="text" placeholder="First Name" name="f_name" required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
                         <!-- error -->
                     </div>
                 </span>
                 <span>
-                    <input type="text" placeholder="Last Name" name="l_name"  required>
+                    <input type="text" placeholder="Last Name" name="l_name" required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
-                    <!-- error -->
+                        <!-- error -->
                     </div>
                 </span>
                 <span>
@@ -65,24 +61,27 @@ if(isset($_POST['submit']))
                     <i class="fa-solid fa-eye eye" onclick=" togglePassword()" style="cursor: pointer;"></i>
                     <div class="error-msg">
                         <!-- error -->
-                        
-                        <strong><label><?php if(isset($_POST['submit']) && strlen($_POST['f_name'])<8){ echo "Password must be greater than 8 !!";}?> </label></strong>
+
+                        <strong><label><?php if (isset($_POST['submit']) && strlen($_POST['f_name']) < 8) {
+                            echo "Password must be greater than 8 !!";
+                        } ?> </label></strong>
                     </div>
                 </span>
                 <span>
-                    <input type="password" placeholder="Confirm Password" name="c_pass"id="recheckpassword" required>
+                    <input type="password" placeholder="Confirm Password" name="c_pass" id="recheckpassword" required>
                     <i class="fa-solid fa-lock"></i>
                     <div class="error-msg">
                         <!-- error -->
-                        <strong><label><?php if(isset($_POST['submit']) && $_POST['a_pass']!=$_POST['c_pass']){ echo "Password isn't matches.!!";}
-            
+                        <strong><label><?php if (isset($_POST['submit']) && $_POST['a_pass'] != $_POST['c_pass']) {
+                            echo "Password isn't matches.!!";
+                        }
+
                         ?> </label></strong>
                     </div>
                 </span>
             </div>
             <span class="haveaccount">
-                <a href="login.php">Already have an account</a>
-                <i class="fa-solid fa-right-to-bracket"></i>
+                <a href="login.php">Already have an account<i class="fa-solid fa-right-to-bracket"></i></a>
             </span>
             <div class="signup-btn">
                 <button type="submit" name="submit">SignUp</button>
@@ -114,8 +113,6 @@ if(isset($_POST['submit']))
         window.addEventListener("load", () => {
             loader.style.display = "none";
         });
-
-
     </script>
 </body>
 

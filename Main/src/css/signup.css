@@ -2,10 +2,16 @@ body {
     letter-spacing: 2px;
 
     display: flex;
+
+    background-image: url("../../Images/log-bg-img.jpg");
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
 }
 
 #preLoader {
-    background: #efe4d3 url("../../Images/loader.gif") no-repeat center center;
+    background: #000000 url("../../Images/loader.gif") no-repeat center center;
 
     background-size: 20%;
 
@@ -41,13 +47,17 @@ body {
 
     height: 650px;
 
-    background-color: rgb(249, 244, 240);
+    background: transparent;
+
+    backdrop-filter: blur(80px);
 
     border-radius: 5px;
 
+    color: white;
+
     font-family: "Rajdhani", sans-serif;
 
-    box-shadow: 0 0 10px black;
+    box-shadow: 0 0 40px black;
 }
 
 .signup span:nth-child(1) a i {
@@ -57,10 +67,9 @@ body {
 
     margin-top: 20px;
 
-    color: black;
 }
 
-.signup h1 {
+.signup h2 {
     text-align: center;
 }
 
@@ -86,6 +95,8 @@ body {
     width: 300px;
 
     margin-top: 30px;
+
+    color: white;
 }
 
 .inputs input:focus {
@@ -123,7 +134,7 @@ body {
 }
 
 .haveaccount a {
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -146,8 +157,6 @@ body {
 
     border: 0px;
 
-    border-radius: 5px;
-
     font-family: "Rajdhani", sans-serif;
 
     font-size: 20px;
@@ -156,7 +165,9 @@ body {
 
     padding: 10px 20px;
 
-    background: brown;
+    background: #bb0120;
+
+    box-shadow: 0 0 10px black;
 }
 
 .signup-btn button:hover {
@@ -166,9 +177,11 @@ body {
 }
 
 .gym-name {
-    width: 100%;
+    align-self: center;
 
-    margin-top: 10px;
+    width: 80%;
+
+    margin-top: 16px;
 
     height: auto;
 
@@ -176,9 +189,11 @@ body {
 
     justify-content: center;
 
-    align-items: end;
+    align-items: center;
 
-    background: #580c0c;
+    box-shadow: 0 0 10px black;
+
+    background: transparent;
 }
 
 .gym-name h3 {

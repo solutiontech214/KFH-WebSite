@@ -7,7 +7,7 @@ body {
 }
 
 nav {
-  background-color: #131313;
+  background-color: #141313;
   display: flex;
   height: 100px;
 }
@@ -18,9 +18,16 @@ nav {
   justify-content: flex-start;
   align-items: center;
 }
-
+body a{
+  text-decoration: none;
+  color: white;
+}
 .logo img {
   margin-left: 40px;
+  transition: all 0.6s ease-in-out;
+}
+.logo img:hover{
+  transform: scale(1.2) translateX(20px);
 }
 
 .items {
@@ -64,7 +71,7 @@ nav {
 }
 
 .items li a:hover {
-  box-shadow: 1px 6px 6px rgb(68, 33, 40);
+  box-shadow:0 0 20px rgb(0, 0, 0);
 }
 
 .info {
@@ -110,7 +117,7 @@ nav {
 .service div img:hover,
 .service2 div img:hover {
   box-shadow: 0 0 16px black;
-  border-top-left-radius: 10px;
+  border-top-left-radius: 20px;
   cursor: pointer;
 }
 
@@ -120,10 +127,14 @@ nav {
   padding: 20px 20px;
   padding-top: 40px;
   border: 0px solid black;
+  box-shadow: 0 0 20px rgb(0, 0, 0);  
   border-bottom-left-radius: 20px;
-  box-shadow: 0 0 24px rgb(0, 0, 0);
   background-color: rgb(17, 16, 17);
 }
+.service div .span:hover,
+.service2 div .span:hover{
+  box-shadow: 0 0 30px rgb(0, 0, 0);  
+} 
 
 .info .span p {
   font-size: 16px;

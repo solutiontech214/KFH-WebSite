@@ -117,15 +117,16 @@ body {
     box-shadow: 0 0 5px black;
     color: rgb(0, 0, 0);
 }
+
+.btn:hover{
+    background: #000;
+    color: white ;
+}
+
  .new-account{
     margin: 20px;
     text-decoration: none;
     color: rgb(255, 255, 255);
-}
-
-.btn:hover{
-    background: #000;
-    color: white !important;
 }
 
 .gym-name {
@@ -135,7 +136,6 @@ body {
     height: auto;
     display: flex;
     justify-content: center;
-    border: 2px black;
     box-shadow: 0 0 10px black;
 }
 
