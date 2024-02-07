@@ -52,7 +52,7 @@
             </div>
             <div>
                 <i class="fa-solid fa-3 fa-2x"></i>
-                <a href=""><img src="../../Images/classes.jpeg" alt="" width="100%" height="220px">
+                <a href="./classes.php"><img src="../../Images/classes.jpeg" alt="" width="100%" height="220px">
                 <div class="span">
                     <h1><b>Group Classes</b></h1>
                     <p>Yoga ,Zumba, aerobics, circuit trainig and other workout classes are scheduled and conducted.</p>

@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    font-family: 'Rajdhani', sans-serif;
+    background-color: #131313;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    background: transparent;
+    display: flex;
+}
+
+nav .logo {
+    width: 60%;
+    height: 100%;
+    display: flex;
+}
+
+.logo img {
+    width: 120px;
+    height: 50px;
+    align-self: center;
+    margin-left: 20px;
+    transition: all 0.6s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.items a {
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.items {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.items a:hover {
+    cursor: pointer;
+    box-shadow: 0 0 16px black;
+    background-color: rgba(0 , 0, 0, 0.7);
+}
+
+.on-img img {
+    position: -webkit-sticky;
+}
+
+.img-2 {
+    position: absolute;
+    margin-top: 200px;
+    margin-left: -600px;
+    border-radius: 2px;
+    box-shadow: 0 0 8px black;
+    transition: all 0.6s ease;
+}
+.img-2:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0 14px black;
+    border-radius: 20px;
+}
+
+.on-img .intro {
+    position: absolute;
+    margin-top: -550px;
+    margin-left: 160px;
+}
+
+.intro p {
+    font-size: 70px;
+    text-shadow: 0 0 10px rgb(214, 180, 132);
+    transition: all 0.6s ease;
+}
+
+.intro p:hover {
+    text-shadow: 0 0 2px black;
+}

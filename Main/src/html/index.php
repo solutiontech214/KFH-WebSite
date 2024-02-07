@@ -33,6 +33,7 @@
           <a href="#">Personal Training</a>
         </div>
       </div>
+      <a href="./classes.php">Classes</a>
       <a href="#">AboutUs</a>
       <a href="#">Contact</a>
     </div>
