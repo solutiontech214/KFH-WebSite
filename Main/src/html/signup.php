@@ -46,7 +46,6 @@ if (isset($_POST['submit'])) {
                     <input type="text" placeholder="Last Name" name="l_name" required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
-                        <!-- error -->
                     </div>
                 </span>
                 <span>
@@ -86,7 +85,10 @@ if (isset($_POST['submit'])) {
             <div class="signup-btn">
                 <button type="submit" name="submit">SignUp</button>
             </div>
-            <hr width="90%" style="color: black; margin-top: 34px;">
+            <div class="account-existance" style="margin-top:10px">
+                this account is Already existing
+            </div>
+            <hr width="90%" style="color: black; margin-top: 10px;">
             <div class="gym-name">
                 <h3>@KANDRE'S FITNESS HUB</h3>
             </div>

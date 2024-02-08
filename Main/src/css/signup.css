@@ -45,11 +45,11 @@ body {
 
     width: 540px;
 
-    height: 650px;
+    height: 680px;
 
     background: transparent;
 
-    backdrop-filter: blur(80px);
+    backdrop-filter: blur(90px);
 
     border-radius: 5px;
 
@@ -100,9 +100,13 @@ body {
 }
 
 .inputs input:focus {
-    border-bottom: 2px solid orangered;
+    border-bottom: 2px solid rgb(0, 140, 255);
 }
-
+.inputs span .error-msg{
+    margin-top: 2px;
+    font-size: 11px;
+    font-weight: 600;
+}
 .inputs span i {
     position: absolute;
 
@@ -120,7 +124,7 @@ body {
 
     font-size: 10px;
 
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
 .haveaccount {
@@ -174,6 +178,14 @@ body {
     background-color: #000;
 
     color: #fff;
+}
+
+.account-existance{
+    align-self: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: red;
+    background-color: #000;
 }
 
 .gym-name {
