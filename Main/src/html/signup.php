@@ -1,13 +1,24 @@
 <?php
-
+require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
 if (isset($_POST['submit'])) {
     $f_name = $_POST['f_name'];
     $l_name = $_POST['l_name'];
     $email = $_POST['email'];
     $a_pass = $_POST['a_pass'];
     $c_pass = $_POST['c_pass'];
-}
 
+    $obj=new Account_Existance();
+   $res= $obj->is_account_exists($email);
+     
+   if ($res!=true) {
+   if($obj->create_account($f_name,$l_name,$email,$a_pass,$c_pass))
+   {
+
+   }
+      }
+   
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -62,7 +73,7 @@ if (isset($_POST['submit'])) {
                     <div class="error-msg">
                         <!-- error -->
 
-                        <strong><label><?php if (isset($_POST['submit']) && strlen($_POST['f_name']) < 8) {
+                        <strong><label><?php if (isset($_POST['submit']) && strlen($_POST['a_pass']) < 8) {
                             echo "Password must be greater than 8 !!";
                         } ?> </label></strong>
                     </div>
@@ -75,10 +86,10 @@ if (isset($_POST['submit'])) {
                         <strong><label><?php if (isset($_POST['submit']) && $_POST['a_pass'] != $_POST['c_pass']) {
                             echo "Password isn't matches.!!";
                         }
-
-                        ?> </label></strong>
+                          ?></label></strong>
                     </div>
                 </span>
+                
             </div>
             <span class="haveaccount">
                 <a href="login.php">Already have an account<i class="fa-solid fa-right-to-bracket"></i></a>
@@ -86,6 +97,7 @@ if (isset($_POST['submit'])) {
             <div class="signup-btn">
                 <button type="submit" name="submit">SignUp</button>
             </div>
+            
             <hr width="90%" style="color: black; margin-top: 34px;">
             <div class="gym-name">
                 <h3>@KANDRE'S FITNESS HUB</h3>
