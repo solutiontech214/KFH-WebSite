@@ -2,15 +2,12 @@
 require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
 $obj = new Account();
 
-
-
 if (isset($_POST['submit'])) {
     $f_name = $_POST['f_name'];
     $l_name = $_POST['l_name'];
     $email = $_POST['email'];
     $a_pass = $_POST['a_pass'];
     $c_pass = $_POST['c_pass'];
-
 
     if ($obj->is_account_exists($email)) {
         // Account already exists, redirect to login
@@ -20,13 +17,11 @@ if (isset($_POST['submit'])) {
         // Account doesn't exist, create account
         $obj->create_account($f_name, $l_name, $email, $a_pass, $c_pass);
     }
-
-
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,18 +33,11 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-
     <div class="preloader1" id="preLoader1"></div>
-
-
-
     <div id="preloader" style="display: none;">
-            <p>Checking email account...</p>
+        <p>Checking email account...</p>
     </div>
-
-
     <div id="perent">
         <form class="signup" method="POST" onsubmit="return showPreloader()">
             <span>
@@ -67,8 +55,7 @@ if (isset($_POST['submit'])) {
                 <span>
                     <input type="text" placeholder="Last Name" name="l_name" required>
                     <i class="fa-solid fa-user"></i>
-                    <div class="error-msg">
-                    </div>
+                    <div class="error-msg"></div>
                 </span>
                 <span>
                     <input type="email" placeholder="Email" name="email" required>
@@ -79,13 +66,12 @@ if (isset($_POST['submit'])) {
                 </span>
                 <span>
                     <input type="password" placeholder="Create Password" name="a_pass" id="passwordInput" required>
-                    <i class="fa-solid fa-eye eye" onclick=" togglePassword()" style="cursor: pointer;"></i>
+                    <i class="fa-solid fa-eye eye" onclick="togglePassword()" style="cursor: pointer;"></i>
                     <div class="error-msg">
                         <!-- error -->
-
                         <strong><label><?php if (isset($_POST['submit']) && strlen($_POST['a_pass']) < 8) {
-                                            echo "Password must be greater than 8 !!";
-                                        } ?> </label></strong>
+                            echo "Password must be greater than 8 !!";
+                        } ?></label></strong>
                     </div>
                 </span>
                 <span>
@@ -94,78 +80,30 @@ if (isset($_POST['submit'])) {
                     <div class="error-msg">
                         <!-- error -->
                         <strong><label><?php if (isset($_POST['submit']) && $_POST['a_pass'] != $_POST['c_pass']) {
-                                            echo "Password isn't matches.!!";
-                                        }
-                                        ?></label></strong>
+                            echo "Password isn't matches.!!";
+                        } ?></label></strong>
                     </div>
                 </span>
-
             </div>
             <span class="haveaccount">
                 <a href="login.php">Already have an account<i class="fa-solid fa-right-to-bracket"></i></a>
             </span>
-
-           
-
             <div class="signup-btn">
                 <button type="submit" name="submit" id="signupButton">SignUp</button>
             </div>
-
-
-
-
-
             <div class="account-existance" style="margin-top:20px">
-
-                <?php
-                // if (isset($_POST['submit'])) {
-
-                //     if ($res = $obj->is_account_exists($_POST['email'])) {
-
-
-                //         echo "Account Already Exist's";
-                //         usleep(1000000);
-                //         if (true) {
-
-                //             header("Location: login.php");
-                //         }
-                //         // Redirect to another page
-
-                //     } else {
-                //         $obj->create_account(
-                //             $_POST['f_name'],
-                //             $_POST['l_name'],
-                //             $_POST['email'],
-
-                //             $_POST['a_pass'],
-                //             $_POST['c_pass']
-                //         );
-                //     }
-                // }
-
-                ?>
-
-
-
+                <!-- PHP code will be executed here -->
             </div>
             <hr width="90%" style="color: black; margin-top: 10px;">
             <div class="gym-name">
                 <h3>@KANDRE'S FITNESS HUB</h3>
             </div>
         </form>
-
-
-
         <?php
-if (isset($_GET['showPreloader'])) {
-    echo '<script>document.getElementById("preloader").style.display = "flex";</script>';
-}
-?>
-
-
-
-
-
+            if (isset($_GET['showPreloader'])) {
+                echo '<script>document.getElementById("preloader").style.display = "flex";</script>';
+            }
+        ?>
     </div>
     <script>
         function togglePassword() {
@@ -183,19 +121,15 @@ if (isset($_GET['showPreloader'])) {
             }
         }
 
-        let loader = document.getElementById("preLoader1")
+        let loader = document.getElementById("preLoader1");
 
         window.addEventListener("load", () => {
             loader.style.display = "none";
         });
 
         function showPreloader() {
-    document.getElementById("preloader").style.display = "flex"; // Display the preloader
-  }
-
-
-
+            document.getElementById("preloader").style.display = "flex"; // Display the preloader
+        }
     </script>
 </body>
-
 </html>
