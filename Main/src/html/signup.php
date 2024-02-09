@@ -7,6 +7,17 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $a_pass = $_POST['a_pass'];
     $c_pass = $_POST['c_pass'];
+
+
+    if ($obj->is_account_exists($email)) {
+        // Account already exists, redirect to login
+        header("Location: login.php");
+        exit();
+    } else {
+        // Account doesn't exist, create account
+        $obj->create_account($f_name, $l_name, $email, $a_pass, $c_pass);
+    }
+
 }
 ?>
 <!DOCTYPE html>
@@ -30,9 +41,14 @@ if (isset($_POST['submit'])) {
 
 
 
+    <div id="preloader" style="display: none;">
+            <p>Account already exist</p>
+    </div>
+
+
 
     <div id="perent">
-        <form class="signup" method="POST">
+        <form class="signup" method="POST" onsubmit="return showPreloader()">
             <span>
                 <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
                 <h2>SignUp</h2>
@@ -86,9 +102,7 @@ if (isset($_POST['submit'])) {
                 <a href="login.php">Already have an account<i class="fa-solid fa-right-to-bracket"></i></a>
             </span>
 
-            <div id="preloader">
-                <p>Checking email account...</p>
-            </div>
+           
 
             <div class="signup-btn">
                 <button type="submit" name="submit" id="signupButton">SignUp</button>
@@ -101,32 +115,30 @@ if (isset($_POST['submit'])) {
             <div class="account-existance" style="margin-top:20px">
 
                 <?php
-                if (isset($_POST['submit'])) {
+                // if (isset($_POST['submit'])) {
 
-                    if ($res = $obj->is_account_exists($_POST['email'])) {
-
-
+                //     if ($res = $obj->is_account_exists($_POST['email'])) {
 
 
-                        echo "Account Already Exist's";
-                        usleep(1000000);
-                        if (true) {
+                //         echo "Account Already Exist's";
+                //         usleep(1000000);
+                //         if (true) {
 
-                            header("Location: login.php");
-                        }
-                        // Redirect to another page
+                //             header("Location: login.php");
+                //         }
+                //         // Redirect to another page
 
-                    } else {
-                        $obj->create_account(
-                            $_POST['f_name'],
-                            $_POST['l_name'],
-                            $_POST['email'],
+                //     } else {
+                //         $obj->create_account(
+                //             $_POST['f_name'],
+                //             $_POST['l_name'],
+                //             $_POST['email'],
 
-                            $_POST['a_pass'],
-                            $_POST['c_pass']
-                        );
-                    }
-                }
+                //             $_POST['a_pass'],
+                //             $_POST['c_pass']
+                //         );
+                //     }
+                // }
 
                 ?>
 
@@ -138,6 +150,19 @@ if (isset($_POST['submit'])) {
                 <h3>@KANDRE'S FITNESS HUB</h3>
             </div>
         </form>
+
+
+
+        <?php
+if (isset($_GET['showPreloader'])) {
+    echo '<script>document.getElementById("preloader").style.display = "flex";</script>';
+}
+?>
+
+
+
+
+
     </div>
     <script>
         function togglePassword() {
@@ -161,31 +186,12 @@ if (isset($_POST['submit'])) {
             loader.style.display = "none";
         });
 
-        // Function to check the email account
-        function checkEmailAccount() {
-            // Change this to the email you want to check
-            const emailToCheck = "example@example.com";
+        function showPreloader() {
+    document.getElementById("preloader").style.display = "flex"; // Display the preloader
+  }
 
-            // Check if the email account exists (this is just a simulation)
-            const accountExists = true; // Change this to your actual check logic
 
-            if (accountExists) {
-                // Redirect to the login page if the account exists
-                window.location.href = "login.html";
-            } else {
-                // Redirect to the signup page if the account doesn't exist
-                window.location.href = "signup.html";
-            }
-        }
 
-        // Add event listener to the signup button
-        document.getElementById("signupButton").addEventListener("click", function() {
-            // Display the preloader
-            document.getElementById("preloader").style.display = "flex";
-
-            // Simulate checking email account with a delay
-            setTimeout(checkEmailAccount, 2000); // Simulating 2 seconds for checking (adjust as needed)
-        });
     </script>
 </body>
 
