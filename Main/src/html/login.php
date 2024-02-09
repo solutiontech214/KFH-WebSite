@@ -1,8 +1,12 @@
 <?php 
+require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
+session_start();
+$obj=new Account();
 if(isset($_POST['submit']))
 {
     $email= $_POST['email'];
      $pass= $_POST['pass'];
+
 }
 
 ?>
