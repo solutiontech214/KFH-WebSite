@@ -18,6 +18,7 @@ if (isset($_POST['submit'])) {
         $obj->create_account($f_name, $l_name, $email, $a_pass, $c_pass);
     }
 
+
 }
 ?>
 <!DOCTYPE html>
@@ -42,7 +43,7 @@ if (isset($_POST['submit'])) {
 
 
     <div id="preloader" style="display: none;">
-            <p>Account already exist</p>
+            <p>Checking email account...</p>
     </div>
 
 
