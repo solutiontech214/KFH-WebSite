@@ -18,7 +18,7 @@ $this->con=new mysqli("localhost","KFH_DB","this.pass.123","KFH_DB");
         echo "Unable to connect to Database..!!";
     }
 }
-// finding the account is exist or not 
+// finding the account is exists  or not 
     public function is_account_exists($email)
     {
        $stmt=$this->con->prepare("SELECT `email` FROM `account` WHERE `email`=?");
