@@ -1,5 +1,12 @@
+
+
+
+  
+  
+     
 <?php
 require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
+$obj=new Account();
 if (isset($_POST['submit'])) {
     $f_name = $_POST['f_name'];
     $l_name = $_POST['l_name'];
@@ -7,18 +14,8 @@ if (isset($_POST['submit'])) {
     $a_pass = $_POST['a_pass'];
     $c_pass = $_POST['c_pass'];
 
-    $obj=new Account_Existance();
-   $res= $obj->is_account_exists($email);
-     
-   if ($res!=true) {
-   if($obj->create_account($f_name,$l_name,$email,$a_pass,$c_pass))
-   {
-
-   }
-      }
-   
-
-}
+    
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -97,7 +94,29 @@ if (isset($_POST['submit'])) {
                 <button type="submit" name="submit">SignUp</button>
             </div>
             <div class="account-existance" style="margin-top:20px">
-                this account is Already existing
+                
+                        <?php
+                        if(isset($_POST['submit'])  ){
+                           
+                            if( $res=$obj->is_account_exists($_POST['email']))
+                            {
+
+                            
+       
+            echo "Account Already Exists.!!";
+        }
+        else{
+            $obj->create_account( $_POST['f_name'],$_POST['l_name'], $_POST['email'],
+            
+            $_POST['a_pass'],
+            $_POST['c_pass']);
+        }
+    }
+        
+                        ?>
+
+
+                
             </div>
             <hr width="90%" style="color: black; margin-top: 10px;">
             <div class="gym-name">
