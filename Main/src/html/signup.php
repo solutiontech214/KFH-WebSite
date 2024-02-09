@@ -2,7 +2,6 @@
 require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
 $obj = new Account();
 
-$showPreloader = false;
 
 
 if (isset($_POST['submit'])) {
@@ -20,7 +19,6 @@ if (isset($_POST['submit'])) {
     } else {
         // Account doesn't exist, create account
         $obj->create_account($f_name, $l_name, $email, $a_pass, $c_pass);
-        $showPreloader = true;
     }
 
 
@@ -47,7 +45,7 @@ if (isset($_POST['submit'])) {
 
 
 
-    <div id="preloader" style="display: <?php echo $showPreloader ? 'flex' : 'none'; ?>;;">
+    <div id="preloader" style="display: none;">
             <p>Checking email account...</p>
     </div>
 
@@ -192,10 +190,7 @@ if (isset($_GET['showPreloader'])) {
         });
 
         function showPreloader() {
-
-    if ('<?php echo $showPreloader; ?>') {
-                document.getElementById("preloader").style.display = "flex"; // Display the preloader
-            }
+    document.getElementById("preloader").style.display = "flex"; // Display the preloader
   }
 
 
