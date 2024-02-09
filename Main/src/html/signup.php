@@ -103,7 +103,17 @@ if (isset($_POST['submit'])) {
 
                             
        
-            echo "Account Already Exists.!!";
+           
+       echo "Account Already Exist's";
+       usleep(1000000);
+           if(true)
+           {
+            
+            header("Location: login.php");
+            
+           }
+// Redirect to another page
+
         }
         else{
             $obj->create_account( $_POST['f_name'],$_POST['l_name'], $_POST['email'],
