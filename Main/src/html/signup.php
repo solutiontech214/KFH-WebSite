@@ -1,21 +1,13 @@
-
-
-
-  
-  
-     
 <?php
 require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
-$obj=new Account();
+$obj = new Account();
 if (isset($_POST['submit'])) {
     $f_name = $_POST['f_name'];
     $l_name = $_POST['l_name'];
     $email = $_POST['email'];
     $a_pass = $_POST['a_pass'];
     $c_pass = $_POST['c_pass'];
-
-    
-    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +26,10 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <div class="preloader" id="preLoader"></div>
+    <div class="preloader1" id="preLoader1"></div>
+
+
+
 
     <div id="perent">
         <form class="signup" method="POST">
@@ -70,8 +65,8 @@ if (isset($_POST['submit'])) {
                         <!-- error -->
 
                         <strong><label><?php if (isset($_POST['submit']) && strlen($_POST['a_pass']) < 8) {
-                            echo "Password must be greater than 8 !!";
-                        } ?> </label></strong>
+                                            echo "Password must be greater than 8 !!";
+                                        } ?> </label></strong>
                     </div>
                 </span>
                 <span>
@@ -80,53 +75,63 @@ if (isset($_POST['submit'])) {
                     <div class="error-msg">
                         <!-- error -->
                         <strong><label><?php if (isset($_POST['submit']) && $_POST['a_pass'] != $_POST['c_pass']) {
-                            echo "Password isn't matches.!!";
-                        }
-                          ?></label></strong>
+                                            echo "Password isn't matches.!!";
+                                        }
+                                        ?></label></strong>
                     </div>
                 </span>
-                
+
             </div>
             <span class="haveaccount">
                 <a href="login.php">Already have an account<i class="fa-solid fa-right-to-bracket"></i></a>
             </span>
-            <div class="signup-btn">
-                <button type="submit" name="submit">SignUp</button>
+
+            <div id="preloader">
+                <p>Checking email account...</p>
             </div>
+
+            <div class="signup-btn">
+                <button type="submit" name="submit" id="signupButton">SignUp</button>
+            </div>
+
+
+
+
+
             <div class="account-existance" style="margin-top:20px">
-                
-                        <?php
-                        if(isset($_POST['submit'])  ){
-                           
-                            if( $res=$obj->is_account_exists($_POST['email']))
-                            {
 
-                            
-       
-           
-       echo "Account Already Exist's";
-       usleep(1000000);
-           if(true)
-           {
-            
-            header("Location: login.php");
-            
-           }
-// Redirect to another page
+                <?php
+                if (isset($_POST['submit'])) {
 
-        }
-        else{
-            $obj->create_account( $_POST['f_name'],$_POST['l_name'], $_POST['email'],
-            
-            $_POST['a_pass'],
-            $_POST['c_pass']);
-        }
-    }
-        
-                        ?>
+                    if ($res = $obj->is_account_exists($_POST['email'])) {
 
 
-                
+
+
+                        echo "Account Already Exist's";
+                        usleep(1000000);
+                        if (true) {
+
+                            header("Location: login.php");
+                        }
+                        // Redirect to another page
+
+                    } else {
+                        $obj->create_account(
+                            $_POST['f_name'],
+                            $_POST['l_name'],
+                            $_POST['email'],
+
+                            $_POST['a_pass'],
+                            $_POST['c_pass']
+                        );
+                    }
+                }
+
+                ?>
+
+
+
             </div>
             <hr width="90%" style="color: black; margin-top: 10px;">
             <div class="gym-name">
@@ -150,10 +155,36 @@ if (isset($_POST['submit'])) {
             }
         }
 
-        let loader = document.getElementById("preLoader")
+        let loader = document.getElementById("preLoader1")
 
         window.addEventListener("load", () => {
             loader.style.display = "none";
+        });
+
+        // Function to check the email account
+        function checkEmailAccount() {
+            // Change this to the email you want to check
+            const emailToCheck = "example@example.com";
+
+            // Check if the email account exists (this is just a simulation)
+            const accountExists = true; // Change this to your actual check logic
+
+            if (accountExists) {
+                // Redirect to the login page if the account exists
+                window.location.href = "login.html";
+            } else {
+                // Redirect to the signup page if the account doesn't exist
+                window.location.href = "signup.html";
+            }
+        }
+
+        // Add event listener to the signup button
+        document.getElementById("signupButton").addEventListener("click", function() {
+            // Display the preloader
+            document.getElementById("preloader").style.display = "flex";
+
+            // Simulate checking email account with a delay
+            setTimeout(checkEmailAccount, 2000); // Simulating 2 seconds for checking (adjust as needed)
         });
     </script>
 </body>
