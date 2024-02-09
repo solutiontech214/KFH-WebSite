@@ -38,7 +38,7 @@ if(isset($_POST['submit']))
         <span class="span2">
             <div>
                 <input type="email" id="email" class="email" name="email" placeholder="Email" required >
-                <i class="fa fa-envelope icon" style="color: #bb0120;"></i>
+                <i class="fa fa-envelope icon" style="color: white;"></i>
             </div>
             <span class="error-msg" id="email-error">
                 <!-- erroe msg -->
@@ -46,7 +46,7 @@ if(isset($_POST['submit']))
             <br>
             <div>
                 <input type="password" id="passwordInput" name="pass" class="email" placeholder="Password" name="password" required>
-                <i class="fa-solid fa-eye eye" onclick=" togglePasswordVisibility()" style="cursor: pointer; color: #bb0120;"></i>
+                <i class="fa-solid fa-eye eye" onclick=" togglePasswordVisibility()" style="cursor: pointer; color: white;"></i>
             </div>
             <span class="error-msg" id="password-error">
                 <!-- error msg -->
@@ -61,7 +61,15 @@ if(isset($_POST['submit']))
         <!-- buttons login and signup -->
         <button class="btn" type="submit" name="submit" id="btn-login">Login</button>
       
-        <hr width="84%" style="margin-top: 20px;">
+
+        <div class="nonexist-account" >
+            <span>
+                account not exist plaese create an account!
+            </span>
+        </div>
+
+
+        <hr width="84%" style="margin-top: 16px;">
 
         <a href="./signup.php" class="new-account">Create a new account <i class="fa-solid fa-user-plus"></i></a>
 
