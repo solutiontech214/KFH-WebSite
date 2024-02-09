@@ -182,8 +182,8 @@ body {
 
 .account-existance{
     align-self: center;
-    font-size: 18px;
     font-weight: 500;
+    padding: 0px 10px;
     color: red;
     background-color: #000;
 }
