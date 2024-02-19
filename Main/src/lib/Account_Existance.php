@@ -19,22 +19,42 @@ $this->con=new mysqli("localhost","KFH_DB","this.pass.123","KFH_DB");
     }
 }
 // finding the account is exists  or not 
-    public function is_account_exists($email)
-    {
-       $stmt=$this->con->prepare("SELECT `email` FROM `account` WHERE `email`=?");
-       $stmt->bind_param("s",$email);
-       $stmt->bind_result($res_email);
-       $res=$stmt->execute();
-       $stmt->fetch();
-       $arr=array();
-      if(empty($arr[0]['email']=$res_email))
-      {
-        return false;
-      }
-      else{
-        return true;
-      }
+public function is_account_exists($email, $pass)
+{
+    $stmt = $this->con->prepare("SELECT `email`, `pass` FROM `account` WHERE `email`=? AND `pass`=?");
+
+    // Check for errors in the preparation of the statement
+    if (!$stmt) {
+        die("Error in preparing the statement: " . $this->con->error);
     }
+
+    // Bind parameters
+    $stmt->bind_param("ss", $email, $pass);
+
+    // Execute the query
+    $res = $stmt->execute();
+
+    // Check for errors in the execution of the statement
+    if (!$res) {
+        die("Error in executing the statement: " . $stmt->error);
+    }
+
+    // Bind the result variables
+    $stmt->bind_result($res_email, $res_pass);
+
+    // Fetch the result
+    $stmt->fetch();
+
+    // Check if the result is not empty
+    if (!empty($res_email) && !empty($res_pass)) {
+        return true;
+    } else {
+        return false;
+    }
+
+    // Close the statement
+   
+}
     //creating an user account
     public function create_account($f_name,$l_name,$email,$a_pass,$c_pass)
 {

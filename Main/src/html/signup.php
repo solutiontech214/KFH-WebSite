@@ -1,6 +1,11 @@
 <?php
+ use PHPMailer\PHPMailer\PHPMailer;
+ use PHPMailer\PHPMailer\SMTP;
+ use PHPMailer\PHPMailer\Exception;
 require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
 $obj = new Account();
+
+
 
 if (isset($_POST['submit'])) {
     $f_name = $_POST['f_name'];
@@ -8,6 +13,7 @@ if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $a_pass = $_POST['a_pass'];
     $c_pass = $_POST['c_pass'];
+
 
     if ($obj->is_account_exists($email)) {
         // Account already exists, redirect to login
@@ -17,6 +23,8 @@ if (isset($_POST['submit'])) {
         // Account doesn't exist, create account
         $obj->create_account($f_name, $l_name, $email, $a_pass, $c_pass);
     }
+
+
 }
 ?>
 
@@ -39,7 +47,7 @@ if (isset($_POST['submit'])) {
         <p>Checking email account...</p>
     </div>
     <div id="perent">
-        <form class="signup" method="POST" onsubmit="return showPreloader()">
+        <form class="signup" method="POST" >
             <span>
                 <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
                 <h2>SignUp</h2>
@@ -70,8 +78,8 @@ if (isset($_POST['submit'])) {
                     <div class="error-msg">
                         <!-- error -->
                         <strong><label><?php if (isset($_POST['submit']) && strlen($_POST['a_pass']) < 8) {
-                            echo "Password must be greater than 8 !!";
-                        } ?></label></strong>
+                                            echo "Password must be greater than 8 !!";
+                                        } ?> </label></strong>
                     </div>
                 </span>
                 <span>
@@ -80,8 +88,9 @@ if (isset($_POST['submit'])) {
                     <div class="error-msg">
                         <!-- error -->
                         <strong><label><?php if (isset($_POST['submit']) && $_POST['a_pass'] != $_POST['c_pass']) {
-                            echo "Password isn't matches.!!";
-                        } ?></label></strong>
+                                            echo "Password isn't matches.!!";
+                                        }
+                                        ?></label></strong>
                     </div>
                 </span>
             </div>
@@ -128,8 +137,11 @@ if (isset($_POST['submit'])) {
         });
 
         function showPreloader() {
-            document.getElementById("preloader").style.display = "flex"; // Display the preloader
-        }
+    document.getElementById("preloader").style.display = "flex"; // Display the preloader
+  }
+
+
+
     </script>
 </body>
 </html>
