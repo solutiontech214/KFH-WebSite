@@ -27,10 +27,10 @@ if(isset($_POST['submit']))
 </head>
 <body>
     <!-- preloader -->
-  <div class="preloader" id="preLoader"></div>
+  
 
   <!-- login form -->
-    <form  action="login.php" class="login" method="POST">
+    <form   class="login"  method="POST">
         <span class="span1">
             <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
             <h2>Login</h2>
@@ -64,7 +64,18 @@ if(isset($_POST['submit']))
 
         <div class="nonexist-account" >
             <span>
-                account not exist plaese create an account!
+                <?php 
+                if(isset($_POST['email'])&& $obj->is_account_exists($_POST['email'],$_POST['pass']) && isset($_POST['submit']))
+                {
+                    $_SESSION['email']=$_POST['email'];
+                    header("Location: index.php");
+exit();
+
+                }
+                else if(isset($_POST['submit'])){
+                    echo "Account Not Exists..!!";
+                }
+                ?>
             </span>
         </div>
 
@@ -80,6 +91,6 @@ if(isset($_POST['submit']))
         </span>
     </form>
 
-    <script src="../js/form.js"></script>
+    <!-- <script src="../js/form.js"></script> -->
 </body>
 </html>

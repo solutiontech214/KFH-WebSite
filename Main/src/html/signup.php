@@ -1,6 +1,10 @@
 <?php
+ use PHPMailer\PHPMailer\PHPMailer;
+ use PHPMailer\PHPMailer\SMTP;
+ use PHPMailer\PHPMailer\Exception;
 require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
 $obj = new Account();
+$error=array('a_pass'=>'unset','c_pass'=>'unset');
 
 
 
@@ -11,18 +15,73 @@ if (isset($_POST['submit'])) {
     $a_pass = $_POST['a_pass'];
     $c_pass = $_POST['c_pass'];
 
-
-    if ($obj->is_account_exists($email)) {
-        // Account already exists, redirect to login
-        header("Location: login.php");
-        exit();
-    } else {
-        // Account doesn't exist, create account
-        $obj->create_account($f_name, $l_name, $email, $a_pass, $c_pass);
+if( $_POST['a_pass']==$_POST['c_pass']){
+    if(strlen($_POST['a_pass'])>=8)
+    {
+        if ($obj->is_account_exists($email,$a_pass) ) {
+            // Account already exists, redirect to login
+            header("Location: a_exists.php");
+            exit();
+        } else {
+            // Account doesn't exist, create account
+            if($obj->create_account($f_name, $l_name, $email, $a_pass, $c_pass))
+            {
+               
+    require 'C:\xampp\htdocs\src\Exception.php';
+    require 'C:\xampp\htdocs\src\PHPMailer.php';
+    require 'C:\xampp\htdocs\src\SMTP.php';
+    
+    //Create an instance; passing `true` enables exceptions
+    $mail = new PHPMailer(true);
+    
+    try {
+        //Server settings
+        $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
+        $mail->isSMTP();                                            //Send using SMTP
+        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+        $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+        $mail->Username   = 'onkargutti94@gmail.com';                     //SMTP username
+        $mail->Password   = 'lbbt yneb pzgc ddps';                               //SMTP password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+        $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $name=$_POST['f_name'];
+        //Recipients
+        $mail->setFrom('onkargutti94@gmail.com', 'KFH Solapur');
+        $mail->addAddress($_POST['email'], $_POST['f_name']." ".$_POST['l_name']);     //Add a recipient
+                   //Name is optional
+        $mail->addReplyTo('onkargutti94@gmail.com', 'Information');
+       
+    
+        //Attachments
+        //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+        $mail->addAttachment('C:\xampp\htdocs\KFH-WebSite\Main\Images\KFH.png', 'new.jng');    //Optional name
+    
+        //Content
+        $mail->isHTML(true);                                  //Set email format to HTML
+        $mail->Subject = 'Account Creation';
+        $mail->Body    = "<h1>Congratulations 🎉 $name  </h1><br> <h2>Your Account is Successfully Created ..</h2>";
+        //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    
+        $mail->send();
+       
+    } catch (Exception $e) {
+       // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 
 
+    header("Location: login.php");
+exit();
+    
+            }
+        }
+    
+    
+    }
+   
 }
+
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -51,7 +110,7 @@ if (isset($_POST['submit'])) {
 
 
     <div id="perent">
-        <form class="signup" method="POST" onsubmit="return showPreloader()">
+        <form class="signup" method="POST" >
             <span>
                 <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
                 <h2>SignUp</h2>
@@ -84,6 +143,7 @@ if (isset($_POST['submit'])) {
                         <!-- error -->
 
                         <strong><label><?php if (isset($_POST['submit']) && strlen($_POST['a_pass']) < 8) {
+                                                $error['a_pass']='set';
                                             echo "Password must be greater than 8 !!";
                                         } ?> </label></strong>
                     </div>
@@ -94,6 +154,7 @@ if (isset($_POST['submit'])) {
                     <div class="error-msg">
                         <!-- error -->
                         <strong><label><?php if (isset($_POST['submit']) && $_POST['a_pass'] != $_POST['c_pass']) {
+                                 $error['c_pass']='set';
                                             echo "Password isn't matches.!!";
                                         }
                                         ?></label></strong>
@@ -189,10 +250,7 @@ if (isset($_GET['showPreloader'])) {
             loader.style.display = "none";
         });
 
-        function showPreloader() {
-    document.getElementById("preloader").style.display = "flex"; // Display the preloader
-  }
-
+     
 
 
     </script>
