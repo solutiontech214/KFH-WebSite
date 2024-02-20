@@ -1,10 +1,9 @@
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   letter-spacing: 2px;
   font-family: "Rajdhani", sans-serif;
   background: #222121;
+  margin: 0;
+  padding: 0;
 }
 
 /* preloader */
@@ -17,7 +16,20 @@ body {
   z-index: 100;
 }
 
+.logo{
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  margin-top: 20px;
+  margin-left: 20px;
+}
 
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* login form  root*/
 .login {
   margin-top: 60px;
@@ -49,14 +61,20 @@ body {
   flex-direction: column;
 }
 .span2 .email {
-  background-color: gray;
   color: rgb(255, 255, 255);
   width: 300px;
   height: 30px;
   background: transparent;
-  border: 2px solid white;
+  border: 2px solid rgba(164, 121, 255, 0.863);
   padding: 5px 10px;
   border-radius: 5px;
+  font-family: "Rajdhani",sans-serif;
+  font-weight: 550;
+}
+.span2 input::placeholder{
+  color: #d6cfcf;
+  font-family: "Rajdhani",sans-serif;
+  font-weight: 500;
 }
 .span2 .error-msg {
   margin-left: 5px;

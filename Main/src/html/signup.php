@@ -100,20 +100,22 @@ exit();
 
 <body>
 
-    <div class="preloader1" id="preLoader1"></div>
+    <div class="x">
+    <a href="index.php"><i class="fa-solid fa-xmark fa-2x" style="color:white;"></i></a>
+    </div>
 
+
+    <div class="preloader1" id="preLoader1"></div>
 
 
     <div id="preloader" style="display: none;">
             <p>Checking email account...</p>
     </div>
 
-
     <div id="perent">
         <form class="signup" method="POST" >
             <span>
-                <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
-                <h2>SignUp</h2>
+                <h1>SignUp</h1>
             </span>
             <div class="inputs">
                 <span>
@@ -127,6 +129,7 @@ exit();
                     <input type="text" placeholder="Last Name" name="l_name" required>
                     <i class="fa-solid fa-user"></i>
                     <div class="error-msg">
+                        
                     </div>
                 </span>
                 <span>
@@ -162,20 +165,17 @@ exit();
                 </span>
 
             </div>
-            <span class="haveaccount">
-                <a href="login.php">Already have an account<i class="fa-solid fa-right-to-bracket"></i></a>
-            </span>
-
-           
 
             <div class="signup-btn">
                 <button type="submit" name="submit" id="signupButton">SignUp</button>
             </div>
 
 
+            <span class="haveaccount">
+                <a href="login.php">Already have an account<i class="fa-solid fa-right-to-bracket"></i></a>
+            </span>
 
-
-
+            
             <div class="account-existance" style="margin-top:20px">
 
                 <?php
@@ -228,6 +228,11 @@ if (isset($_GET['showPreloader'])) {
 
 
     </div>
+
+
+
+
+
     <script>
         function togglePassword() {
             const passwordInput = document.getElementById("passwordInput");

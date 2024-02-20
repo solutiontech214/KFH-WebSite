@@ -1,287 +1,297 @@
 body {
-    letter-spacing: 2px;
+  margin: 0px;
 
-    display: flex;
+  letter-spacing: 2px;
 
-    background-image: url("../../Images/log-bg-img.jpg");
+  display: flex;
 
+  background: #222121;
 
-    background-size: cover;
+  background-size: cover;
 
-    background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
 
 .preloader1 {
-    background: #000000 url("../../Images/loader.gif") no-repeat center center;
+  background: #000000 url("../../Images/loader.gif") no-repeat center center;
 
-    background-size: 20%;
+  background-size: 20%;
 
-    width: 100%;
+  width: 100%;
 
-    height: 100vh;
+  height: 100vh;
 
-    position: fixed;
+  position: fixed;
 
-    z-index: 100;
+  z-index: 100;
 }
+
+
+.x{
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+    margin-left: -40px;
+    width: 100%;
+    height: 30px;
+    position: fixed;
+  }
 
 #perent {
-    width: 100%;
+  width: 100%;
 
-    height: 100%;
+  padding: 10px 20px;
 
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    align-items: center;
+  margin-top: 20px;
 
-    margin-top: 60px;
 }
+
 
 .signup {
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    width: 540px;
+  width: 540px;
 
-    height: 680px;
+  background: transparent;
 
-    background: transparent;
+  border-radius: 5px;
 
-    backdrop-filter: blur(90px);
+  color: white;
 
-    border-radius: 5px;
-
-    color: white;
-
-    font-family: "Rajdhani", sans-serif;
-
-    box-shadow: 0 0 40px black;
-}
-
-.signup span:nth-child(1) a i {
-    position: absolute;
-
-    margin-left: 500px;
-
-    margin-top: 20px;
+  font-family: "Rajdhani", sans-serif;
 
 }
 
-.signup h2 {
-    text-align: center;
+
+.signup h1 {
+  text-align: center;
 }
 
 .inputs {
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    align-items: center;
+  align-items: center;
 
-    column-gap: 20px;
+  column-gap: 20px;
 }
 
 .inputs input {
-    border: none;
+  background: transparent;
 
-    background: none;
+  height: 30px;
 
-    outline: none;
+  border: 2px solid rgba(164, 121, 255, 0.863);
 
-    border-bottom: 2px solid black;
+  padding: 5px 10px;
 
-    width: 300px;
+  width: 300px;
 
-    margin-top: 30px;
+  font-family: "Rajdhani",sans-serif;
 
-    color: white;
+  border-radius: 5px;
+
+  font-weight: 550;
+
+  margin-top: 20px;
+
+  color: white;
+}
+.inputs input::placeholder{
+    color: #fff;
+    font-family: "Rajdhani",sans-serif;
+    font-weight: 500;
 }
 
 .inputs input:focus {
-    border-bottom: 2px solid rgb(0, 140, 255);
+    background: none;
+    outline: none;
+  border: 2px solid rgb(0, 140, 255);
 }
-.inputs span .error-msg{
-    margin-top: 2px;
-    font-size: 11px;
-    font-weight: 600;
+
+
+
+.inputs span .error-msg {
+  width: 100%;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 2px;
+  font-size: 11px;
+  font-weight: 600;
 }
 .inputs span i {
-    position: absolute;
+  position: absolute;
 
-    margin-top: 28px;
+  margin-top: 35px;
 
-    margin-left: -20px;
+  margin-left: -25px;
 }
 
 .error-msg {
-    position: relative;
+  position: relative;
 
-    height: 10px;
+  height: 10px;
 
-    width: fit-content;
+  width: fit-content;
 
-    font-size: 10px;
+  font-size: 10px;
 
-    color: rgb(255, 0, 0);
+  color: rgb(255, 0, 0);
 }
 
 .haveaccount {
-    margin-top: 14px;
+  margin-top: 20px;
 
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    align-items: center;
+  align-items: center;
+
 }
 
 .haveaccount a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: #000;
+  padding: 10px 20px;
 }
 
 .haveaccount i {
-    margin-left: 4px;
+  margin-left: 4px;
 }
 
 .signup-btn {
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    margin-top: 20px;
+  margin-top: 20px;
 
-    width: 100%;
+  width: 100%;
 }
 
 .signup-btn button {
-    width: 50%;
+  width: 50%;
 
-    border: 0px;
+  border: 0px;
 
-    font-family: "Rajdhani", sans-serif;
+  font-family: "Rajdhani", sans-serif;
 
-    font-size: 20px;
+  font-size: 22px;
 
-    font-weight: 500;
+  font-weight: 500;
 
-    padding: 10px 20px;
+  padding: 10px 20px;
 
-    background: #bb0120;
+  background: #bb0120;
 
-    box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
 }
 
 .signup-btn button:hover {
-    background-color: #000;
+  background-color: #000;
 
-    color: #fff;
+  color: #fff;
 }
 
 /* preloader */
 #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-  }
-  #preloader p {
-    color: white;
-    font-size: 24px;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+#preloader p {
+  color: white;
+  font-size: 24px;
+}
 
-
-
-
-
-
-
-
-.account-existance{
-    align-self: center;
-    font-weight: 500;
-    padding: 0px 10px;
-    color: red;
-    background-color: #000;
+.account-existance {
+  align-self: center;
+  font-weight: 500;
+  padding: 0px 10px;
+  color: red;
+  background-color: #000;
 }
 
 .gym-name {
-    align-self: center;
+  align-self: center;
 
-    width: 80%;
+  width: 80%;
 
-    margin-top: 16px;
+  margin-top: 16px;
 
-    height: auto;
+  height: auto;
 
-    display: flex;
+  display: flex;
 
-    justify-content: center;
+  justify-content: center;
 
-    align-items: center;
+  align-items: center;
 
-    box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px black;
 
-    background: transparent;
+  background: transparent;
 }
 
 .gym-name h3 {
-    padding: 16px 16px;
-
-    color: #fff;
+  padding: 16px 16px;
+  color: #fff;
 }
 
 /* Your existing CSS code... */
 
 @media only screen and (max-width: 544px) {
-    #perent {
-        margin-top: 30px;
-        margin: 0px;
-        background: none;
-    }
+  #perent {
+    margin-top: 30px;
+    margin: 0px;
+    background: none;
+  }
 
-    .signup {
-        width: 100%;
+  .signup {
+    width: 100%;
 
-        height: auto;
-        background-color: transparent;
-        box-shadow: none;
-    }
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+  }
 
-    .signup span:nth-child(1) a i {
-        margin-left: 90%;
+  .signup span:nth-child(1) a i {
+    margin-left: 90%;
 
-        margin-top: 20px;
-    }
+    margin-top: 20px;
+  }
 
-    .inputs span {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  .inputs span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-    }
+  .inputs span i {
+    position: relative;
+  }
 
-    .inputs span i {
-        position: relative;
-    }
+  .inputs input {
+    width: 80%;
+  }
 
-    .inputs input {
-        width: 80%;
-
-
-    }
-
-    .signup-btn button {
-        width: 80%;
-    }
+  .signup-btn button {
+    width: 80%;
+  }
 }

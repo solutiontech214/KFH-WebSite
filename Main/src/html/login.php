@@ -28,9 +28,14 @@ if(isset($_POST['submit']))
 <body>
     <!-- preloader -->
   
+    <div class="logo">
+        <img src="../../Images/KFH.png" alt="logo" width="120" height="50">
+    </div>
 
   <!-- login form -->
-    <form   class="login"  method="POST">
+  <div class="container">
+
+  <form   class="login"  method="POST">
         <span class="span1">
             <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
             <h2>Login</h2>
@@ -90,6 +95,10 @@ exit();
             <h3>@KANDRE'S FITNESS HUB</h3>
         </span>
     </form>
+    
+
+  </div>
+   
 
     <script src="../js/form.js"></script>
 </body>
