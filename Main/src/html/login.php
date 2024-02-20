@@ -25,17 +25,23 @@ if(isset($_POST['submit']))
     <!-- preloader -->
   <div class="preloader" id="preLoader"></div>
 
+
+
   <!-- login form -->
     <form  action="login.php" class="login" method="POST">
+        <div class="image">
+            <img src="../../Images/KFH.png" alt="logo" width="120px" height="50" style="margin-top: -40px;">
+        </div>
         <span class="span1">
             <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
-            <h2>Login</h2>
+            <h2>WelCome</h2>
         </span>
         <span class="span2">
             <div>
                 <input type="email" id="email" class="email" name="email" placeholder="Email" required >
                 <i class="fa fa-envelope icon" style="color: white;"></i>
             </div>
+
             <span class="error-msg" id="email-error">
                 <!-- erroe msg -->
             </span>
@@ -49,11 +55,14 @@ if(isset($_POST['submit']))
             </span>
         </span>
 
+
+
         <!-- forget password -->
         <span class="span3">        
-            <a href="forgot_pass.php">Forget Password?</a>
+            <a href="./forgetpage.php">Forget Password?</a>
         </span>
         
+
         <!-- buttons login and signup -->
         <button class="btn" type="submit" name="submit" id="btn-login">Login</button>
       
@@ -66,6 +75,7 @@ if(isset($_POST['submit']))
 
 
         <hr width="84%" style="margin-top: 16px;">
+
 
         <a href="./signup.php" class="new-account">Create a new account <i class="fa-solid fa-user-plus"></i></a>
 
