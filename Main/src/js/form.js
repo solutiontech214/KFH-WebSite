@@ -1,5 +1,5 @@
 
-let loader = document.getElementById("preLoader")
+/*let loader = document.getElementById("preLoader")
 
 window.addEventListener("load", () => {
   loader.style.display = "none";
@@ -18,4 +18,4 @@ function togglePasswordVisibility() {
     eyeIcon.classList.remove("fa-eye-slash");
     eyeIcon.classList.add("fa-eye");
   }
-}
+}*/

@@ -1,8 +1,12 @@
 <?php 
+require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
+session_start();
+$obj=new Account();
 if(isset($_POST['submit']))
 {
     $email= $_POST['email'];
      $pass= $_POST['pass'];
+
 }
 
 ?>
@@ -23,15 +27,13 @@ if(isset($_POST['submit']))
 </head>
 <body>
     <!-- preloader -->
-  <div class="preloader" id="preLoader"></div>
+  
 
 
 
   <!-- login form -->
-    <form  action="login.php" class="login" method="POST">
-        <div class="image">
-            <img src="../../Images/KFH.png" alt="logo" width="120px" height="50" style="margin-top: -40px;">
-        </div>
+    <form   class="login"  method="POST">
+
         <span class="span1">
             <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
             <h2>WelCome</h2>
@@ -69,7 +71,18 @@ if(isset($_POST['submit']))
 
         <div class="nonexist-account" >
             <span>
-                account not exist plaese create an account!
+                <?php 
+                if(isset($_POST['email'])&& $obj->is_account_exists($_POST['email'],$_POST['pass']) && isset($_POST['submit']))
+                {
+                    $_SESSION['email']=$_POST['email'];
+                    header("Location: index.php");
+exit();
+
+                }
+                else if(isset($_POST['submit'])){
+                    echo "Account Not Exists..!!";
+                }
+                ?>
             </span>
         </div>
 
@@ -86,6 +99,6 @@ if(isset($_POST['submit']))
         </span>
     </form>
 
-    <script src="../js/form.js"></script>
+    <!-- <script src="../js/form.js"></script> -->
 </body>
 </html>
