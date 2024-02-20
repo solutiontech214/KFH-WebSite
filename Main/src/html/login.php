@@ -33,6 +33,9 @@ if(isset($_POST['submit']))
 
   <!-- login form -->
     <form   class="login"  method="POST">
+    <div class="image">
+            <img src="../../Images/KFH.png" alt="logo" width="120px" height="50" style="margin-top: -40px;">
+    </div>
 
         <span class="span1">
             <a href="index.php"><i class="fa-solid fa-xmark" style="color:white;"></i></a>
