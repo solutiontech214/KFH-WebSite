@@ -55,7 +55,7 @@ if(isset($_POST['submit']))
 
         <!-- forget password -->
         <span class="span3">        
-            <a href="forgot_pass.php">Forget Password?</a>
+            <a href="forgetpage.php">Forget Password?</a>
         </span>
         
         <!-- buttons login and signup -->
