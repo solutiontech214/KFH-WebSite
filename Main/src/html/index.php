@@ -35,7 +35,7 @@
       </div>
       <a href="./classes.php">Classes</a>
       <a href="#">AboutUs</a>
-      <a href="#">Contact</a>
+      <a href="./contact.php">Contact</a>
     </div>
     <div class="login">
       <a href="../html/login.php"><button class="btn-login" id="login" type="button">Login</button></a>
