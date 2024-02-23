@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -37,9 +39,23 @@
       <a href="#">AboutUs</a>
       <a href="./contact.php">Contact</a>
     </div>
-    <div class="login">
-      <a href="../html/login.php"><button class="btn-login" id="login" type="button">Login</button></a>
-    </div>
+    <?php
+    if(!isset($_SESSION['log']))
+    {
+
+    
+    echo '<div class="login">
+      <a href="../html/login.php"><button class="btn-login" id="login" type="button" >Login</button></a>
+    </div>';
+    
+    }
+    else{
+      echo '<div class="login">
+      <a href="../html/index.php"><button class="btn-login" id="login" type="button" >Log Out</button></a>
+    </div>';
+    unset($_SESSION['log']);
+    }
+    ?>
   </nav>
 
   <div class="img-container">

@@ -74,6 +74,44 @@ public function is_account_exists($email, $pass)
      }
     
 }
+//getting account infromation
+
+public function get_info($email)
+{
+    $stmt = $this->con->prepare("SELECT `f_name` FROM `account` WHERE `email`=? ");
+
+    // Check for errors in the preparation of the statement
+    if (!$stmt) {
+        die("Error in preparing the statement: " . $this->con->error);
+    }
+
+    // Bind parameters
+    $stmt->bind_param("s", $email);
+
+    // Execute the query
+    $res = $stmt->execute();
+
+    // Check for errors in the execution of the statement
+    if (!$res) {
+        die("Error in executing the statement: " . $stmt->error);
+    }
+
+    // Bind the result variables
+    $stmt->bind_result($res_name);
+
+    // Fetch the result
+    $stmt->fetch();
+
+    // Check if the result is not empty
+    if (!empty($res_name)) {
+        return $res_name;
+    } else {
+        return false;
+    }
+
+    // Close the statement
+   
+}
 
 //class ends
 }
