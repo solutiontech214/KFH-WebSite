@@ -28,7 +28,7 @@ if(isset($_POST['log_out']))
       <img src="../../Images/KFH.png" width="120px" height="50px" class="logo">
     </div>
     <div class="items">
-      <a href="#">Home</a>
+      <a href="./index.php">Home</a>
       <div class="dropdown">
         <a href="./service.php" class="dropbtn dropdown-toggle">Srevices</a>
         <div class="dropdown-content">
