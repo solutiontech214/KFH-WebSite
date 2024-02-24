@@ -73,6 +73,7 @@ if(isset($_POST['submit']))
                 if(isset($_POST['email'])&& $obj->is_account_exists($_POST['email'],$_POST['pass']) && isset($_POST['submit']))
                 {
                     $_SESSION['email']=$_POST['email'];
+                    $_SESSION['log']=$_POST['email'];
                     header("Location: index.php");
 exit();
 
