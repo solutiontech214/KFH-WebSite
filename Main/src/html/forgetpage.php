@@ -39,7 +39,7 @@ $obj = new Account();
         {
 
         
-       echo  $name=$obj->get_info($_POST['email']);
+         $name=$obj->get_info($_POST['email']);
         $_SESSION['name']=$name;
         if($name!=false)
         {
@@ -74,7 +74,7 @@ $obj = new Account();
      $mail->Subject = 'Update Password';
      $num=rand(100000,600000);
      $_SESSION['otp']=$num;
-     $mail->Body    = "<h1>Dear 🎉 $name  </h1><br> <h2>You are requested to update your password <br> Here is your otp : <label style='text-decoration:underline;color:blue;' >$num </label></h2>";
+     $mail->Body    = "<h1>💁 Dear  $name  </h1><br> <h2>You are requested to update your password <br> Here is your otp : <label style='text-decoration:underline;color:blue;' >$num </label></h2>";
      //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
  
      $mail->send();

@@ -1,3 +1,24 @@
+<?php
+if(isset($_POST['submit']))
+{
+    if(isset($_SESSION['log']))
+    {
+        $phone=$_POST['phone'];
+        $msg=$_POST['message'];
+
+
+        
+    }else{
+        ?><script>
+        setTimeout(function() {
+            window.location.href = 'redirect.php';
+        }, 3000);
+        </script>
+        <?php
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,17 +86,17 @@
         <div class="container c2">
             <div>
                 <h1>Give Your Deatils</h1>
-                <form action="contact_process.php" method="POST">
+                <form  method="POST">
                     <div class="inputs">
                         <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name" required><br>
+                        <input type="text" id="name" name="name"  value="<?php  if(isset($_SESSION['name'])){echo $_SESSION['name'];}?>" disabled><br>
                         <span>
                             <!-- errrro -->
                         </span>
                     </div>
                     <div class="inputs">
                         <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" required><br>
+                        <input type="email" id="email" name="email" value="<?php  if(isset($_SESSION['log'])){echo $_SESSION['log'];}?>"disabled><br>
                         <span>
                             <!-- errrro -->
                         </span>
@@ -92,7 +113,7 @@
                         <textarea id="message" name="message" rows="4" required></textarea><br>
                     </div>
                     <br>
-                    <button type="submit">Submit</button>
+                    <button type="submit" name="submit">Submit</button>
                 </form>
                 <div class="follow-link">
                     <a href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link"><i class="fa-brands fa-instagram "></i></a>
