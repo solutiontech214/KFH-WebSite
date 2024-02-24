@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,6 +57,26 @@
     border: 0;
     background-color: #000;
   }
+  .alert {
+            padding: 15px;
+           /* Green color */
+           
+            margin-bottom: 150px;
+            font-size: larger;
+            display: flex;
+            width:auto;
+            margin-left:80px;
+            margin-right:80px;
+        }
+        .error
+        {
+          background-color: red !important;
+          color:black!important;
+        }
+        .success{
+          background-color: #4CAF50 !important;
+color:white !important;
+        }
 </style>
 </head>
 <body>
@@ -64,31 +88,68 @@
   <div class="container">
     <div class="card">
       <div class="card-header">
+      
+      <br>
+      <br>
         <h4>OTP Verification</h4>
       </div>
       <div class="card-body">
-        <form id="otpForm">
+        <form id="otpForm" method="POST">
           <div class="form-group">
             <label for="otpInput">Enter OTP:</label>
             <input type="text" class="form-control" id="otpInput" name="otpInput" required>
+           
           </div>
-          <button type="submit" class="btn btn-primary btn1">Verify OTP</button>
+          <input type="submit" name="submit" class="btn btn-primary btn1" value="Verify OTP">
         </form>
       </div>
     </div>
   </div>
+
+  <?php  if(!isset($_POST['submit']))
+  {
+      ?>
+    <span class="alert success"><strong>
+      <?php echo  "We Just Sent an OTP to :".$_SESSION['otp_mail']." PLease Check ..."; 
+      ?>
+      </strong>
+      </span>
+      <?php
+    }else if(isset($_POST['submit']) && ($_POST['otpInput']==$_SESSION['otp']))
+    {
+      ?>
+      <span class="alert success"><strong>
+        <?php
+      echo "You are Verified by Our System.. 😀";
+
+      ?>
+      <script>
+  // Delay the redirection for 3 seconds (3000 milliseconds)
+  setTimeout(function() {
+    window.location.href = "updatepass.php";
+  }, 3000);
+</script>
+</strong>
+      </span>
+      <?php
+    }else if(isset($_POST['submit']) && ($_POST['otpInput']!=$_SESSION['otp']))
+    {
+
+    ?>
+    <span class="alert error"><strong>
+      <?php
+    echo "Oop's..! Otp isn's matches with that we have Sent..!";
+    ?>
+    </strong>
+    </span>
+    <?php
+      
+    }
+    ?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-  $(document).ready(function() {
-    // Handle form submission
-    $('#otpForm').submit(function(event) {
-      event.preventDefault(); // Prevent the form from submitting normally
-      // Add your OTP verification logic here
-    });
-  });
-</script>
+
 
 </body>
 </html>
