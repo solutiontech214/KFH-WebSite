@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,7 +11,6 @@
       padding: 0;
       background: #060606;
     }
-
     .preloader {
       margin: 0;
       background: #060606 url("../../Images/loader.gif") no-repeat center center;
@@ -24,7 +22,6 @@
       justify-content: center;
       align-items: center;
     }
-
     h1 {
       color: white;
       margin-top: 20%;
@@ -32,13 +29,11 @@
     }
   </style>
 </head>
-
 <body>
   <div class="preloader">
     <h1>Redirecting To Login Page..</h1>
   </div>
 </body>
-
 </html>
 <script>
   // Delay the redirection for 3 seconds (3000 milliseconds)
