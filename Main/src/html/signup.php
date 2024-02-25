@@ -68,10 +68,14 @@ if( $_POST['a_pass']==$_POST['c_pass']){
        // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
     }
 
-
-    header("Location: login.php");
-exit();
-    
+?>
+    <script>
+  // Delay the redirection for 3 seconds (3000 milliseconds)
+  setTimeout(function() {
+    window.location.href = "nxt.php";
+  }, 1300);
+</script>
+<?php
             }
         }
     

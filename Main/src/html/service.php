@@ -22,7 +22,7 @@
                 <a href=""><i class="fa-brands fa-instagram" style="color: #ea2a76; background-color:none"></i></a>
             </li>
             <li><a href="./index.php">Home</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="contact.php">Contact</a></li>
             <li><a href="">AboutUs</a></li>
         </div>
     </nav>
@@ -99,7 +99,7 @@
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">Services</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="contact.php">Contact</a></li>
                 <li><a href="">AboutUs</a></li>
             </ul>
         </div>
