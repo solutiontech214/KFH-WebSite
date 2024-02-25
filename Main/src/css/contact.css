@@ -199,10 +199,12 @@ form button:hover{
     justify-content: center;
     align-items: center;
 }
-
 .follow-link a{
+    margin: 0;
+    width: fit-content;
+    height: 20px;
     text-decoration: none;
     color: black;
     margin-left: 40px;
-    font-size: 30px;
 }
+

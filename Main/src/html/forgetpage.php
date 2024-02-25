@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
@@ -9,7 +9,8 @@ require 'C:\xampp\htdocs\src\PHPMailer.php';
 require 'C:\xampp\htdocs\src\SMTP.php';
 require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
 $obj = new Account();
-
+$num=rand(100000,600000);
+     $_SESSION['otp']=$num;
 
 ?>
 <!DOCTYPE html>
@@ -63,7 +64,7 @@ $obj = new Account();
      $mail->addAddress($_POST['email'],$res_name);     //Add a recipient
                 //Name is optional
      $mail->addReplyTo('onkargutti94@gmail.com', 'Information');
-    
+    $_SESSION['otp_mail']=$_POST['email'];
  
      //Attachments
      //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
@@ -72,12 +73,17 @@ $obj = new Account();
      //Content
      $mail->isHTML(true);                                  //Set email format to HTML
      $mail->Subject = 'Update Password';
+
      $num=rand(100000,600000);
      $_SESSION['otp']=$num;
+
+     
+
      $mail->Body    = "<h1>💁 Dear  $name  </h1><br> <h2>You are requested to update your password <br> Here is your otp : <label style='text-decoration:underline;color:blue;' >$num </label></h2>";
      //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
  
      $mail->send();
+     header("Location:otp.php");
     
  } catch (Exception $e) {
     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
