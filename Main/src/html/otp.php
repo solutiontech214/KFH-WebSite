@@ -123,7 +123,7 @@ color:white !important;
       <script>
   // Delay the redirection for 3 seconds (3000 milliseconds)
   setTimeout(function() {
-    window.location.href = "updatepass.php";
+    window.location.href = "newpass.php";
   }, 3000);
 </script>
 </strong>

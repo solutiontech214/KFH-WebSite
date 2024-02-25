@@ -1,3 +1,93 @@
+<?php
+require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+           
+require 'C:\xampp\htdocs\src\Exception.php';
+require 'C:\xampp\htdocs\src\PHPMailer.php';
+require 'C:\xampp\htdocs\src\SMTP.php';
+session_start();
+$obj = new Account();
+if(isset($_POST['submit']))
+{
+    if($_POST['a_pass']==$_POST['c_pass'])
+    {
+        if($obj->update_pass($_SESSION['otp_mail'],$_POST['a_pass']))
+        {
+
+            $mail = new PHPMailer(true);
+    
+ try {
+     //Server settings
+     $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
+     $mail->isSMTP();                                            //Send using SMTP
+     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+     $mail->Username   = 'onkargutti94@gmail.com';                     //SMTP username
+     $mail->Password   = 'lbbt yneb pzgc ddps';                               //SMTP password
+     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;            //Enable implicit TLS encryption
+     $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+     $res_name=$_SESSION['name'];
+     //Recipients
+     $mail->setFrom('onkargutti94@gmail.com', 'KFH Solapur');
+     $mail->addAddress($_SESSION['otp_mail'],$res_name);     //Add a recipient
+                //Name is optional
+     $mail->addReplyTo('onkargutti94@gmail.com', 'Information');
+    
+ 
+     //Attachments
+     //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+     //$mail->addAttachment('C:\xampp\htdocs\KFH-WebSite\Main\Images\KFH.png', 'new.jng');    //Optional name
+ 
+     //Content
+     $mail->isHTML(true);                                  //Set email format to HTML
+     $mail->Subject = ' Password Updated ...';
+     
+     $mail->Body    = "<h1>💁 Dear  $name  </h1><br> <h2>Your Password is Successfully Update. 👍</label></h2>";
+     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+ 
+     $mail->send();
+     header("Location:otp.php");
+    
+ } catch (Exception $e) {
+    // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+ }
+
+            unset($_SESSION['otp_mail']);
+            unset($_SESSION['name']);
+        ?>
+        <div class="alert1">
+              Password Updated Successfully..😀
+           </div>
+           <script>
+  // Delay the redirection for 3 seconds (3000 milliseconds)
+  setTimeout(function() {
+    window.location.href = "nxt.php";
+  }, 3000);
+</script>
+               <?php
+
+        }
+        else{
+            ?>
+            <div class="alert">
+                  Unable to update Password..!!!
+               </div>
+                   <?php   
+        }
+    }
+    else{
+        ?>
+ <div class="alert">
+       Password are not matching Provided by u.!!
+    </div>
+        <?php
+
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,6 +154,18 @@
             margin-top: -25px;
             margin-left: 340px;
         }
+        .alert {
+    padding: 15px;
+    background-color: #f44336; /* Red background color */
+    color: white; /* White text color */
+    margin-bottom: 15px; /* Add some space at the bottom */
+}
+.alert1 {
+    padding: 15px;
+    background-color: green; /* Red background color */
+    color: white; /* White text color */
+    margin-bottom: 15px; /* Add some space at the bottom */
+}
     </style>
 </head>
 
@@ -77,21 +179,21 @@
         <div class="row justify-content-center">
             <div class="col-md-6 c">
                 <h2 class="text-center mb-4">New User Password Setup</h2>
-                <form>
+                <form method="POST" >
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter password"
+                        <input type="password" class="form-control" id="password" name="a_pass"placeholder="Enter password"
                             style="font-size: 16px; font-weight: 500; color: #000;" />
                         <i class="fa-solid fa-eye eye" onclick=" togglePasswordVisibility()"
                             style="cursor: pointer; color: rgb(0, 0, 0)"></i>
                     </div>
                     <div class="form-group">
                         <label for="confirmPassword">Confirm Password</label>
-                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password"
+                        <input type="password" name="c_pass" class="form-control" id="confirmPassword" placeholder="Confirm password"
                             style="font-size: 16px; font-weight: 500; color: #000;" />
                         <i class="fa-solid fa-lock" style="cursor: pointer; color: rgb(0, 0, 0)"></i>
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block _btn">
+                    <button type="submit" name="submit" class="btn btn-primary btn-block _btn">
                         Submit
                     </button>
                 </form>
