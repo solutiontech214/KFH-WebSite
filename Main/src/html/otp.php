@@ -1,7 +1,5 @@
 <?php
 session_start();
-
-
 ?><!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +9,6 @@ session_start();
     <!-- Bootstrap CSS -->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
-
 <style>
   *{
     font-family: "Rajdhani",sans-serif;
@@ -20,7 +17,7 @@ session_start();
   body{
     margin: 0;
     padding: 0;
-    background: #222121;
+    background: #212212;
   }
   .logo{
     width: 100%;
@@ -126,7 +123,7 @@ color:white !important;
       <script>
   // Delay the redirection for 3 seconds (3000 milliseconds)
   setTimeout(function() {
-    window.location.href = "updatepass.php";
+    window.location.href = "newpass.php";
   }, 3000);
 </script>
 </strong>

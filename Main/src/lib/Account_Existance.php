@@ -112,6 +112,22 @@ public function get_info($email)
     // Close the statement
    
 }
+function update_pass($email,$newpass)
+{
+    $stmt = $this->con->prepare("UPDATE `account` SET `pass`=? WHERE  `email`=? ");
+    $stmt->bind_param("ss",$newpass, $email);
+    $stmt->execute();
+   $ar= $stmt->affected_rows;
+   
+    if($ar==1)
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
 
 //class ends
 }
