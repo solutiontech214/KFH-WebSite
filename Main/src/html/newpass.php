@@ -9,15 +9,15 @@ require 'C:\xampp\htdocs\src\PHPMailer.php';
 require 'C:\xampp\htdocs\src\SMTP.php';
 session_start();
 $obj = new Account();
-if(isset($_POST['submit']))
+if(isset($_POST['submit']) )
 {
     if($_POST['a_pass']==$_POST['c_pass'])
     {
-        if($obj->update_pass($_SESSION['otp_mail'],$_POST['a_pass']))
+        if($obj->update_pass($_SESSION['otp_mail'],$_POST['a_pass']) )
         {
 
             $mail = new PHPMailer(true);
-    
+    if(isset($_SESSION['otp_mail'])){
  try {
      //Server settings
      $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
@@ -44,18 +44,19 @@ if(isset($_POST['submit']))
      $mail->isHTML(true);                                  //Set email format to HTML
      $mail->Subject = ' Password Updated ...';
      
-     $mail->Body    = "<h1>💁 Dear  $name  </h1><br> <h2>Your Password is Successfully Update. 👍</label></h2>";
+     $mail->Body    = "<h1>💁 Dear  $res_name  </h1><br> <h2>Your Password is Successfully Update. 👍</h2>";
      //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
- 
      $mail->send();
-     header("Location:otp.php");
+     unset($_SESSION['otp_mail']);
+     unset($_SESSION['name']);
+   
     
  } catch (Exception $e) {
     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
  }
+}
 
-            unset($_SESSION['otp_mail']);
-            unset($_SESSION['name']);
+            
         ?>
         <div class="alert1">
               Password Updated Successfully..😀
