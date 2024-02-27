@@ -1,6 +1,6 @@
 * {
   font-family: 'Rajdhani', sans-serif;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
   margin: 0;
   padding: 0;
 }
@@ -194,7 +194,7 @@ button:hover {
 
 .cont:hover img {
   transform: scale(1.01);
-  border-radius: 30px;
+  border-radius: 20px;
   box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
@@ -204,11 +204,15 @@ button:hover {
   flex-direction: column;
   align-items: center;
   width: 50%;
-  text-align: end;
+  text-align: start;
   margin-right: 20px;
   color: rgb(255, 255, 255);
 }
-
+.pic-info p{
+  font-weight: 450;
+  font-size: 20px;
+  margin:0 40px;
+}
 .container1 {
   display: flex;
   align-items: center;
@@ -353,6 +357,16 @@ button:hover {
 .logo-img {
   margin-top: 60px;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #343333;
+}
+::-webkit-scrollbar-thumb {
+  background: #e43d4b;
+}
+
 
 /* Media query for mobile devices */
 @media only screen and (max-width: 480px) {

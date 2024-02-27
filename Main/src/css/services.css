@@ -23,11 +23,7 @@ body a{
   color: white;
 }
 .logo img {
-  margin-left: 40px;
-  transition: all 0.6s ease-in-out;
-}
-.logo img:hover{
-  transform: scale(1.2) translateX(20px);
+  margin-left: 20px;
 }
 
 .items {
@@ -127,13 +123,14 @@ body a{
   padding: 20px 20px;
   padding-top: 40px;
   border: 0px solid black;
-  box-shadow: 0 0 20px rgb(0, 0, 0);  
+  box-shadow: 0 0 5px rgb(0, 0, 0);  
   border-bottom-left-radius: 20px;
   background-color: rgb(17, 16, 17);
+  transition: all 0.4s ease;
 }
 .service div .span:hover,
 .service2 div .span:hover{
-  box-shadow: 0 0 30px rgb(0, 0, 0);  
+  box-shadow: 0 0 20px rgb(0, 0, 0); 
 } 
 
 .info .span p {
@@ -198,4 +195,14 @@ footer div {
 
 .pages a:hover {
   color: orangered;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #343333;
+}
+::-webkit-scrollbar-thumb {
+  background: #e43d4b;
 }

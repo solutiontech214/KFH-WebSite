@@ -295,3 +295,12 @@ body {
     width: 80%;
   }
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #343333;
+}
+::-webkit-scrollbar-thumb {
+  background: #e43d4b;
+}

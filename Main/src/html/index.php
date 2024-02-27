@@ -69,7 +69,7 @@ if(isset($_POST['log_out']))
   <div class="img-container">
     <img class="mySlides" src="../../Images/gym-img2.jpg" alt="gym">
     <div class="text-info"><p><b>Shape Your Body</b><br> in most <b>Luxurious</b><br> gym in town</p>
-      <a href=""><button class="btn-login" id="login" type="button">See More..</button></a>
+      <a href="./service.php"><button class="btn-login" id="login" type="button">See More..</button></a>
     </div>
     <img class="mySlides" src="../../Images/gym2.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym3.jpg" alt="gym">
@@ -87,16 +87,15 @@ if(isset($_POST['log_out']))
       <span class="pic-info">
         <h1><b>Equipments</b></h1>
         <p><br>
-          <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
+          Having the right exercise equipment is crucial for reaching your fitness goals and maintaining a healthy lifestyle. With the right gear, you will be able to increase your strength, cardiovascular fitness, and general fitness.
         </p>
       </span>
     </div>
     <div class="cont c2">
       <span class="pic-info">
-        <h1><b>Zumba Classes</b></h1>
-        <p><br>
-          <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
-        </p>
+        <h1><b>Zumba Classes</b></h1><br>
+        <p>
+        Zumba classes combine latin and international music and dance to create a dynamic calorie-burning form of workout for people of all fitness levels and age groups. This effective fitness system features aerobic training that is a fusion of slow and fast rhythms to tone and sculpt your body.        </p>
       </span>
       <span class="pic">
         <img src="../../Images/zumba.jpg" alt="">
@@ -109,19 +108,19 @@ if(isset($_POST['log_out']))
       <span class="pic-info">
         <h1><b>Luxurious Feel</b></h1>
         <p><br>
-          <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?
         </p>
       </span>
     </div>
     <div class="cont c4">
       <span class="pic-info">
-        <h1><b>Equipments</b></h1>
+        <h1><b>Personal Traners</b></h1>
         <p><br>
-          <b>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?</b>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?
         </p>
       </span>
       <span class="pic">
-        <img src="../../Images/cardio-cycle.jpg" alt="">
+        <img src="../../Images/traners.jpg" alt="">
       </span>
     </div>
   </div>
