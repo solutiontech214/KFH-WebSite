@@ -13,8 +13,8 @@
         <div class="items">
             <a href="./index.php">Home</a>
             <a href="#">Membership</a>
-            <a href="#">Contact</a>
-            <a href="#">About Us</a>
+            <a href="./contact.php">Contact</a>
+            <a href="./aboutus.php">About Us</a>
         </div>
     </nav>
     <div class="on-img">

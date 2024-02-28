@@ -150,12 +150,16 @@ if(isset($_POST['log_out']))
       <img src="../../Images/KFH.png" alt="" width="120px" height="50px" class="logo">
     </div>
     <div class="content">
-      <a href="">Home</a>
-      <a href="">Services</a>
-      <a href="">AboutUs</a>
-      <a href="">Contact</a>
+      <a href="./index.php">Home</a>
+      <a href="./service.php">Services</a>
+      <a href="./aboutus.php">AboutUs</a>
+      <a href="./contact.php">Contact</a>
     </div>
   </footer>
+  <div class="copyright">
+        <p>@copyright kandresfitnesshub.com</p>
+  </div>
+
   <script src="../js/index.js" defer></script>
   <script>
     window.addEventListener("scroll", function() {

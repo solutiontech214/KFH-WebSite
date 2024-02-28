@@ -70,55 +70,55 @@ body a{
   box-shadow:0 0 20px rgb(0, 0, 0);
 }
 
+
+.head {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
 .info {
   margin: 0;
   padding: 0;
   background-color: #131313;
   color: white;
-}
-
-.head {
-  width: 100%;
-  height: 200px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-.service,
-.service2 {
-  width: 100%;
+.service{
+  width: 60%;
   background-color: #141313;
-  height: 500px;
+  height: 1600px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-.service div,
-.service2 div {
+.service div{
   text-align: center;
   width: 350px;
   height: 220px;
 }
 
-.service div img,
-.service2 div img {
+.service div img{
   margin-top: 20px;
   border-top-right-radius: 20px;
   box-shadow: 0 0 3px black;
   transition: all 0.6s ease-in-out;
 }
 
-.service div img:hover,
-.service2 div img:hover {
+.service div img:hover{
   box-shadow: 0 0 16px black;
   border-top-left-radius: 20px;
   cursor: pointer;
 }
 
-.service div .span,
-.service2 div .span {
+.service div .span{
   letter-spacing: 1px;
   padding: 20px 20px;
   padding-top: 40px;
@@ -128,8 +128,7 @@ body a{
   background-color: rgb(17, 16, 17);
   transition: all 0.4s ease;
 }
-.service div .span:hover,
-.service2 div .span:hover{
+.service div .span:hover{
   box-shadow: 0 0 20px rgb(0, 0, 0); 
 } 
 
@@ -143,10 +142,9 @@ body a{
   justify-content: space-evenly;
 }
 
-footer {
-  margin-top: 20px;
+footer{
   width: 100%;
-  height: 400px;
+  height: 300px;
   background-color: #141414;
   display: flex;
   justify-content: space-around;
@@ -156,6 +154,7 @@ footer {
 footer div {
   height: 300px;
   width: 30%;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -195,6 +194,15 @@ footer div {
 
 .pages a:hover {
   color: orangered;
+}
+.copyright{
+  width: 100%;
+  height: 50px;
+  background: #121010;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 ::-webkit-scrollbar {
