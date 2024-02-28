@@ -79,7 +79,8 @@ if(isset($_POST['submit'])  )
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
     .alert {
-            padding: 15px;
+            padding: 10px 20px;
+            margin: 0;
             background-color: #4CAF50; /* Green color */
             color: white;
             margin-bottom: 15px;
@@ -191,6 +192,11 @@ if(isset($_POST['submit'])  )
             </div>
         </div>
     </div>
+    <script>
+         setTimeout(function() {
+        document.querySelector('.alert').style.display = 'none';
+    }, 2000); // 2000 milliseconds = 2 seconds
+    </script>
 </body>
 
 </html>
@@ -213,6 +219,4 @@ if(isset($_SESSION['log']))
     }
    
 }
-
-
 ?>

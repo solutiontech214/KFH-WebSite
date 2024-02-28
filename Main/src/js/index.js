@@ -36,3 +36,5 @@ allImages.forEach(image => {
         image.style.height = '100%';
     });
 });
+
+
