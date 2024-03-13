@@ -18,82 +18,103 @@
         </div>
         <div class="items">
             <a href="./index.php">Home</a>
-            <a href="./contact.php">Contact</a>
             <a href="./aboutus.php">AboutUs</a>
             <a href="./aboutus.php">Classes</a>
+            <a href="./contact.php" class="_contact">Contact</a>
         </div>
     </nav>
     <div class="head">
         <h1><b>Our Services</b></h1>
     </div>
-        <div class="service">
-            <div>
-                <i class="fa-solid fa-1 fa-2x"></i>
-                <a href=""><img src="../../Images/cardio2.JPG" alt="" width="100%" height="220px">
+
+    <div class="service">
+        <div>
+            <i class="fa-solid fa-1 fa-2x"></i>
+            <a href="">
+                <div class="_card">
+                    <img src="../../Images/cardio2.JPG" alt="" width="100%" height="220px">
                     <div class="span">
                         <h1><b>Cardio center</b></h1>
                         <p>Cardio section for weight loss, to improve stamina and cardiovascular health.</p>
                     </div>
-                </a>
-            </div>
-            <div>
-                <i class="fa-solid fa-2 fa-2x"></i>
-                <a href=""><img src="../../Images/stringth.JPG" alt="" width="100%" height="220px">
+                </div>
+            </a>
+        </div>
+        <div>
+            <i class="fa-solid fa-2 fa-2x"></i>
+            <a href="">
+                <div class="_card">
+                    <img src="../../Images/stringth.JPG" alt="" width="100%" height="220px">
                     <div class="span">
                         <h1><b>Strength Training</b></h1>
                         <p>A well equipped strength training and free workout section which for specialized training. </p>
                     </div>
-                </a>
-            </div>
-            <div>
-                <i class="fa-solid fa-3 fa-2x"></i>
-                <a href="./classes.php"><img src="../../Images/classes.jpeg" alt="" width="100%" height="220px">
+                </div>
+
+            </a>
+        </div>
+        <div>
+            <i class="fa-solid fa-3 fa-2x"></i>
+            <a href="./classes.php">
+                <div class="_card">
+                    <img src="../../Images/classes.jpeg" alt="" width="100%" height="220px">
                     <div class="span">
                         <h1><b>Group Classes</b></h1>
                         <p>Yoga ,Zumba, aerobics, circuit trainig and other workout classes are scheduled and conducted.</p>
                     </div>
-                </a>
-            </div>
-            <div>
-                <i class="fa-solid fa-4 fa-2x"></i>
-                <a href=""><img src="../../Images/Spa2.jpg" alt="" width="100%" height="220px">
+                </div>
+            </a>
+        </div>
+        <div>
+            <i class="fa-solid fa-4 fa-2x"></i>
+            <a href="">
+                <div class="_card">
+                    <img src="../../Images/Spa2.jpg" alt="" width="100%" height="220px">
                     <div class="span">
                         <h1><b>Spa</b></h1>
                         <p>Relaxing spa that will rejuvinate your body and mind which help you relax peacefully.</p>
                     </div>
-                </a>
-            </div>
-            <div>
-                <i class="fa-solid fa-5 fa-2x"></i>
-                <a href=""><img src="../../Images/tranier.jpeg" alt="" width="100%" height="220px">
+                </div>
+            </a>
+        </div>
+        <div>
+            <i class="fa-solid fa-5 fa-2x"></i>
+            <a href="">
+                <div class="_card">
+                    <img src="../../Images/tranier.jpeg" alt="" width="100%" height="220px">
                     <div class="span">
                         <h1><b>Personal Training</b></h1>
                         <p>Professional trainers create personalized workout plans and guide and motivate you.</p>
                     </div>
-                </a>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer class="_footer">
+        <div class="links">
+            <div class=" media facebook">
+                <a href=""><i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i></a>
+            </div>
+            <div class=" media insta">
+                <a href=""><i class="fa-brands fa-instagram" style="color: #eb003b;"></i></a>
             </div>
         </div>
-
-    <footer class="nav-footer">
-        <div class="location">
-            <span>
-                <h2>Our GYM's</h2>
-            </span>
-            <ul>
-                <li><a href="https://www.google.com/maps/place/Kandre%27s+Fitness+Hub/data=!4m7!3m6!1s0x3bc5da1c451ff087:0x109dd48c98e53aab!8m2!3d17.6354542!4d75.9152472!16s%2Fg%2F11gcm07_jv!19sChIJh_AfRRzaxTsRqzrlmIzUnRA?authuser=0&hl=en&rclk=1" target="_blank"><i class="fa-solid fa-location-dot" style="color: #eb0052;"></i> Solapur</a></li>
-                <li><a href="https://www.google.com/maps/place/Kandre%27s+Fitness+Hub/data=!4m7!3m6!1s0x3bc5da1c451ff087:0x109dd48c98e53aab!8m2!3d17.6354542!4d75.9152472!16s%2Fg%2F11gcm07_jv!19sChIJh_AfRRzaxTsRqzrlmIzUnRA?authuser=0&hl=en&rclk=1" target="_blank"><i class="fa-solid fa-location-dot" style="color: #eb0052;"></i> Pandharpur</a></li>
-            </ul>
+        <div class="_info">
+            <a href="#">Kandre's Fitness Hub, Third floor,Mhetre Tower, Vishwakaran Park,Near Aasara Bridge, Jule Solapur,Solapur, 413004</a>
         </div>
-        <div class="logo-png">
-            <img src="../../Images/KFH.png" alt="" width="120px" height="50px">
+        <div class="contact">
+            <a href=""><i class="fa-solid fa-phone"></i>+91 70226 69007</a>
+            <a href=""><i class="fa-solid fa-envelope"></i> kandrefitnesshub@gmail.com</a>
         </div>
-        <div class="pages">
-                <a href="./index.php">Home</a>
-                <a href="./service.php">Services</a>
-                <a href="./contact.php">Contact</a>
-                <a href="./aboutus.php">AboutUs</a>
+        <div class="_logo">
+            <div>
+                <a href="./index.php"><img src="../../Images/KFH.png" alt="" width="125px" height="50px"></a>
+            </div>
         </div>
     </footer>
+
+
     <div class="copyright">
         <p>@copyright kandresfitnesshub.com</p>
     </div>

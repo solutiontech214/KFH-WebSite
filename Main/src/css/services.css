@@ -1,17 +1,23 @@
-*{
+* {
   font-family: "Rajdhani", sans-serif;
 }
 body {
   letter-spacing: 2px;
   margin: 0;
   padding: 0;
-  background: #131313;
+  background: #ffffff;
+  background-image: url("./../../Images/gym-img2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
-
+a{
+  text-decoration: none;
+  color: #000000;
+}
 nav {
-  background-color: #000;
+  background: #ffffff;
   display: flex;
-  height: 100px;
+  height: 60px;
 }
 
 .logo {
@@ -20,7 +26,7 @@ nav {
   justify-content: flex-start;
   align-items: center;
 }
-body a{
+body a {
   text-decoration: none;
   color: white;
 }
@@ -33,22 +39,23 @@ body a{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: white;
 }
 
 .items a {
   text-decoration: none;
-  color: white;
-  font-size: 16px;
+  color: #1414149e;
+  font-size: 17px;
   font-weight: 600;
-  transition: all 0.4s ease-in-out;
-  padding: 10px 20px;
 }
-
-.items a:hover {
-  box-shadow:0 0 20px rgb(0, 0, 0);
+.items a:hover{
+  color: black;
 }
-
+.items ._contact {
+  background-color: #b61c19;
+  padding: 10px 26px;
+  color: #ffffff;
+  border-radius: 30px;
+}
 
 .head {
   width: 100%;
@@ -57,103 +64,132 @@ body a{
   justify-content: center;
   align-items: center;
   color: white;
-  background: #141313;
 }
 
-
-
-.service{
-  color: white;
+.service {
+  color: rgb(0, 0, 0);
   width: 100%;
-  background-color: #141313;
-  height: 1100px;
+  background-color: #ffffff;
+  height: 1200px;
   display: flex;
   gap: 50px;
   justify-content: space-evenly;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 10px 20px;
+  padding: 50px 20px;
 }
 
-.service div{
+.service div {
   text-align: center;
   width: 350px;
   height: 220px;
 }
-
-.service div img{
+.service div ._card{
+  margin: 0;
+  padding: 0;
+}
+.service div ._card img {
   margin-top: 20px;
   border-top-right-radius: 20px;
   box-shadow: 0 0 3px black;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
-
-.service div img:hover{
-  box-shadow: 0 0 16px black;
+.service ._card:hover img{
   border-top-left-radius: 20px;
-  cursor: pointer;
+  box-shadow: 0 0 30px black;
 }
-
-.service div .span{
+.service div ._card .span {
   letter-spacing: 1px;
-  padding: 20px 20px;
-  padding-top: 40px;
-  border: 0px solid black;
-  box-shadow: 0 0 5px rgb(0, 0, 0);  
+  padding: 40px 20px;
+  box-shadow: 0 0 5px rgb(0, 0, 0);
   border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   background-color: rgb(17, 16, 17);
   transition: all 0.4s ease;
 }
-.service div .span:hover{
-  box-shadow: 0 0 20px rgb(0, 0, 0); 
-} 
+.service ._card:hover .span{
+  box-shadow: 0 10px 30px black;
+}
+
 
 .info .span p {
   font-size: 16px;
   font-weight: 500;
 }
 
-footer{
-  width: 100%;
+footer {
   height: 300px;
-  background-color: #141414;
-  display: flex;
-  justify-content: space-evenly;
-  align-self: center;
-  flex-wrap: wrap;
+  background-color: #910805;
 }
 
-footer div {
-  height: 300px;
-  width: 200px;
-  margin-top: 40px;
+._footer .links {
+  width: 100%;
+  height: 80px;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
-.location span h2 {
-  color: white;
+._footer .links .media{
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+._footer .links .media:hover{
+  cursor: pointer;
+  background-color: #ededed;
+}
+._footer ._info{
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+._footer .contact{
+  width: 50%;
+  margin-left: 28%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.contact a:hover{
+  color: rgb(0, 0, 0);
+}
+._footer ._logo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+}
+._footer ._logo div{
+  width: 180px;
+  height: 80px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 550px;
+  border-bottom-right-radius: 800px;
+  border-top-left-radius: 400px;
+  border-bottom-left-radius: 800px;
 }
 
-.location ul li {
-  text-align: start;
-  list-style-type: none;
-  margin-top: 20px;
-}
-
-.location a {
-  text-decoration: none;
-  color: white;
-  text-align: start;
-  font-size: 20px;
-}
-.copyright{
+.copyright {
   width: 100%;
   height: 50px;
-  background-color: #141414;
+  background-color: #800805;
   color: white;
+  font-weight: 500;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,8 +199,8 @@ footer div {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #343333;
+  background: #c1c0c0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #e43d4b;
+  background: #b7110c;
 }

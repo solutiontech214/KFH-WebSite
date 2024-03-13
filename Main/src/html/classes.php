@@ -17,7 +17,6 @@
             <a href="./aboutus.php">About Us</a>
         </div>
     </nav>
-    
     <div class="on-img">
         <img src="../../Images//asd.jpg" alt="Yoga Image" width="100%" height="730px">
         <div class="intro">
@@ -30,6 +29,5 @@
             </ol>
         </div>
     </div>
-
 </body>
 </html>
