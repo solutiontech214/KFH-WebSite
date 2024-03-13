@@ -37,7 +37,7 @@ if(isset($_POST['log_out']))
         </div>
       </div>
       <a href="./classes.php">Classes</a>
-      <a href="#">AboutUs</a>
+      <a href="./aboutus.php">AboutUs</a>
       <a href="./contact.php">Contact</a>
     </div>
     <?php

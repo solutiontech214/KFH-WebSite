@@ -17,16 +17,19 @@
             <a href="./aboutus.php">About Us</a>
         </div>
     </nav>
+    
     <div class="on-img">
         <img src="../../Images//asd.jpg" alt="Yoga Image" width="100%" height="730px">
         <div class="intro">
-            <p> <b>Our Classes and Programs</b><br>Yoga Classes <br>Zumba Classes <br>Airobics<br>Circuit Traning</p>
+            <p><b>Our Classes and Programs </b></p>
+            <ol>
+            <li> Yoga Classes </li> 
+            <li> Zumba Classes</li>
+            <li> Airobics</li>
+            <li> Circuit Traning</li>
+            </ol>
         </div>
     </div>
-
-
-
-
 
 </body>
 </html>

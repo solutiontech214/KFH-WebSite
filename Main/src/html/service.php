@@ -17,19 +17,15 @@
             <a href="./index.php"><img src="../../Images/KFH.png" alt="" width="125px" height="50px"></a>
         </div>
         <div class="items">
-            <li>
-                <a href="https://www.google.com/maps/place/Kandre%27s+Fitness+Hub/data=!4m7!3m6!1s0x3bc5da1c451ff087:0x109dd48c98e53aab!8m2!3d17.6354542!4d75.9152472!16s%2Fg%2F11gcm07_jv!19sChIJh_AfRRzaxTsRqzrlmIzUnRA?authuser=0&hl=en&rclk=1" target="_blank"><i class="fa-solid fa-location-dot" style="color: #eb0052;"></i> Solapur</a>
-                <a href=""><i class="fa-brands fa-instagram" style="color: #ea2a76; background-color:none"></i></a>
-            </li>
-            <li><a href="./index.php">Home</a></li>
-            <li><a href="./contact.php">Contact</a></li>
-            <li><a href="./aboutus.php">AboutUs</a></li>
+            <a href="./index.php">Home</a>
+            <a href="./contact.php">Contact</a>
+            <a href="./aboutus.php">AboutUs</a>
+            <a href="./aboutus.php">Classes</a>
         </div>
     </nav>
     <div class="head">
         <h1><b>Our Services</b></h1>
     </div>
-    <div class="info">
         <div class="service">
             <div>
                 <i class="fa-solid fa-1 fa-2x"></i>
@@ -77,7 +73,6 @@
                 </a>
             </div>
         </div>
-    </div>
 
     <footer class="nav-footer">
         <div class="location">
@@ -93,12 +88,10 @@
             <img src="../../Images/KFH.png" alt="" width="120px" height="50px">
         </div>
         <div class="pages">
-            <ul>
-                <li><a href="./index.php">Home</a></li>
-                <li><a href="./service.php">Services</a></li>
-                <li><a href="./contact.php">Contact</a></li>
-                <li><a href="./aboutus.php">AboutUs</a></li>
-            </ul>
+                <a href="./index.php">Home</a>
+                <a href="./service.php">Services</a>
+                <a href="./contact.php">Contact</a>
+                <a href="./aboutus.php">AboutUs</a>
         </div>
     </footer>
     <div class="copyright">
