@@ -21,7 +21,7 @@ if(isset($_POST['log_out']))
   <div class="preloader" id="preLoader"></div>
 
   <nav class="nav-bar" id="nav">
-    <div style="margin-left: 10px;">
+    <div style="margin-left: 20px;">
       <img src="../../Images/KFH.png" width="120px" height="50px" class="logo">
     </div>
     <div class="items">
@@ -64,8 +64,9 @@ if(isset($_POST['log_out']))
 
   <div class="img-container">
     <img class="mySlides" src="../../Images/gym-img2.jpg" alt="gym">
-    <div class="text-info"><p><b>Shape Your Body</b><br> in most <b>Luxurious</b><br> gym in town</p>
-      <a href="./service.php"><button class="btn-login" id="login" type="button">See More..</button></a>
+    <div class="text-info">
+      <p><b>Shape Your Body</b><br> in most <b style="color: rgb(236, 72, 46);">Luxurious</b><br> gym in town</p>
+      <a href="./service.php"><button class="btn-login" id="login" type="button">eXplore More..</button></a>
     </div>
     <img class="mySlides" src="../../Images/gym2.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym3.jpg" alt="gym">
@@ -169,7 +170,7 @@ if(isset($_POST['log_out']))
 
   
   <script src="../js/index.js" defer></script>
-  <!-- <script>
+  <script>
     window.addEventListener("scroll", function() {
     var navbar = document.getElementById("nav");
     if (window.scrollY > 0) {
@@ -178,7 +179,21 @@ if(isset($_POST['log_out']))
       navbar.classList.remove("navbar-scrolled");
     }
 });
-  </script> -->
+
+  let navbar = document.querySelector('nav');
+let lastScrollPosition = 0;
+
+window.addEventListener('scroll', function() {
+    let currentScrollPosition = window.scrollY;
+
+    if (currentScrollPosition > 200) {
+        navbar.classList.add('fixed-nav');
+    } else {
+        navbar.classList.remove('fixed-nav');
+    }
+});
+  </script>
+
 </body>
 
 </html>

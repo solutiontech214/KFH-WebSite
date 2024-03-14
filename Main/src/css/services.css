@@ -10,36 +10,48 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-a{
-  text-decoration: none;
-  color: #000000;
-}
-nav {
-  background: #ffffff;
-  display: flex;
-  height: 60px;
-}
 
-.logo {
-  width: 50%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
 body a {
   text-decoration: none;
   color: white;
 }
+
+
+nav {
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 5px black;
+  top: -60px;
+  transition: top 1.1s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+
 .logo img {
   margin-left: 20px;
 }
 
 .items {
-  width: 50%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 40px;
+  margin-right: 20px;
 }
+
 
 .items a {
   text-decoration: none;
@@ -51,7 +63,7 @@ body a {
   color: black;
 }
 .items ._contact {
-  background-color: #b61c19;
+  background-color: #bb0120;
   padding: 10px 26px;
   color: #ffffff;
   border-radius: 30px;

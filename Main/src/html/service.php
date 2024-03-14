@@ -14,7 +14,7 @@
 <body>
     <nav>
         <div class="logo">
-            <a href="./index.php"><img src="../../Images/KFH.png" alt="" width="125px" height="50px"></a>
+            <a href="./index.php"><img src="../../Images/KFH.png" alt="" width="120px" height="50px"></a>
         </div>
         <div class="items">
             <a href="./index.php">Home</a>
@@ -23,6 +23,10 @@
             <a href="./contact.php" class="_contact">Contact</a>
         </div>
     </nav>
+
+
+
+
     <div class="head">
         <h1><b>Our Services</b></h1>
     </div>
@@ -119,6 +123,23 @@
         <p>@copyright kandresfitnesshub.com</p>
     </div>
 
-</body>
 
+    <script>
+ let navbar = document.querySelector('nav');
+let lastScrollPosition = 0;
+
+window.addEventListener('scroll', function() {
+    let currentScrollPosition = window.scrollY;
+
+    if (currentScrollPosition > 150) {
+        navbar.classList.add('fixed-nav');
+    } else {
+        navbar.classList.remove('fixed-nav');
+    }
+});
+
+
+    </script>
+
+</body>
 </html>
