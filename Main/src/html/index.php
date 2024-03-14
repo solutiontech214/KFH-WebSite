@@ -134,34 +134,42 @@ if(isset($_POST['log_out']))
     <span>in the most <h3>Luxurious</h3> gym in town.</span>
   </div>
 
-  <footer class="nav-footer">
-    <div class="follow_us">
-      <h3>Follow us on</h3>
-      <div class="insta">
-        <i class="fa-brands fa-square-instagram fa-3x" id="insta"></i>
-        <a style="text-decoration:none;" href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link">Instagram</a>
-      </div>
-      <div class="facebook">
-        <i class="fa-brands fa-facebook-f fa-2x" style="color: #316FF6;"></i>
-        <a style="text-decoration:none;" href="https://www.facebook.com/KandreFitnessHub/">facebook</a>
-      </div>
-    </div>
-    <div class="logo-img">
-      <img src="../../Images/KFH.png" alt="" width="120px" height="50px" class="logo">
-    </div>
-    <div class="content">
-      <a href="./index.php">Home</a>
-      <a href="./service.php">Services</a>
-      <a href="./aboutus.php">AboutUs</a>
-      <a href="./contact.php">Contact</a>
-    </div>
-  </footer>
+  <footer class="_footer">
+        <div class="links">
+            <div class=" media facebook">
+                <a href=""><i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i></a>
+            </div>
+            <div class=" media insta">
+                <a href=""><i class="fa-brands fa-instagram" style="color: #eb003b;"></i></a>
+            </div>
+        </div>
+        <div class="_info">
+            <a href="#">Kandre's Fitness Hub, Third floor,Mhetre Tower, Vishwakaran Park,Near Aasara Bridge, Jule Solapur,Solapur, 413004</a>
+        </div>
+        <div class="contact">
+            <a href=""><i class="fa-solid fa-phone"></i>+91 70226 69007</a>
+            <a href=""><i class="fa-solid fa-envelope"></i> kandrefitnesshub@gmail.com</a>
+        </div>
+        <div class="_logo">
+            <div>
+                <a href="./index.php"><img src="../../Images/KFH.png" alt="" width="125px" height="50px"></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+
   <div class="copyright">
         <p>@copyright kandresfitnesshub.com</p>
   </div>
 
+
+
+  
   <script src="../js/index.js" defer></script>
-  <script>
+  <!-- <script>
     window.addEventListener("scroll", function() {
     var navbar = document.getElementById("nav");
     if (window.scrollY > 0) {
@@ -170,7 +178,7 @@ if(isset($_POST['log_out']))
       navbar.classList.remove("navbar-scrolled");
     }
 });
-  </script>
+  </script> -->
 </body>
 
 </html>
