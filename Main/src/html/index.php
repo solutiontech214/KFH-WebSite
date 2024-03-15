@@ -81,7 +81,8 @@ if(isset($_POST['log_out']))
       <p><b>Shape Your Body</b><br> in most <b style="color: rgb(236, 72, 46);">Luxurious</b><br> gym in town</p>
       <a href="./service.php"><button class="btn-login" id="login" type="button">eXplore More..</button></a>
     </div>
-    <img class="mySlides" src="../../Images/gym2.jpg" alt="gym">
+    <!-- <img class="mySlides" src="../../Images/gym2.jpg" alt="gym">  -->
+    <!-- Above image is not of this gym so i am commented it .. -->
     <img class="mySlides" src="../../Images/gym3.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym5.jpg" alt="gym">
     <button class="prev-arrow" onclick="plusDivs(-1)">&#10094;</button>
