@@ -180,7 +180,7 @@ if(isset($_POST['log_out']))
     }
 });
 
-  let navbar = document.querySelector('nav');
+let navbar = document.querySelector('nav');
 let lastScrollPosition = 0;
 
 window.addEventListener('scroll', function() {
