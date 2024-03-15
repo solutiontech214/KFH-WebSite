@@ -54,7 +54,6 @@
                         <p>A well equipped strength training and free workout section which for specialized training. </p>
                     </div>
                 </div>
-
             </a>
         </div>
         <div>
@@ -116,30 +115,26 @@
                 <a href="./index.php"><img src="../../Images/KFH.png" alt="" width="125px" height="50px"></a>
             </div>
         </div>
+        <div class="copyright">
+            <p>@copyright kandresfitnesshub.com</p>
+        </div>
     </footer>
 
-
-    <div class="copyright">
-        <p>@copyright kandresfitnesshub.com</p>
-    </div>
-
-
     <script>
- let navbar = document.querySelector('nav');
-let lastScrollPosition = 0;
+        let navbar = document.querySelector('nav');
+        let lastScrollPosition = 0;
 
-window.addEventListener('scroll', function() {
-    let currentScrollPosition = window.scrollY;
+        window.addEventListener('scroll', function() {
+            let currentScrollPosition = window.scrollY;
 
-    if (currentScrollPosition > 150) {
-        navbar.classList.add('fixed-nav');
-    } else {
-        navbar.classList.remove('fixed-nav');
-    }
-});
-
-
+            if (currentScrollPosition > 150) {
+                navbar.classList.add('fixed-nav');
+            } else {
+                navbar.classList.remove('fixed-nav');
+            }
+        });
     </script>
 
 </body>
+
 </html>

@@ -197,7 +197,7 @@ it doesnt matter that this code is in single qoutes
     }
 });
 
-  let navbar = document.querySelector('nav');
+let navbar = document.querySelector('nav');
 let lastScrollPosition = 0;
 
 window.addEventListener('scroll', function() {
