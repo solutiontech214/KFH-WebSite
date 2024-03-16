@@ -76,41 +76,81 @@ public function is_account_exists($email, $pass)
 }
 //getting account infromation
 
-public function get_info($email)
+public function __call($name_of_function,$args)
 {
-    $stmt = $this->con->prepare("SELECT `f_name` FROM `account` WHERE `email`=? ");
+    if($name_of_function=='get_info')
+    {
+        switch(count($args))
+        {
+            case 1:
+                $stmt = $this->con->prepare("SELECT `f_name` FROM `account` WHERE `email`=? ");
 
-    // Check for errors in the preparation of the statement
-    if (!$stmt) {
-        die("Error in preparing the statement: " . $this->con->error);
+                // Check for errors in the preparation of the statement
+                
+            
+                // Bind parameters
+                $stmt->bind_param("s", $args[0]);
+            
+                // Execute the query
+                $res = $stmt->execute();
+            
+                // Check for errors in the execution of the statement
+               
+            
+                // Bind the result variables
+                $stmt->bind_result($res_name);
+            
+                // Fetch the result
+                $stmt->fetch();
+            
+                // Check if the result is not empty
+                if (!empty($res_name)) {
+                    return $res_name;
+                } else {
+                    return false;
+                }
+
+               
+
+            case 2:
+                $stmt = $this->con->prepare("SELECT `f_name`, `l_name` FROM `account` WHERE `email`=? ");
+
+                // Check for errors in the preparation of the statement
+                if (!$stmt) {
+                    die("Error in preparing the statement: " . $this->con->error);
+                }
+            
+                // Bind parameters
+                $stmt->bind_param("s", $args[0]);
+            
+                // Execute the query
+                $res = $stmt->execute();
+            
+                // Check for errors in the execution of the statement
+                if (!$res) {
+                    die("Error in executing the statement: " . $stmt->error);
+                }
+            
+                // Bind the result variables
+                $stmt->bind_result($res_name,$res_l_name);
+            
+                // Fetch the result
+                $stmt->fetch();
+            
+                // Check if the result is not empty
+                if (!empty($res_name) && !empty($res_l_name)) {
+                    return $res_name." ".$res_l_name;
+                } else {
+                    return false;
+                }
+
+             
+
+            default:
+                echo "Invalid call";
+        }
+    
     }
-
-    // Bind parameters
-    $stmt->bind_param("s", $email);
-
-    // Execute the query
-    $res = $stmt->execute();
-
-    // Check for errors in the execution of the statement
-    if (!$res) {
-        die("Error in executing the statement: " . $stmt->error);
-    }
-
-    // Bind the result variables
-    $stmt->bind_result($res_name);
-
-    // Fetch the result
-    $stmt->fetch();
-
-    // Check if the result is not empty
-    if (!empty($res_name)) {
-        return $res_name;
-    } else {
-        return false;
-    }
-
-    // Close the statement
-   
 }
 function update_pass($email,$newpass)
 {

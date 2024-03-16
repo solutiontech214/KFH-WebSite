@@ -3,6 +3,7 @@ require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
 
 session_start();
 $obj=new Account();
+$a =new Account();
 if(isset($_POST['log_out']))
       {
       unset($_SESSION['log']);
@@ -55,7 +56,7 @@ if(isset($_POST['log_out']))
     </div>';
     }
     else{
-      $name=$obj->get_info($_SESSION['log']);
+      $name=$a->get_info($_SESSION['log'],1);
       
       echo '<div class="login" style="display: flex; justify-content: space-evenly; align-items: center; width: 360px; margin-right: 0px">
       <div class="profile">
