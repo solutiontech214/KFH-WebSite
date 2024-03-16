@@ -93,8 +93,11 @@ $num=rand(100000,600000);
         </span>
         </div>
       </div>
-      <button type="submit" name="submit">Submit</button>
+      <button type="submit" name="submit">Send OTP</button>
     </form>
+  </div>
+  <div>
+    <h2 style="text-align:center;">Please provide your email address below to receive a one-time password (OTP) for verification.</h2>
   </div>
 </body>
 </html>

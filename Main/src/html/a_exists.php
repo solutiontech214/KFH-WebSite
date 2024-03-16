@@ -9,7 +9,7 @@
            body {
       margin: 0;
       padding: 0;
-      background: #060606;
+      background: #fed790;
     }
     .body
     {
@@ -21,7 +21,7 @@
         align-items: center;
     }
     h1,h2{
-      color: white;
+      color: rgb(0, 0, 0);
       font-family: "Rajdhani", sans-serif;
       letter-spacing: 2px;
     }

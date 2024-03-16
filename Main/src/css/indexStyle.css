@@ -7,11 +7,11 @@
 
 body {
   overflow-x: hidden;
-  background: #100010;
+  background: #ffffff;
 }
 
 .preloader {
-  background: #060606 url("../../Images/loader.gif") no-repeat center center;
+  background: #f5cd7b url("../../Images/loader.gif") no-repeat center center;
   background-size: 20%;
   width: 100%;
   height: 100vh;

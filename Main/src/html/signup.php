@@ -95,17 +95,17 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <div class="logo">
-        <img src="./../../Images/KFH.png" alt="logo" width="120px" height="50">
-        <a href="index.php"><i class="fa-solid fa-xmark fa-2x" style="color:black;"></i></a>
-    </div>
-
 
     <div class="preloader1" id="preLoader"></div>
 
-
+    
     <div id="preloader" style="display: none;">
         <p>Checking email account...</p>
+    </div>
+
+    <div class="logo">
+        <img src="./../../Images/KFH.png" alt="logo" width="120px" height="50">
+        <a href="index.php"><i class="fa-solid fa-xmark fa-2x" style="color:black;"></i></a>
     </div>
 
     <div id="perent">
