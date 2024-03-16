@@ -1,9 +1,9 @@
 <?php
-require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
+require ('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
 session_start();
 $obj = new Account();
 $a = new Account();
-if (isset($_POST['log_out'])) {
+if (isset ($_POST['log_out'])) {
   unset($_SESSION['log']);
 }
 ?>
@@ -33,7 +33,7 @@ if (isset($_POST['log_out'])) {
       <div class="dropdown">
 
 
-        <?php if (isset($_SESSION['log'])) {
+        <?php if (isset ($_SESSION['log'])) {
           echo '<a href="./service.php" class="dropbtn dropdown-toggle">Srevices</a>';
         } else {
           echo '<a href="./loginservice.php" class="dropbtn dropdown-toggle">Srevices</a>';
@@ -46,7 +46,7 @@ if (isset($_POST['log_out'])) {
           <a href="#">Personal Training</a>
         </div>
       </div>
-      <?php if (isset($_SESSION['log'])) {
+      <?php if (isset ($_SESSION['log'])) {
         echo '<a href="./classes.php">Classes</a>';
       } else {
         echo '<a href="./loginclasses.php">Classes</a>';
@@ -55,7 +55,7 @@ if (isset($_POST['log_out'])) {
       <a href="./contact.php">Contact</a>
     </div>
     <?php
-    if (!isset($_SESSION['log'])) {
+    if (!isset ($_SESSION['log'])) {
       echo '<div class="login">
       <a href="../html/login.php"><button class="btn-login" id="login" type="button" >Login<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
       <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
@@ -65,9 +65,12 @@ if (isset($_POST['log_out'])) {
     } else {
       $name = $a->get_info($_SESSION['log'], 1);
       echo '<div class="login" style="display: flex; justify-content: space-evenly; align-items: center; width: 360px; margin-right: 0px">
-      <div class="profile">
-          <span class="user">
-          <a href=""><i class="fa-solid fa-user"></i>' ?> <?php echo $name; ?> <?php echo ' </a>
+      <div class="profile dropdown">
+          <span class="user dropbtn dropdown-toggle">
+          <a href=""><i class="fa-solid fa-user"></i>' ?>   <?php echo $name; ?>   <?php echo ' </a>
+          <div class="down-cont">
+          <a href="#">hello</a>
+        </div>
           </span>
       </div>
       <form method="post">
@@ -77,8 +80,8 @@ if (isset($_POST['log_out'])) {
       </form>
     </div>
     ';
-                                                                              }
-                                                                                ?>
+    }
+    ?>
   </nav>
   <div class="img-container">
     <img class="mySlides" src="../../Images/gym-img2.jpg" alt="gym">
