@@ -54,13 +54,14 @@ if (isset($_POST['submit'])) {
 
                         //Attachments
                         //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-                        $mail->addAttachment('C:\xampp\htdocs\KFH-WebSite\Main\Images\KFH.png', 'new.jng');    //Optional name
+                        $mail->addAttachment('C:\xampp\htdocs\KFH-WebSite\Main\Images\KFH.png');    //Optional name
 
                         //Content
                         $mail->isHTML(true);                                  //Set email format to HTML
                         $mail->Subject = 'Account Creation';
-                        $mail->Body    = "<h1>Congratulations 🎉 $name  </h1><br> <h2>Your Account is Successfully Created ..</h2>";
-                        //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+                        $mail->Body    = '<h1>Congratulations 🎉 '.$name.'  </h1><br> <h2>Your Account is Successfully Created ..</h2>
+                        <br> <h2>Thank you for Being member of <strong style="color:#bb0120;">KFH Family..</strong>😊</h2>';
+                        //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients;
 
                         $mail->send();
                     } catch (Exception $e) {

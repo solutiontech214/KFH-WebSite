@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
             //Content
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Feedback :';
-            $mail->Body    = "<h1>" . $_POST['message'] . "<br> Mob NO : " . $_POST['phone'] . "<br>Name :" . $_SESSION['feed_name'];
+            $mail->Body    = "<h1>Message :" . $_POST['message'] . "<br><br> Mob NO : " . $_POST['phone'] . "<br><br>Name :" . $_SESSION['feed_name'];
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
