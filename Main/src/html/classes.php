@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -24,22 +26,22 @@
         <h1>Our Classes and Programs </h1>
     </div>
     <div class="container">
-            <div class="cont c1">
-                <img src="../../Images/yoga.jpeg" alt="" width="450px" height="450px">
-                <h2>Yoga Classes</h2>
-            </div>
-            <div class="cont c2">
-                <img src="../../Images/zumba2.jpg" alt="" width="450px" height="450px">
-                <h2>Zumba Classes</h2>
-            </div>
-            <div class="cont c3">
-                <img src="../../Images/cardio2.jpg" alt="" width="450px" height="450px">
-                <h2>Airobics</h2>
-            </div>
-            <div class="cont c4">
-                <img src="../../Images/cardio2.jpg" alt="" width="450px" height="450px">
-                <h2>Circuit Traning</h2>
-            </div>
+        <div class="cont c1">
+            <img src="../../Images/yoga.jpeg" alt="" width="450px" height="450px">
+            <h2>Yoga Classes</h2>
+        </div>
+        <div class="cont c2">
+            <img src="../../Images/zumba2.jpg" alt="" width="450px" height="450px">
+            <h2>Zumba Classes</h2>
+        </div>
+        <div class="cont c3">
+            <img src="../../Images/airobics.jpeg" alt="" width="450px" height="450px">
+            <h2>Airobics</h2>
+        </div>
+        <div class="cont c4">
+            <img src="../../Images/circuit.jpeg" alt="" width="450px" height="450px">
+            <h2>Circuit Traning</h2>
+        </div>
     </div>
     <!--footer -->
     <footer class="_footer">
