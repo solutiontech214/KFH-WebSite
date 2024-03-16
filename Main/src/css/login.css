@@ -1,14 +1,14 @@
 body {
   letter-spacing: 2px;
   font-family: "Rajdhani", sans-serif;
-  background: #100010;
+  background: #ffffff;
   margin: 0;
   padding: 0;
 }
 
 /* preloader */
 .preloader {
-  background: #242323 url("../../Images/loader.gif") no-repeat center center;
+  background: #facb80 url("../../Images/loader.gif") no-repeat center center;
   background-size: 20%;
   width: 100%;
   height: 100vh;
@@ -16,7 +16,7 @@ body {
   z-index: 100;
 }
 
-.logo{
+.logo {
   height: 60px;
   width: 100%;
   position: fixed;
@@ -24,11 +24,12 @@ body {
   margin-left: 20px;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 /* login form  root*/
 .login {
   margin-top: 60px;
@@ -36,7 +37,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 540px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 /* span 1 */
@@ -45,12 +46,13 @@ body {
   margin-left: 270px;
   margin-top: 30px;
   transform: scale(1.4);
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
+
 .login .span1 h2 {
   font-weight: 550;
   font-size: 40px;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 /* span 2 */
@@ -59,33 +61,40 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 .span2 .email {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   width: 300px;
   height: 30px;
   background: transparent;
-  border: 2px solid rgba(164, 121, 255, 0.863);
+  border: 2px solid rgb(164, 121, 255);
+  box-shadow: 2px 2px 2px rgb(164, 121, 255);
   padding: 5px 10px;
   border-radius: 5px;
-  font-family: "Rajdhani",sans-serif;
+  font-family: "Rajdhani", sans-serif;
   font-weight: 550;
 }
-.span2 input::placeholder{
-  color: #d6cfcf;
-  font-family: "Rajdhani",sans-serif;
+
+.span2 input::placeholder {
+  color: #000000;
+  font-family: "Rajdhani", sans-serif;
   font-weight: 500;
 }
+
 .span2 .error-msg {
   margin-left: 5px;
   font-size: 12px;
   color: rgb(255, 0, 0);
   height: 12px;
 }
+
 .span2 .email:focus {
   background: none;
   outline: none;
   border: 2px solid rgb(0, 94, 201);
+  box-shadow: 2px 2px 2px rgb(0, 94, 201);
 }
+
 .span2 div i {
   position: absolute;
   margin-left: -28px;
@@ -93,14 +102,21 @@ body {
 }
 
 /* span 3 */
-.span3{
-    margin-top: 20px;
+.span3 {
+  margin-top: 20px;
 }
+
 .span3 a {
   text-decoration: none;
-  font-size: 15px;
-  color: rgb(187, 203, 255);
+  font-size: 16px;
+  font-weight: 550;
+  color: rgb(0, 0, 0);
 }
+
+.span3 a:hover {
+  color: rgb(5, 50, 164);
+}
+
 .span3 a:active {
   text-decoration: underline;
 }
@@ -118,12 +134,12 @@ body {
   border-radius: 4px;
   background-color: #bb0120;
   box-shadow: 0 0 5px black;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .btn:hover {
-  background: #000;
-  color: white;
+  background-color: #910805;
+  color: rgb(255, 255, 255);
 }
 
 .nonexist-account {
@@ -132,6 +148,7 @@ body {
   padding: 0px 10px;
   font-weight: 500;
 }
+
 .nonexist-account span {
   color: red;
 }
@@ -144,49 +161,35 @@ body {
   padding: 10px 20px;
 }
 
-.gym-name {
-  width: 80%;
-  margin-top: 20px;
-  position: relative;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  box-shadow: 0 0 10px black;
-}
-
-.gym-name h3 {
-  padding: 16px 16px;
-  color: #fff;
-}
-
 /* Styles for smaller screens (mobile) */
 @media only screen and (max-width: 557px) {
   .login {
     box-shadow: none;
     background: transparent;
   }
+
   .login .span1 i {
-    margin-left: 50%; /* Adjusted for mobile screens */
+    margin-left: 50%;
+    /* Adjusted for mobile screens */
   }
 
   .login .span1 h2 {
-    font-size: 32px; /* Adjusted font size for mobile screens */
+    font-size: 32px;
+    /* Adjusted font size for mobile screens */
   }
 
   .span2 .email {
-    width: 300px; /* Adjusted width for mobile screens */
+    width: 300px;
+    /* Adjusted width for mobile screens */
   }
 
   .span3 a {
-    margin-top: 20px; /* Adjusted margin for mobile screens */
+    margin-top: 20px;
+    /* Adjusted margin for mobile screens */
   }
 
-  /* .btn {
-        width: 80%; Adjusted width for mobile screens
-    } 
-     */
-
   .gym-name h3 {
-    padding: 8px; /* Adjusted padding for mobile screens */
+    padding: 8px;
+    /* Adjusted padding for mobile screens */
   }
 }

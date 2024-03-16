@@ -95,12 +95,13 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <div class="x">
-        <a href="index.php"><i class="fa-solid fa-xmark fa-2x" style="color:white;"></i></a>
+    <div class="logo">
+        <img src="./../../Images/KFH.png" alt="logo" width="120px" height="50">
+        <a href="index.php"><i class="fa-solid fa-xmark fa-2x" style="color:black;"></i></a>
     </div>
 
 
-    <div class="preloader1" id="preLoader1"></div>
+    <div class="preloader1" id="preLoader"></div>
 
 
     <div id="preloader" style="display: none;">
@@ -136,7 +137,7 @@ if (isset($_POST['submit'])) {
                 </span>
                 <span>
                     <input type="password" placeholder="Create Password" name="a_pass" id="passwordInput" required>
-                    <i class="fa-solid fa-eye eye" onclick=" togglePassword()" style="cursor: pointer;"></i>
+                    <i class="fa-solid fa-eye eye" onclick="togglePasswordVisibility()" style="cursor: pointer;"></i>
                     <div class="error-msg">
                         <!-- error -->
 
@@ -159,18 +160,16 @@ if (isset($_POST['submit'])) {
                     </div>
                 </span>
             </div>
-            <div class="signup-btn">
-                <button type="submit" name="submit" id="signupButton">SignUp</button>
-            </div>
             <span class="haveaccount">
                 <a href="login.php">Already have an account<i class="fa-solid fa-right-to-bracket"></i></a>
             </span>
+            <div class="signup-btn">
+                <button type="submit" name="submit" id="signupButton">SignUp</button>
+            </div>
+         
             <div class="account-existance" style="margin-top:20px">
             </div>
-            <hr width="90%" style="color: black; margin-top: 10px;">
-            <div class="gym-name">
-                <h3>@KANDRE'S FITNESS HUB</h3>
-            </div>
+
         </form>
         <?php
         if (isset($_GET['showPreloader'])) {
@@ -181,30 +180,8 @@ if (isset($_POST['submit'])) {
 
 
 
+    <script src="./../js/form.js"></script>
 
-
-    <script>
-        function togglePassword() {
-            const passwordInput = document.getElementById("passwordInput");
-            const eyeIcon = document.querySelector(".eye");
-
-            if (passwordInput.type === "password") {
-                passwordInput.type = "text";
-                eyeIcon.classList.remove("fa-eye");
-                eyeIcon.classList.add("fa-eye-slash");
-            } else {
-                passwordInput.type = "password";
-                eyeIcon.classList.remove("fa-eye-slash");
-                eyeIcon.classList.add("fa-eye");
-            }
-        }
-
-        let loader = document.getElementById("preLoader1")
-
-        window.addEventListener("load", () => {
-            loader.style.display = "none";
-        });
-    </script>
 </body>
 
 </html>

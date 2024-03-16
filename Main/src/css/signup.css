@@ -1,19 +1,15 @@
 body {
-  margin: 0px;
+  margin: 0;
+
+  padding: 0;
 
   letter-spacing: 2px;
 
-  display: flex;
-
-  background: #100010;
-
-  background-size: cover;
-
-  background-repeat: no-repeat;
+  background: #ffffff;
 }
 
 .preloader1 {
-  background: #000000 url("../../Images/loader.gif") no-repeat center center;
+  background: #fed790 url("../../Images/loader.gif") no-repeat center center;
 
   background-size: 20%;
 
@@ -27,26 +23,21 @@ body {
 }
 
 
-.x{
+.logo{
     display: flex;
-    justify-content: end;
-    margin-top: 40px;
-    margin-left: -40px;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 30px;
-    position: fixed;
+    height: 40px;
   }
+
 
 #perent {
   width: 100%;
 
-  padding: 10px 20px;
-
   display: flex;
 
   justify-content: center;
-
-  margin-top: 20px;
 
 }
 
@@ -62,7 +53,7 @@ body {
 
   border-radius: 5px;
 
-  color: white;
+  color: rgb(0, 0, 0);
 
   font-family: "Rajdhani", sans-serif;
 
@@ -80,7 +71,6 @@ body {
 
   align-items: center;
 
-  column-gap: 20px;
 }
 
 .inputs input {
@@ -88,7 +78,9 @@ body {
 
   height: 30px;
 
-  border: 2px solid rgba(164, 121, 255, 0.863);
+  border: 2px solid rgb(164, 121, 255);
+
+  box-shadow: 2px 2px 2px rgb(164, 121, 255);
 
   padding: 5px 10px;
 
@@ -102,10 +94,10 @@ body {
 
   margin-top: 20px;
 
-  color: white;
+  color: rgb(0, 0, 0);
 }
 .inputs input::placeholder{
-    color: #fff;
+    color: #000000;
     font-family: "Rajdhani",sans-serif;
     font-weight: 500;
 }
@@ -113,7 +105,8 @@ body {
 .inputs input:focus {
     background: none;
     outline: none;
-  border: 2px solid rgb(0, 140, 255);
+    border: 2px solid rgb(0, 94, 201);
+    box-shadow: 2px 2px 2px rgb(0, 94, 201);
 }
 
 
@@ -158,10 +151,12 @@ body {
 }
 
 .haveaccount a {
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
-  background-color: #000;
-  padding: 10px 20px;
+  font-weight: 550;
+}
+.haveaccount a:hover{
+  color: rgb(27, 69, 178);
 }
 
 .haveaccount i {
@@ -173,13 +168,13 @@ body {
 
   justify-content: center;
 
-  margin-top: 20px;
+  margin-top: 40px;
 
   width: 100%;
 }
 
 .signup-btn button {
-  width: 50%;
+  width: 60%;
 
   border: 0px;
 
@@ -193,13 +188,14 @@ body {
 
   background: #bb0120;
 
-  box-shadow: 0 0 10px black;
+  color: #ffffff;
+
+  box-shadow: 0 0 5px black;
 }
 
 .signup-btn button:hover {
-  background-color: #000;
-
-  color: #fff;
+  background-color: #910805;
+  color: rgb(255, 255, 255);
 }
 
 /* preloader */
@@ -209,49 +205,27 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(249, 200, 122);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 1000;
 }
 #preloader p {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 24px;
 }
+
 
 .account-existance {
   align-self: center;
   font-weight: 500;
   padding: 0px 10px;
   color: red;
-  background-color: #000;
 }
 
-.gym-name {
-  align-self: center;
 
-  width: 80%;
 
-  margin-top: 16px;
-
-  height: auto;
-
-  display: flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-  box-shadow: 0 0 10px black;
-
-  background: transparent;
-}
-
-.gym-name h3 {
-  padding: 16px 16px;
-  color: #fff;
-}
 
 /* Your existing CSS code... */
 

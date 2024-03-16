@@ -67,7 +67,7 @@ if (isset($_POST['log_out'])) {
       echo '<div class="login" style="display: flex; justify-content: space-evenly; align-items: center; width: 360px; margin-right: 0px">
       <div class="profile">
           <span class="user">
-          <a href=""><i class="fa-solid fa-user"></i>' ?> <?php echo  $name; ?><?php echo ' </a>
+          <a href=""><i class="fa-solid fa-user"></i>' ?> <?php echo $name; ?> <?php echo ' </a>
           </span>
       </div>
       <form method="post">
@@ -77,8 +77,8 @@ if (isset($_POST['log_out'])) {
       </form>
     </div>
     ';
-                                                                            }
-                                                                              ?>
+                                                                              }
+                                                                                ?>
   </nav>
   <div class="img-container">
     <img class="mySlides" src="../../Images/gym-img2.jpg" alt="gym">
@@ -179,7 +179,7 @@ if (isset($_POST['log_out'])) {
     <p>@copyright kandresfitnesshub.com</p>
   </div>
 
-  
+
   <script src="../js/index.js" defer></script>
   <script>
     window.addEventListener("scroll", function() {
