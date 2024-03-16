@@ -5,11 +5,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AboutUs</title>
-    <link rel="stylesheet" href="../css/aboutus.css" />
+    <link rel="stylesheet" href="./../css/aboutus.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet" />
 </head>
-
 <body>
     <nav>
         <div class="logo">
@@ -25,13 +24,6 @@
     <div class="intro">
         <h1>AboutUs</h1>
     </div>
-
-
-
-
-
-
-
     <div class="container">
         <div class="cont">
             <div class="img-cont">
@@ -52,32 +44,6 @@
             </p>
         </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <footer class="_footer">
         <div class="links">
             <div class=" media facebook">
