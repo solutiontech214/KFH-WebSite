@@ -31,7 +31,9 @@ if(isset($_POST['log_out']))
     <div class="items">
       <a href="./index.php">Home</a>
       <div class="dropdown">
-        <a href="./service.php" class="dropbtn dropdown-toggle">Srevices</a>
+
+      
+       <?php if(isset($_SESSION['log'])){ echo '<a href="./service.php" class="dropbtn dropdown-toggle">Srevices</a>' ;} else{echo '<a href="./loginservice.php" class="dropbtn dropdown-toggle">Srevices</a>' ;}?>
         <div class="dropdown-content">
           <a href="#">Cardio center</a>
           <a href="#">Strength Training</a>
@@ -40,7 +42,7 @@ if(isset($_POST['log_out']))
           <a href="#">Personal Training</a>
         </div>
       </div>
-      <a href="./classes.php">Classes</a>
+      <?php if(isset($_SESSION['log'])){echo '<a href="./classes.php">Classes</a>';}else{ echo '<a href="./loginclasses.php">Classes</a>';}?>
       <a href="./aboutus.php">AboutUs</a>
       <a href="./contact.php">Contact</a>
     </div>
