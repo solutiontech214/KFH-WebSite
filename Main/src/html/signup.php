@@ -58,7 +58,7 @@ if (isset($_POST['submit'])) {
 
                         //Content
                         $mail->isHTML(true);                                  //Set email format to HTML
-                        $mail->Subject = 'Account Creation';
+                        $mail->Subject = ' Account Creation';
                         $mail->Body    = '<h1>Congratulations 🎉 '.$name.'  </h1><br> <h2>Your Account is Successfully Created ..</h2>
                         <br> <h2>Thank you for Being member of <strong style="color:#bb0120;">KFH Family..</strong>😊</h2>';
                         //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients;
