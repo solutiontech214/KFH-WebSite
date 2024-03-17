@@ -10,6 +10,7 @@ body {
   background-image: url("./../../Images/gym-img2.jpg");
   background-size: cover;
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 body a {
@@ -145,6 +146,7 @@ nav {
 /* footer */
 
 footer {
+  width: 100%;
   height: auto;
   background-color: #910805;
 }

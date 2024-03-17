@@ -20,11 +20,10 @@
             <a href="./index.php">Home</a>
             <a href="./aboutus.php">AboutUs</a>
             <a href="./aboutus.php">Classes</a>
+            <a href="./package.php">Our Package</a>
             <a href="./contact.php" class="_contact">Contact</a>
         </div>
     </nav>
-
-
 
 
     <div class="head">
@@ -46,7 +45,7 @@
         </div>
         <div>
             <i class="fa-solid fa-2 fa-2x"></i>
-            <a href="">
+            <a href="./strength.php">
                 <div class="_card">
                     <img src="../../Images/stringth.JPG" alt="" width="100%" height="220px">
                     <div class="span">

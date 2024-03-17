@@ -132,9 +132,14 @@ nav {
   display: block;
   font-weight: 500;
 }
+.down-cont a:hover{
+  background-color: #f5cd7b;
+}
 .dropdown:hover .down-cont {
   display: block;
 }
+
+
 
 .btn-login {
   padding: 10px 30px;

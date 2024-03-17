@@ -95,7 +95,7 @@ if(isset($_POST['yes']))
           <span class="user dropbtn dropdown-toggle">
           <a href=""><i class="fa-solid fa-user"></i>' ?>   <?php echo $name; ?>   <?php echo ' </a>
           <div class="down-cont">
-          <a href="#" onclick="openPopup()">Remove Account</a>
+          <a href="#" onclick="openPopup()">Remove Account <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
         </div>
           </span>
       </div>
@@ -134,10 +134,10 @@ if(isset($_POST['yes']))
   <div class="cont-info">
     <div class="cont c1">
       <span class="pic">
-        <img src="../../Images/cardio-cycle.jpg" alt="">
+        <img src="../../Images/equipments.JPG" alt="">
       </span>
       <span class="pic-info">
-        <h1><b>Equipments</b></h1>
+        <h1><b>Amazing Gym Equipments</b></h1>
         <p><br>
           Having the right exercise equipment is crucial for reaching your fitness goals and maintaining a healthy lifestyle. With the right gear, you will be able to increase your strength, cardiovascular fitness, and general fitness.
         </p>
