@@ -68,15 +68,22 @@ if (isset ($_POST['submit'])) {
         <div class="nonexist-account" >
             <span>
                 <?php
-                if (isset ($_POST['email']) && $obj->is_account_exists($_POST['email'], $_POST['pass']) && isset ($_POST['submit'])) {
-                    $_SESSION['email'] = $_POST['email'];
+                if (isset ($_POST['email'])  && isset ($_POST['submit']) && isset($_POST['pass'])) {
+                    if(($obj->get_email($_POST['email'])==true ) && ($obj->get_pass($_POST['pass']))==true)
+                    {
+                        $_SESSION['email'] = $_POST['email'];
                     $_SESSION['log'] = $_POST['email'];
                     header("Location: index.php");
                     exit();
+                    }
+                    else if(($obj->get_email($_POST['email'])==true ) || ($obj->get_pass($_POST['pass']))==true){
+                        echo "Incorrect Email or Password..!";
+                    }
+                    else{
+                        echo "Account not found..!";   
+                    }
 
-                } else if (isset ($_POST['submit'])) {
-                    echo "Account Not Exists..!!";
-                }
+                } 
                 ?>
             </span>
         </div>

@@ -10,7 +10,7 @@ require 'C:\xampp\htdocs\src\PHPMailer.php';
 require 'C:\xampp\htdocs\src\SMTP.php';
 session_start();
 $obj = new Account();
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit']) && strlen($_POST['a_pass'])>=8) {
     if ($_POST['a_pass'] == $_POST['c_pass']) {
         if ($obj->update_pass($_SESSION['otp_mail'], $_POST['a_pass'])) {
             $mail = new PHPMailer(true);
@@ -44,8 +44,7 @@ if (isset($_POST['submit'])) {
                     $mail->Body    = "<h1>💁 Dear  $res_name  </h1><br> <h2>Your Password is Successfully Update. 👍</h2>";
                     //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
                     $mail->send();
-                    unset($_SESSION['otp_mail']);
-                    unset($_SESSION['name']);
+                    
                 } catch (Exception $e) {
                     // echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
                 }
@@ -79,6 +78,12 @@ if (isset($_POST['submit'])) {
 <?php
 
     }
+}else if(isset($_POST['submit']) && strlen($_POST['a_pass'])<8){
+    ?>
+    <div class="alert">
+            Password length must be of 8 digit or greater..!!
+        </div>
+    <?php
 }
 
 ?>

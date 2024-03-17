@@ -41,3 +41,8 @@
     window.location.href = "login.php";
   }, 3000);
 </script>
+<?php
+session_start();
+unset($_SESSION['otp_mail']);
+unset($_SESSION['name']);
+?>

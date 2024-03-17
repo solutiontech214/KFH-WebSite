@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 
     if ($_POST['a_pass'] == $_POST['c_pass']) {
         if (strlen($_POST['a_pass']) >= 8) {
-            if ($obj->is_account_exists($email, $a_pass)) {
+            if ($obj->get_email($email)) {
                 // Account already exists, redirect to login
                 header("Location: a_exists.php");
                 exit();

@@ -186,6 +186,81 @@ public function remove_account($email)
     }
 
 }
+
+
+
+public function get_email($email)
+{
+    $stmt = $this->con->prepare("SELECT `email`  FROM `account` WHERE `email`=? ");
+
+    // Check for errors in the preparation of the statement
+    if (!$stmt) {
+        die("Error in preparing the statement: " . $this->con->error);
+    }
+
+    // Bind parameters
+    $stmt->bind_param("s", $email);
+
+    // Execute the query
+    $res = $stmt->execute();
+
+    // Check for errors in the execution of the statement
+    if (!$res) {
+        die("Error in executing the statement: " . $stmt->error);
+    }
+
+    // Bind the result variables
+    $stmt->bind_result($res_email);
+
+    // Fetch the result
+    $stmt->fetch();
+
+    // Check if the result is not empty
+    if (!empty($res_email)) {
+        return true;
+    } else {
+        return false;
+    }
+
+    // Close the statement
+   
+}
+public function get_pass( $pass)
+{
+    $stmt = $this->con->prepare("SELECT  `pass` FROM `account` WHERE  `pass`=?");
+
+    // Check for errors in the preparation of the statement
+    if (!$stmt) {
+        die("Error in preparing the statement: " . $this->con->error);
+    }
+
+    // Bind parameters
+    $stmt->bind_param("s", $pass);
+
+    // Execute the query
+    $res = $stmt->execute();
+
+    // Check for errors in the execution of the statement
+    if (!$res) {
+        die("Error in executing the statement: " . $stmt->error);
+    }
+
+    // Bind the result variables
+    $stmt->bind_result( $res_pass);
+
+    // Fetch the result
+    $stmt->fetch();
+
+    // Check if the result is not empty
+    if (!empty($res_pass)) {
+        return true;
+    } else {
+        return false;
+    }
+
+    // Close the statement
+   
+}
 //class ends
 }
 

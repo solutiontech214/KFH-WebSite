@@ -47,10 +47,10 @@
     <footer class="_footer">
         <div class="links">
             <div class=" media facebook">
-                <a href=""><i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i></a>
+                <a href="https://www.facebook.com/KandreFitnessHub/"><i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i></a>
             </div>
             <div class=" media insta">
-                <a href=""><i class="fa-brands fa-instagram" style="color: #eb003b;"></i></a>
+                <a href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link"><i class="fa-brands fa-instagram" style="color: #eb003b;"></i></a>
             </div>
         </div>
         <div class="_info">

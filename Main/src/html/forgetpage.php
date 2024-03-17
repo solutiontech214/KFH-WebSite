@@ -97,7 +97,7 @@ $num=rand(100000,600000);
     </form>
   </div>
   <div>
-    <h2 style="text-align:center;">Please provide your email address below to receive a one-time password (OTP) for verification.</h2>
+    <h2 style="text-align:center;">Please provide your email address above to receive a one-time password (OTP) for verification.</h2>
   </div>
 </body>
 </html>
