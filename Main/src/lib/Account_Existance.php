@@ -1,6 +1,7 @@
 <?php
 //class starts
 date_default_timezone_set('Asia/Kolkata');
+
 class Account
 {
    
@@ -169,6 +170,22 @@ function update_pass($email,$newpass)
 
 }
 
+public function remove_account($email)
+{
+    $stmt = $this->con->prepare("DELETE FROM `account` WHERE `email`=? ");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $ar= $stmt->affected_rows;
+   
+    if($ar==1)
+    {
+        return true;
+    }
+    else{
+        return false;
+    }
+
+}
 //class ends
 }
 

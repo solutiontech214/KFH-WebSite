@@ -6,6 +6,19 @@ $a = new Account();
 if (isset ($_POST['log_out'])) {
   unset($_SESSION['log']);
 }
+
+if(isset($_POST['yes']))
+{
+ if($obj->remove_account($_SESSION['log'])) 
+ {
+  unset($_SESSION['log']);
+
+  session_destroy();
+ }
+ 
+
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +27,19 @@ if (isset ($_POST['log_out'])) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KFH</title>
+  <style>
+     #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+  </style>
 </head>
 <link rel="stylesheet" href="../css/indexStyle.css">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
@@ -69,7 +95,7 @@ if (isset ($_POST['log_out'])) {
           <span class="user dropbtn dropdown-toggle">
           <a href=""><i class="fa-solid fa-user"></i>' ?>   <?php echo $name; ?>   <?php echo ' </a>
           <div class="down-cont">
-          <a href="#">hello</a>
+          <a href="#" onclick="openPopup()">Remove Account</a>
         </div>
           </span>
       </div>
@@ -83,6 +109,15 @@ if (isset ($_POST['log_out'])) {
     }
     ?>
   </nav>
+  <div id="popup">
+    <form action="./index.php" method="post">
+    <h2>Are Your Sure...?</h2>
+    <p>Do You Want to Remove Account Permanently.</p>
+    <button onclick="closePopup()" name="yes">Yes.</button>
+    <button onclick="closePopup()" name="no">No.</button>
+    </form>
+    
+</div>
   <div class="img-container">
     <img class="mySlides" src="../../Images/gym-img2.jpg" alt="gym">
     <div class="text-info">
@@ -207,7 +242,15 @@ if (isset ($_POST['log_out'])) {
       }
     });
   </script>
+<script>
+    function openPopup() {
+        document.getElementById("popup").style.display = "block";
+    }
 
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+</script>
 </body>
 
 </html>
