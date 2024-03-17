@@ -13,7 +13,6 @@ $obj = new Account();
 if (isset($_POST['submit'])) {
     if ($_POST['a_pass'] == $_POST['c_pass']) {
         if ($obj->update_pass($_SESSION['otp_mail'], $_POST['a_pass'])) {
-
             $mail = new PHPMailer(true);
             if (isset($_SESSION['otp_mail'])) {
                 try {
