@@ -51,8 +51,17 @@ if (isset ($_POST['submit'])) {
                 <input type="password" id="passwordInput" name="pass" class="email" placeholder="Password" name="password" required>
                 <i class="fa-solid fa-eye eye" onclick=" togglePasswordVisibility()" style="cursor: pointer; color:black;"></i>
             </div>
+            <br>
             <span class="error-msg" id="password-error">
-                <!-- error msg -->
+                <?php
+                if(isset($_POST['submit']) && isset($_POST['pass']))
+                {
+                    if(($obj->get_email($_POST['email'])==true ) || ($obj->get_pass($_POST['pass']))==true){
+                       echo "<tsrong>Incorrect Password..!</strong>";
+                    }
+                }
+           
+                    ?>
             </span>
         </span>
 
@@ -77,7 +86,7 @@ if (isset ($_POST['submit'])) {
                     exit();
                     }
                     else if(($obj->get_email($_POST['email'])==true ) || ($obj->get_pass($_POST['pass']))==true){
-                        echo "Incorrect Email or Password..!";
+                       
                     }
                     else{
                         echo "Account not found..!";   
