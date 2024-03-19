@@ -5,7 +5,6 @@
 body {
   margin: 0;
   padding: 0;
-  background: #ffffff;
   background-image: url("./../../Images/stringth.JPG");
   background-size: cover;
   background-attachment: fixed;
@@ -66,25 +65,10 @@ nav {
   background-color: #910805;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .intro {
   display: flex;
   width: 100%;
-  height: 20vh;
+  height: 30vh;
   align-items: center;
   color: #ffffff;
   margin-left: 100px;
@@ -94,60 +78,33 @@ nav {
   margin: 0;
   width: 100%;
   height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ffffff;
-  padding: 10px 20px;
-  text-align: center;
-  background-image: url("./../../Images/background.jpg");
-  background-size: cover;
-  background-attachment: fixed;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-.container {
+.cont {
   width: 100%;
   height: auto;
   background-color: #ffffff;
-  padding: 10px 10px;
   display: flex;
+  padding: 40px 0px;
   justify-content: space-evenly;
   align-items: start;
-  column-gap: 50px;
-  row-gap: 100px;
   flex-wrap: wrap;
-  background-image: url("./../../Images/background.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  
+  row-gap: 10rcap;
 }
-
-.img-cont {
-  width: 500px;
-  height: auto;
-  text-align: start;
-}
-.img-cont img {
-  border-radius: 50% 50% 41% 59% / 69% 36% 64% 31%;
+.card {
   transition: all 0.8s ease;
-}
-.img-cont img:hover {
-  border-radius: 60% 40% 56% 44% / 27% 75% 25% 73%;
   box-shadow: 0 0 10px black;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 10px black;
 }
 
 /* Footer */
-
 footer {
   width: 100%;
   height: auto;
