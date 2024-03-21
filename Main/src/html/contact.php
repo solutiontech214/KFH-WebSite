@@ -78,7 +78,6 @@ if (isset($_POST['submit'])) {
             padding: 10px 20px;
             margin: 0;
             background-color: #4CAF50;
-            /* Green color */
             color: white;
             margin-bottom: 15px;
             font-size: larger;

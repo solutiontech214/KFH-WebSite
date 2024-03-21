@@ -96,50 +96,19 @@ nav {
 
 /* contents */
 
-.container {
+.co{
+  margin: 0;
+  background-color: #ffffff;
   width: 100%;
   height: auto;
-  padding: 60px 0;
-  background-color: #ffffff;
+  padding: 20px 0px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  column-gap: 90px;
-  row-gap: 50px;
 }
 
-.container .cont{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.container .cont img{
-   transition: all 0.8s ease;
-}
-.container .c1  img{
-   border-radius:  73% 27% 32% 68% / 56% 66% 34% 44% ;
-}
-
-.container .cont img:hover{
-    border-radius: 64% 36% 57% 43% / 45% 60% 40% 55% ;
-    box-shadow: 0 0 10px black;
- }
  
-.container .c2 img{
-    border-radius: 72% 28% 21% 79% / 60% 52% 48% 40% ;
-}
-
-.container .c3 img{
-    border-radius: 59% 41% 51% 49% / 36% 71% 29% 64% ;
-}
-.container .c4 img{
-    border-radius: 65% 35% 41% 59% / 48% 28% 72% 52% ;
-}
-
-
-
 
 
 

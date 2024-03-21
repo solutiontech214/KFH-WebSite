@@ -7,39 +7,20 @@ if (isset ($_POST['log_out'])) {
   unset($_SESSION['log']);
 }
 
-if(isset($_POST['yes']))
-{
- if($obj->remove_account($_SESSION['log'])) 
- {
-  unset($_SESSION['log']);
+if (isset ($_POST['yes'])) {
+  if ($obj->remove_account($_SESSION['log'])) {
+    unset($_SESSION['log']);
 
-  session_destroy();
- }
- 
-
-
+    session_destroy();
+  }
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KFH</title>
-  <style>
-     #popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-  </style>
 </head>
 <link rel="stylesheet" href="../css/indexStyle.css">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
@@ -55,30 +36,24 @@ if(isset($_POST['yes']))
       <img src="../../Images/KFH.png" width="120px" height="50px" class="logo">
     </div>
     <div class="items">
-      <a href="./index.php">Home</a>
-      <div class="dropdown">
-
-
-        <?php if (isset ($_SESSION['log'])) {
-          echo '<a href="./service.php" class="dropbtn dropdown-toggle">Srevices</a>';
-        } else {
-          echo '<a href="./loginservice.php" class="dropbtn dropdown-toggle">Srevices</a>';
-        } ?>
-        <div class="dropdown-content">
-          <a href="#">Cardio center</a>
-          <a href="#">Strength Training</a>
-          <a href="#">Group Classes</a>
-          <a href="#">Spa</a>
-          <a href="#">Personal Training</a>
-        </div>
-      </div>
+      <a href="./index.php" class="a">Home</a>
       <?php if (isset ($_SESSION['log'])) {
-        echo '<a href="./classes.php">Classes</a>';
+        echo '<a href="./service.php" class="a">Srevices</a>';
       } else {
-        echo '<a href="./loginclasses.php">Classes</a>';
+        echo '<a href="./loginservice.php" class="a">Srevices</a>';
       } ?>
-      <a href="./aboutus.php">AboutUs</a>
-      <a href="./contact.php">Contact</a>
+      <?php if (isset ($_SESSION['log'])) {
+        echo '<a href="./classes.php" class="a">Classes</a>';
+      } else {
+        echo '<a href="./prelogin.php" class="a">Classes</a>';
+      } ?>
+      <?php if (isset ($_SESSION['log'])) {
+        echo '<a href="./aboutus.php" class="a">AboutUs</a>';
+      } else {
+        echo '<a href="./prelogin.php" class="a">AboutUs</a>';
+      }
+      ?>
+      <a href="./contact.php" class="a">Contact</a>
     </div>
     <?php
     if (!isset ($_SESSION['log'])) {
@@ -91,33 +66,33 @@ if(isset($_POST['yes']))
     } else {
       $name = $a->get_info($_SESSION['log'], 1);
       echo '<div class="login" style="display: flex; justify-content: space-evenly; align-items: center; width: 360px; margin-right: 0px">
-      <div class="profile dropdown">
-          <span class="user dropbtn dropdown-toggle">
-          <a href=""><i class="fa-solid fa-user"></i>' ?>   <?php echo $name; ?>   <?php echo ' </a>
-          <div class="down-cont">
-          <a href="#" onclick="openPopup()">Remove Account <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
-        </div>
-          </span>
-      </div>
-      <form method="post">
-      <button class="btn-login" id="login" type="submit" name="log_out" value="Log Out">LogOut<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-closed-fill" viewBox="0 0 16 16">
-      <path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
-      </svg></button>
-      </form>
-    </div>
+              <div class="profile dropdown">
+                <span class="user dropbtn dropdown-toggle">
+                <a href=""><i class="fa-solid fa-user"></i>' ?>   <?php echo $name; ?>   <?php echo ' </a>
+                <div class="down-cont">
+                <a href="#" onclick="openPopup()">Remove Account <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                </div>
+                </span>
+              </div>
+              <form method="post">
+                <button class="btn-login" id="login" type="submit" name="log_out" value="Log Out">LogOut<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-closed-fill" viewBox="0 0 16 16">
+                <path d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                </svg></button>
+              </form>
+            </div>
     ';
     }
     ?>
   </nav>
-  <div id="popup">
-    <form action="./index.php" method="post">
-    <h2>Are Your Sure...?</h2>
-    <p>Do You Want to Remove Account Permanently.</p>
-    <button onclick="closePopup()" name="yes">Yes.</button>
-    <button onclick="closePopup()" name="no">No.</button>
+  <div class="popup bg-light" id="popup">
+    <form action="./index.php" method="post" class="text-black">
+      <h2>Are Your Sure...?</h2>
+      <p class="fw-medium">Do You Want to Remove Account Permanently.</p>
+      <button onclick="closePopup()" name="yes" class="btn btn-primary">Yes</button>
+      <button onclick="closePopup()" name="no" class="btn btn-primary">No</button>
     </form>
-    
-</div>
+  </div>
+
   <div class="img-container">
     <img class="mySlides" src="../../Images/gym-img2.jpg" alt="gym">
     <div class="text-info">
@@ -126,6 +101,8 @@ if(isset($_POST['yes']))
     </div>
     <img class="mySlides" src="../../Images/gym3.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym5.jpg" alt="gym">
+    <img class="mySlides" src="../../Images/stringth.JPG" alt="gym">
+    <img class="mySlides" src="../../Images/equipments.JPG" alt="gym">
     <button class="prev-arrow" onclick="plusDivs(-1)">&#10094;</button>
     <button class="next-arrow" onclick="plusDivs(+1)">&#10095;</button>
   </div>
@@ -220,37 +197,32 @@ if(isset($_POST['yes']))
 
   <script src="../js/index.js" defer></script>
   <script>
-    window.addEventListener("scroll", function() {
-      var navbar = document.getElementById("nav");
-      if (window.scrollY > 0) {
-        navbar.classList.add("navbar-scrolled");
-      } else {
-        navbar.classList.remove("navbar-scrolled");
-      }
-    });
-
     let navbar = document.querySelector('nav');
-    let lastScrollPosition = 0;
+    let items = document.querySelectorAll('.a');
 
     window.addEventListener('scroll', function() {
       let currentScrollPosition = window.scrollY;
 
-      if (currentScrollPosition > 200) {
+      if (currentScrollPosition > 700) {
         navbar.classList.add('fixed-nav');
+        items.forEach(item => {
+          item.style.color = 'black'; // Change color to black for each anchor tag
+        });
       } else {
         navbar.classList.remove('fixed-nav');
+        items.forEach(item => {
+          item.style.color = ''; // Reset color to default for each anchor tag
+        });
       }
     });
   </script>
-<script>
+  <script>
     function openPopup() {
-        document.getElementById("popup").style.display = "block";
+      document.getElementById("popup").style.display = "block";
     }
-
     function closePopup() {
-        document.getElementById("popup").style.display = "none";
+      document.getElementById("popup").style.display = "none";
     }
-</script>
+  </script>
 </body>
-
 </html>

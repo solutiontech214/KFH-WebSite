@@ -96,14 +96,13 @@ nav {
 .img-cont {
   overflow: hidden;
   position: relative;
-  border-radius: 64% 36% 57% 43% / 45% 60% 40% 55%;
 }
 
 .img-cont img {
   transition: transform 0.3s ease;
 }
 .img-cont:hover {
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 2px black;
 }
 .img-cont:hover img {
   transform: scale(1.1); /* Zoom image on hover */

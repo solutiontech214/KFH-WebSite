@@ -30,7 +30,7 @@
 <body>
   <div class="loader">
     <img src="../../Images/loader.gif" alt="" width="220px" height="180px">
-    <h1>To access Classes you have to Login First!</h1>
+    <h1>You have to Login First!</h1>
     <h2>Redirecting To Login Page..</h2>
   </div>
 </body>
