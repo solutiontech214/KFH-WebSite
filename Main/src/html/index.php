@@ -1,13 +1,13 @@
 <?php
-require ('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
+require('C:\xampp\htdocs\KFH-WebSite\Main\src\lib\Account_Existance.php');
 session_start();
 $obj = new Account();
 $a = new Account();
-if (isset ($_POST['log_out'])) {
+if (isset($_POST['log_out'])) {
   unset($_SESSION['log']);
 }
 
-if (isset ($_POST['yes'])) {
+if (isset($_POST['yes'])) {
   if ($obj->remove_account($_SESSION['log'])) {
     unset($_SESSION['log']);
 
@@ -17,10 +17,26 @@ if (isset ($_POST['yes'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KFH</title>
+  <style>
+    #popup {
+      display: none;
+      position: fixed;
+      width: 400px;
+      height: 200px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 5px 10px rgb(0, 0, 0);
+      z-index: 10000;
+    }
+  </style>
 </head>
 <link rel="stylesheet" href="../css/indexStyle.css">
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet">
@@ -37,17 +53,17 @@ if (isset ($_POST['yes'])) {
     </div>
     <div class="items">
       <a href="./index.php" class="a">Home</a>
-      <?php if (isset ($_SESSION['log'])) {
+      <?php if (isset($_SESSION['log'])) {
         echo '<a href="./service.php" class="a">Srevices</a>';
       } else {
         echo '<a href="./loginservice.php" class="a">Srevices</a>';
       } ?>
-      <?php if (isset ($_SESSION['log'])) {
+      <?php if (isset($_SESSION['log'])) {
         echo '<a href="./classes.php" class="a">Classes</a>';
       } else {
         echo '<a href="./prelogin.php" class="a">Classes</a>';
       } ?>
-      <?php if (isset ($_SESSION['log'])) {
+      <?php if (isset($_SESSION['log'])) {
         echo '<a href="./aboutus.php" class="a">AboutUs</a>';
       } else {
         echo '<a href="./prelogin.php" class="a">AboutUs</a>';
@@ -56,7 +72,7 @@ if (isset ($_POST['yes'])) {
       <a href="./contact.php" class="a">Contact</a>
     </div>
     <?php
-    if (!isset ($_SESSION['log'])) {
+    if (!isset($_SESSION['log'])) {
       echo '<div class="login">
       <a href="../html/login.php"><button class="btn-login" id="login" type="button" >Login<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
       <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
@@ -68,7 +84,7 @@ if (isset ($_POST['yes'])) {
       echo '<div class="login" style="display: flex; justify-content: space-evenly; align-items: center; width: 360px; margin-right: 0px">
               <div class="profile dropdown">
                 <span class="user dropbtn dropdown-toggle">
-                <a href=""><i class="fa-solid fa-user"></i>' ?>   <?php echo $name; ?>   <?php echo ' </a>
+                <a href=""><i class="fa-solid fa-user"></i>' ?> <?php echo $name; ?> <?php echo ' </a>
                 <div class="down-cont">
                 <a href="#" onclick="openPopup()">Remove Account <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
                 </div>
@@ -81,8 +97,8 @@ if (isset ($_POST['yes'])) {
               </form>
             </div>
     ';
-    }
-    ?>
+                                                                                    }
+                                                                                      ?>
   </nav>
   <div class="popup bg-light" id="popup">
     <form action="./index.php" method="post" class="text-black">
@@ -220,9 +236,11 @@ if (isset ($_POST['yes'])) {
     function openPopup() {
       document.getElementById("popup").style.display = "block";
     }
+
     function closePopup() {
       document.getElementById("popup").style.display = "none";
     }
   </script>
 </body>
+
 </html>
