@@ -64,12 +64,12 @@ if (isset($_POST['yes'])) {
         echo '<a href="./prelogin.php" class="a">Classes</a>';
       } ?>
       <?php if (isset($_SESSION['log'])) {
-        echo '<a href="./aboutus.php" class="a">AboutUs</a>';
+        echo '<a href="./contact.php" class="a">Contact</a>';
       } else {
-        echo '<a href="./prelogin.php" class="a">AboutUs</a>';
+        echo '<a href="./prelogin.php" class="a">Contact</a>';
       }
       ?>
-      <a href="./contact.php" class="a">Contact</a>
+      <a href="./aboutus.php" class="a">AboutUs</a>
     </div>
     <?php
     if (!isset($_SESSION['log'])) {
@@ -179,18 +179,22 @@ if (isset($_POST['yes'])) {
   </div>
 
   <div class="slogan">
-    <h1>Shape Your Body!</h1><br>
-    <span>in the most <h3>Luxurious</h3> gym in town.</span>
+    <h1>Transform Your Body,</h1><br>
+    <span>Elevate Your Spirit at <h2>KFH</h2>Gym!</span>
   </div>
 
   <footer class="_footer">
     <div class="links">
-      <div class=" media facebook">
-        <a href="https://www.facebook.com/KandreFitnessHub/"><i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i></a>
-      </div>
-      <div class=" media insta">
-        <a href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link"><i class="fa-brands fa-instagram" style="color: #eb003b;"></i></a>
-      </div>
+      <a href="https://www.facebook.com/KandreFitnessHub/" target="_blank">
+        <div class=" media facebook">
+          <i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i>
+        </div>
+      </a>
+      <a href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link" target="_blank">
+        <div class=" media insta">
+          <i class="fa-brands fa-instagram" style="color: #eb003b;"></i>
+        </div>
+      </a>
     </div>
     <div class="_info">
       <a href="#">Kandre's Fitness Hub, Third floor,Mhetre Tower, Vishwakaran Park,Near Aasara Bridge, Jule Solapur,Solapur, 413004</a>

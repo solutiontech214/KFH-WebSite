@@ -26,13 +26,20 @@
     </div>
     <div class="container">
         <div class="cont">
+            <h1>KFH in Pandharpur!</h1>
             <div class="img-cont">
-                <img src="../../Images/img9.jpg" alt="" width="500px" height="400px" />
+                <img src="../../Images/aboutgym.jpg" alt="" width="400px" height="250px">
+                <img src="../../Images/aboutgym7.jpg" alt="" width="400px" height="250px">
+                <img src="../../Images/aboutgym2.jpg" alt="" width="400px" height="250px">
+                <img src="../../Images/aboutgym6.jpg" alt="" width="400px" height="250px">
+                <img src="../../Images/aboutgym4.jpg" alt="" width="400px" height="250px">
+                <img src="../../Images/aboutgym5.jpg" alt="" width="400px" height="250px">
+                <img src="../../Images/aboutgym3.jpg" alt="" width="400px" height="250px">
             </div>
-            <h1>KFH Now in Solapur!</h1>
         </div>
         <div class="aboutus">
             <p>
+            Welcome to KFH Gym, where fitness meets excellence. Established in Pandharpur, we've been proud to serve the community and help individuals achieve their fitness goals since [year of establishment].<br>
                 Kandre's Fitness Hub, which has been operating in the fitness industry for over 9 years with great success in Pandharpur, has now expanded to Solapur.
             </p>
             <p>
@@ -69,20 +76,7 @@
             <p>@copyright kandresfitnesshub.com</p>
         </div>
     </footer>
-    <script>
-        let navbar = document.querySelector('nav');
-        let lastScrollPosition = 0;
 
-        window.addEventListener('scroll', function() {
-            let currentScrollPosition = window.scrollY;
-
-            if (currentScrollPosition > 250) {
-                navbar.classList.add('fixed-nav');
-            } else {
-                navbar.classList.remove('fixed-nav');
-            }
-        });
-    </script>
 </body>
 
 </html>

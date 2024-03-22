@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -91,12 +92,16 @@
     <!--footer -->
     <footer class="_footer">
         <div class="links">
-            <div class=" media facebook">
-                <a href=""><i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i></a>
-            </div>
-            <div class=" media insta">
-                <a href=""><i class="fa-brands fa-instagram" style="color: #eb003b;"></i></a>
-            </div>
+            <a href="https://www.facebook.com/KandreFitnessHub/" target="_blank">
+                <div class=" media facebook">
+                    <i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link" target="_blank">
+                <div class=" media insta">
+                    <i class="fa-brands fa-instagram" style="color: #eb003b;"></i>
+                </div>
+            </a>
         </div>
         <div class="_info">
             <a href="#">Kandre's Fitness Hub, Third floor,Mhetre Tower, Vishwakaran Park,Near Aasara Bridge, Jule Solapur,Solapur, 413004</a>
@@ -114,22 +119,6 @@
             <p>@copyright kandresfitnesshub.com</p>
         </div>
     </footer>
-
-
-    <script>
-        let navbar = document.querySelector('nav');
-        let lastScrollPosition = 0;
-
-        window.addEventListener('scroll', function() {
-            let currentScrollPosition = window.scrollY;
-
-            if (currentScrollPosition > 50) {
-                navbar.classList.add('fixed-nav');
-            } else {
-                navbar.classList.remove('fixed-nav');
-            }
-        });
-    </script>
 </body>
 
 </html>

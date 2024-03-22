@@ -90,12 +90,12 @@ if (isset($_POST['submit'])) {
         <div class="container c1">
             <div class="nav">
                 <div class="logo">
-                    <img src="../../Images/KFH.png" alt="logo" width="120px" height="50px">
+                    <a href="./index.php"><img src="../../Images/KFH.png" alt="logo" width="120px" height="50px"></a>
                 </div>
                 <div class="nav-items">
-                    <a href="./index.php">Home</a>
+                    <a href="./index.php">Classes</a>
                     <a href="./service.php">Services</a>
-                    <a href="">Membership</a>
+                    <a href="">Packages</a>
                     <a href="./aboutus.php">AboutUs</a>
                 </div>
             </div>
