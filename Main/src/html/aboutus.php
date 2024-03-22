@@ -40,7 +40,7 @@
         <div class="aboutus">
             <p>
             Welcome to KFH Gym, where fitness meets excellence. Established in Pandharpur, we've been proud to serve the community and help individuals achieve their fitness goals since [year of establishment].<br>
-                Kandre's Fitness Hub, which has been operating in the fitness industry for over 9 years with great success in Pandharpur, has now expanded to Solapur.
+                Kandre's Fitness Hub, which has been operating in the fitness industry for over 9 years with great success in Pandharpur,<b style="text-decoration:underline; color:#316FF6;">has now expanded to Solapur.</b>
             </p>
             <p>
                 At Kandre's Fitness Hub we aim to create a healthy and fun environment
@@ -48,6 +48,20 @@
                 of our staff and business. Team members are hand picked for their
                 ability to provide excellent service and capabilities to handle
                 responsibilities professionally.
+            </p>
+            <h2>Mission</h2>
+            <p>Our mission at KFH Gym remains the same: to provide a supportive environment where individuals of all fitness levels can thrive. With our expansion to Solapur, we are excited to extend our reach and impact, empowering more people to lead healthier lives through personalized training programs and state-of-the-art facilities.</p>
+            <h2>Why Choose KFH Gym?</h2>
+            <p>
+            <ul>
+                <li><b>Experience:</b> With years of experience serving the Pandharpur community, we have honed our expertise in delivering results-driven fitness solutions.</li>
+                <li><b>Community:</b> Our gym is more than just a place to work out – it's a community where members support and inspire each other to reach their fitness goals.</li>
+                <li><b>Expansion to Solapur:</b> Our decision to expand to Solapur reflects our commitment to providing accessible and high-quality fitness services to a broader audience.</li>
+            </ul>
+            </p>
+                <h1>Join Us Today</h1>
+            <p>
+                Whether you're in Pandharpur or Solapur, we invite you to join the KFH Gym community and embark on a journey to transform your body and elevate your spirit. Together, let's achieve greatness through fitness.
             </p>
         </div>
     </div>

@@ -80,7 +80,7 @@ nav {
 }
 
 .container {
-  background-color: #000000af;
+  background-color: #000000cf;
   width: 100%;
   height: auto;
   color: black;
@@ -97,26 +97,32 @@ nav {
   align-items: center;
   overflow: hidden; /* Hide any content that overflows */
 }
-.cont h1{
+.container h1,h2{
   color: white;
+  text-decoration: underline;
+}
+.container li{
+  list-style-type: none;
+  color: white;
+  font-size: 20px;
 }
 
 .img-cont {
   display: flex; /* Use flexbox for horizontal alignment */
   white-space: nowrap;
-  animation: marquee-animation 30s linear infinite; /* Adjust duration as needed */
+  animation: marquee-animation 100s linear infinite; /* Adjust duration as needed */
 }
 
 .img-cont img {
   margin-right: 20px; /* Adjust spacing between images */
   box-shadow: 0 0 2px black;
   border-radius: 5px;
-  transition: all 0.8s ease;
+  transition: all 1s ease;
 }
 .img-cont img:hover{
   /* transform: scale(1.05); */
   transform: rotateZ(2deg);
-  box-shadow: 0 0 20px black;
+  box-shadow: 0 0 0 5px rgb(7, 95, 190);
   border-radius: 10px;
 }
 
