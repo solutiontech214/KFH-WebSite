@@ -74,7 +74,7 @@ $num=rand(100000,600000);
      $mail->isHTML(true);                                  //Set email format to HTML
      $mail->Subject = 'Update Password';
      
-     $mail->Body    = "<h1>💁 Dear  $name  </h1><br> <h2>You are requested to update your password <br> Here is your otp : <label style='text-decoration:underline;color:blue;' >$num </label></h2>";
+     $mail->Body    = "<h1>💁 Dear  $name  </h1><br> <h2>You are requested to update your password <br> Here is your OTP : <label style='text-decoration:underline;color:blue;' >$num </label></h2>";
      //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
  
      $mail->send();

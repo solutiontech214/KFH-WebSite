@@ -131,7 +131,7 @@ session_start();
           // Delay the redirection for 3 seconds (3000 milliseconds)
           setTimeout(function() {
             window.location.href = "newpass.php";
-          }, 3000);
+          }, 1000);
         </script>
       </strong>
     </span>

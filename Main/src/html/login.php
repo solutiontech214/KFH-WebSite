@@ -57,7 +57,7 @@ if (isset ($_POST['submit'])) {
                 if(isset($_POST['submit']) && isset($_POST['pass']))
                 {
                     if(($obj->get_email($_POST['email'])==true ) || ($obj->get_pass($_POST['pass']))==true){
-                       echo "<strong>Incorrect Password..!</strong>";
+                       echo "<strong>Incorrect Email or  Password..!</strong>";
                     }
                 }
                     ?>
