@@ -26,18 +26,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 0 5px black;
-  top: -60px;
-  transition: top 1.1s ease, box-shadow 0.3s ease;
   z-index: 1000;
 }
 
-.fixed-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
 
 .logo img {
   margin-left: 20px;

@@ -95,7 +95,7 @@ if (isset($_POST['submit'])) {
                 <div class="nav-items">
                     <a href="./index.php">Classes</a>
                     <a href="./service.php">Services</a>
-                    <a href="">Packages</a>
+                    <a href="./package.php">Packages</a>
                     <a href="./aboutus.php">AboutUs</a>
                 </div>
             </div>

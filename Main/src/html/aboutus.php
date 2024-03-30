@@ -67,12 +67,16 @@
     </div>
     <footer class="_footer">
         <div class="links">
+        <a href="https://www.facebook.com/KandreFitnessHub/" target="_blank">
             <div class=" media facebook">
-                <a href="https://www.facebook.com/KandreFitnessHub/"><i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i></a>
+                <i class="fa-brands fa-facebook-f" style="color: #316FF6;"></i>
             </div>
+        </a>
+        <a href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link" target="_blank">
             <div class=" media insta">
-                <a href="https://www.instagram.com/reel/CyFPB3YoEJy/?utm_source=ig_web_copy_link"><i class="fa-brands fa-instagram" style="color: #eb003b;"></i></a>
+                <i class="fa-brands fa-instagram" style="color: #eb003b;"></i>
             </div>
+        </a>
         </div>
         <div class="_info">
             <a href="#">Kandre's Fitness Hub, Third floor,Mhetre Tower, Vishwakaran Park,Near Aasara Bridge, Jule Solapur,Solapur, 413004</a>
