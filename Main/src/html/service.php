@@ -80,7 +80,7 @@
         </div>
         <div>
             <i class="fa-solid fa-5 fa-2x"></i>
-            <a href="">
+            <a href="./trainer.php">
                 <div class="_card">
                     <img src="../../Images/tranier.jpeg" alt="" width="100%" height="220px">
                     <div class="span">

@@ -25,9 +25,7 @@ if (isset ($_POST['submit'])) {
 <body>
     <!-- preloader -->
     <div class="preloader" id="preLoader"></div>
-
-
-
+    
     <div class="logo">
         <img src="../../Images/KFH.png" alt="logo" width="120" height="50">
     </div>
