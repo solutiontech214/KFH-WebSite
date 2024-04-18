@@ -113,7 +113,7 @@ if (isset($_POST['yes'])) {
     <img class="mySlides" src="../../Images/gym-img2.jpg" alt="gym">
     <div class="text-info">
       <p><b>Shape Your Body</b><br> in most <b style="color: rgb(236, 72, 46);">Luxurious</b><br> gym in town</p>
-      <a href="./service.php"><button class="btn-login" id="login" type="button">eXplore More..</button></a>
+      <a href="./service.php"><button class="btn-login" id="login" type="button">explore More..</button></a>
     </div>
     <img class="mySlides" src="../../Images/gym3.jpg" alt="gym">
     <img class="mySlides" src="../../Images/gym5.jpg" alt="gym">

@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -16,9 +19,13 @@
         </div>
         <div class="items">
             <a href="./index.php">Home</a>
-            <a href="./classes.php">Classes</a>
-            <a href="./service.php">Services</a>
-            <a href="./contact.php" class="_contact">Contact</a>
+            
+            
+            <?php if (isset($_SESSION['log'])) {
+        echo '<a href="./contact.php" class="_contact">Contact</a>';
+      } else {
+        echo '<a href="./loginservice.php" class="a">Contact</a>';
+      } ?>
         </div>
     </nav>
     <div class="intro">
