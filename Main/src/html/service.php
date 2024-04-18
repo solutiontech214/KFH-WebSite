@@ -32,7 +32,7 @@
     <div class="service">
         <div>
             <i class="fa-solid fa-1 fa-2x"></i>
-            <a href="">
+            <a href="./cardio.php">
                 <div class="_card">
                     <img src="../../Images/cardio2.JPG" alt="" width="100%" height="220px">
                     <div class="span">
@@ -80,7 +80,7 @@
         </div>
         <div>
             <i class="fa-solid fa-5 fa-2x"></i>
-            <a href="">
+            <a href="./trainer.php">
                 <div class="_card">
                     <img src="../../Images/tranier.jpeg" alt="" width="100%" height="220px">
                     <div class="span">

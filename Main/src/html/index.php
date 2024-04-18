@@ -69,7 +69,12 @@ if (isset($_POST['yes'])) {
         echo '<a href="./prelogin.php" class="a">Contact</a>';
       }
       ?>
-      <a href="./aboutus.php" class="a">AboutUs</a>
+      <?php if (isset($_SESSION['log'])) {
+        echo '<a href="./aboutus.php" class="a">AboutUs</a>';
+      } else {
+        echo '<a href="./prelogin.php" class="a">AboutUS</a>';
+      }
+      ?>
     </div>
     <?php
     if (!isset($_SESSION['log'])) {
@@ -153,7 +158,7 @@ if (isset($_POST['yes'])) {
       <span class="pic-info">
         <h1><b>Luxurious Feel</b></h1>
         <p><br>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?
+        Experience the epitome of luxury and exclusivity at KFH Gym. Our state-of-the-art facilities boast cutting-edge equipment and modern amenities designed to elevate your workout experience to new heights. Indulge in ultimate relaxation with our luxurious spa services, including sauna and steam room, and unwind in our plush relaxation area. 
         </p>
       </span>
     </div>
@@ -161,7 +166,7 @@ if (isset($_POST['yes'])) {
       <span class="pic-info">
         <h1><b>Personal Traners</b></h1>
         <p><br>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, excepturi?
+        Elevate your fitness journey with the expertise of our certified personal trainers at KFH Gym. Each trainer brings a wealth of knowledge and experience, specializing in various areas such as strength training, weight loss, flexibility, and sports-specific workouts.
         </p>
       </span>
       <span class="pic">
